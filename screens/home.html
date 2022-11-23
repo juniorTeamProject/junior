@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/bdf8853241.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">  
+    <script src="/js/home.js"></script>
+    
+</head>
+<body>
+
+ <!-- start Header-->
+ 
+  <header>
+      
+    <div class="wrapper">
+        
+      <div class="logo">Jun</div> 
+      
+         <!--bttn login, etc-->
+      <div class="wrapperBttns">
+        
+        <div class="signInBttn"> הרשמה </div>
+        <div class="logInBttn" onclick = toggleLogin()> כניסה </div>
+      </div>
+
+      <div class="wraperNumofJobs">
+        <div class="wrTextJobs">
+          <div class="numOfJobs">34,634</div>
+          <div class="textJobs">משרות באתר</div>
+        </div>
+      </div>
+
+        <!--Search-->
+      <div class="wrapperSearch">
+        <div class="Search">
+            <div class="wrapIconSearch">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </div>
+            <input class="inputWhere" placeholder='איפה?' type="text"list='cities' >
+            <div class="vertivalLine"></div>
+            <input class="inputWhat" placeholder='איזו עבודה?' type="text" list="jobs">
+              <!-------------->
+
+              <!-- data lists-->
+              <!-- 1.languange-->
+            <datalist id = 'languges'>
+                <option value="JavaScript"></option>
+                <option value="Java"></option>
+                <option value="C++"></option>
+                <option value="C"></option>
+            </datalist>
+            <!-- 2.jobs-->
+            <datalist id = 'jobs'>
+              <option value="web"></option>
+              <option value="mobile"></option>
+              <option value="Embeded"></option>
+              <option value="Ai"></option>
+              <option value="Data analyst"></option>
+              <option value="cyver"></option>
+            </datalist>
+
+            <!-- 3.cities-->
+            <datalist id = 'cities'>
+              <option value="מרכז"></option>
+              <option value="דרום"></option>
+              <option value="צפון"></option>
+              <option value="מחוז ירושלים"></option>
+              <option value="השפלה"></option>
+              <option value="שרון"></option>
+            </datalist>
+            <!-------------->
+        </div>
+      </div>
+    </div>    
+    
+  </header>
+  <!-- END Header-->
+  
+
+   <!-- start companies Icons-->
+  <div class="wrapIconsJobs">
+    
+    <div class="iconJob1"></div>
+    <div class="iconJob2"></div>
+    <div class="iconJob3"></div>
+    <div class="iconJob4"></div>
+    <div class="divServicerNum">מעל אלף <br> מעסיקים!</div>
+    <!-------------->
+  </div>
+
+
+  <!-- popUp login-->
+  <div class="wrapper-popUp-login">
+    <div class="popUp-content">
+      <img class = "logo_popUp" src="/images/logo.png" alt="logo">
+      <img class = "exit_icon" onclick=toggleLogin() src="/images/exit_icon.png" alt="exit">
+      <div class=" wrap_input">
+        <div class="loginText">
+          <h1>התחברות</h1>
+        </div>
+  
+        <input class = "input_userName_login" type="text"placeholder="מייל">
+        <input class = "input_password_login" type="text"placeholder="ססמא">
+        <div class="div_loginBttn">
+          <a href="#" class="login_bttn">כניסה</a>
+        </div>
+        <div class="signUp_ishere"> 
+          <p> לא רשום? </p>
+          <a href="register.html"> ההרשמה פה </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- END popUp login-->
+  
+
+  
+</body>
+
+</html>
