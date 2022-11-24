@@ -37,6 +37,12 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 20px; 
       
 }
+.primeBttn{
+    color: white;
+    font-size: 27px;
+    text-decoration-color: #DC3549;
+
+}
 
 .signInBttn{
     font-weight: normal;
@@ -48,9 +54,17 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     cursor: pointer;
 }
 .signInBttn:hover{
+    cursor: pointer;
     background-color: white;
     color: #281158;
 }
+.primeBttn:hover{
+    
+    font-size: 30px;
+   
+
+}
+
 .logInBttn{
     font-weight: normal;
     background-color: #DC3549;
