@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/register/register_junior.css">
-    <title>Junior - register</title>
+  <meta charset="UTF-8">
+  <title>SignUp - junior</title>
+  <link rel="stylesheet" href="/css/register/register_junior.css">
+	<script src="/js/register/register_junior.js"></script>
+	<script src="/js/register/register_prime.js"></script>
+	<script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+    ></script>
+
 </head>
+
+
 <body>
+
     <a href="/screens/home.html">
-      <img class = "logo_popUp" src="/images/logo.png" alt="logo">
-    </a>
-    <div class="titleRegister">
-        <h1>הרשמה - ג'וניור</h1>
-    </div>
-   
+		<img class = "logo_popUp" src="/images/logo.png" alt="logo">
+	</a>
+
+	<div class="wrrap_signUp ">  	
+			<h1 style="text-align:center ;">הרשמה - גוניור</h1>
+			
+			<div class="wrapImage">
+                <div class="displayImage">
+                    <p class="logoTxt">לוגו</p>
+                    <img id= "imageFile" src="" >
+                </div>
+            </div>
+
+			<input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
+
+			<div class="signup">
+				<form>
+					<input type="text" name="txt" placeholder="שם מלא" required="">
+					<input type="email" name="email" placeholder="אימייל" required="">
+					<input type="password" name="pswd" placeholder="ססמא" required="">
+					<button class="bttn_SignUp_Junior">הרשמה</button>
+				</form>
+				<p style="text-align:center ;">רשום? <a href="/screens/home.html">הכניסה מהדף הראשי</a></p>
+				
+			</div>	
+			
+	</div>
+</body>
+</html>
+
+  
 </body>
 </html>

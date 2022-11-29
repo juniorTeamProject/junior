@@ -26,6 +26,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     
 }
 
+/* bttns sign */
 .wrapperBttns{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -38,10 +39,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
       
 }
 .primeBttn{
+    direction: rtl;
     color: white;
     font-size: 27px;
     text-decoration-color: #DC3549;
 
+}
+.primeBttn:hover{
+    font-size: 30px;
 }
 
 .signInBttn{
@@ -52,17 +57,13 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     text-align: center;   
     border: 1px solid #FFFFFF;
     cursor: pointer;
+    text-decoration: none;
 }
 .signInBttn:hover{
     cursor: pointer;
     background-color: white;
     color: #281158;
-}
-.primeBttn:hover{
-    
-    font-size: 30px;
-   
-
+    transition: .2s ease-in;
 }
 
 .logInBttn{
@@ -78,13 +79,17 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 .logInBttn:hover{
     background-color: white;
     color: #DC3549;
+    transition: .2s ease-in;
 }
+/* ------------ */
+
 .wraperNumofJobs{
     padding: 70px;
     display: flex;
     justify-content: center;
 }
 
+/* num&text of jobs */
 .wrTextJobs{
    
     text-align: center;
@@ -102,7 +107,9 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-weight: 400;
     font-size: 25px;
 }
+/* ------------ */
 
+/* search */
 .wrapperSearch{
     display: flex;
     justify-content: center;
@@ -120,8 +127,6 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
    
   
 }
-
-
 .Search > input{
     height: 60px;
     width: 20%;
@@ -156,10 +161,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     direction: rtl;
     text-align: right;
 }
+/* --------- */
 
 
 /* start div iconsJobs */
-
 .wrapIconsJobs{
     display: flex;
     justify-content: space-evenly;
@@ -206,10 +211,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     border-radius: 30px;
 }
 
-/* End div iconsJobs */
+/* -------------- */
+
 
 /* start popUp_login */
-
 .wrapper-popUp-login{
 
     background: rgb(0, 0, 0,0.9);
@@ -276,8 +281,6 @@ background-color: #E7E7E7;
     justify-content: center;
     align-items: center;
 }
-
-
 .login_bttn{
 width: 30%;
 padding: 12px;
@@ -286,7 +289,9 @@ border-radius: 10px;
 color: white;
 font-size: 17px;
 text-decoration: none;
-
+outline: none;
+border: none;
+cursor:pointer;
 }
 .signUp_ishere{
 padding: 10px;
@@ -299,3 +304,4 @@ color: #281158;
 .signUp_ishere a {
     color: #281158;
 }
+/* -------------- */
