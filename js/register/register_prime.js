@@ -1,6 +1,6 @@
 
-// choose image in signup from files
- function pickImage(input) {    
+// choose image in signup from file
+   function pickImage(input) {    
     document.querySelector('.logoTxt').innerHTML = '';  // clean logo txt
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -14,6 +14,6 @@
     }
   }
 
-    
+  
    
   

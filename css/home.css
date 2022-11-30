@@ -11,11 +11,12 @@
 }
 
 .logo{
-padding: 20px;
+padding: 5px;
+padding-right: 15px;
 position: absolute;
 right: 0;
 top: 0;
-font-size:60px ;
+font-size:3.6em ;
 color: white;
 font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
@@ -28,20 +29,23 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
 /* bttns sign */
 .wrapperBttns{
+    margin-left: 18px;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:20px ;
     display:flex; 
     width: 25%;
+    min-width: 250px;
     justify-content: space-evenly;
     padding: 20px;
-    font-size: 20px; 
+    font-size: 1.1em; 
       
 }
 .primeBttn{
+    margin-right: 15px;
     direction: rtl;
     color: white;
-    font-size: 27px;
+    font-size: 1.5em;
     text-decoration-color: #DC3549;
 
 }
@@ -50,6 +54,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .signInBttn{
+    display: flex;
+    justify-content: center;
     font-weight: normal;
     color: white;
     width: 25%;
@@ -96,7 +102,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: white;
 }
 .numOfJobs{
-    font-size: 60px;
+    font-size: 3.4em;
     font-family: 'Noto Sans Warang Citi';
     font-style: normal;
     font-weight: 600;
@@ -105,7 +111,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.5em;
 }
 /* ------------ */
 
@@ -128,11 +134,13 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   
 }
 .Search > input{
+    margin-right: 10px;
     height: 60px;
     width: 20%;
+    min-width: 100px;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 1em;
 }
 .wrapIconSearch{
     display: flex;
@@ -144,7 +152,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: white;
     background-color: #DC3549;
     vertical-align: bottom;
-    font-size: 30px;
+    font-size: 1em;
     border-radius: 150px;
     cursor: pointer;
     
@@ -153,8 +161,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
    font-size: 35px;
 }
 .vertivalLine{
-    border-left: 4px solid #e9e9e9;
-    height: 50;
+    border-left: 3px solid #e9e9e9;
+    height: 40;
   
 }
 .inputWhat,.inputWhere{
@@ -166,36 +174,43 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
 /* start div iconsJobs */
 .wrapIconsJobs{
+    
     display: flex;
     justify-content: space-evenly;
-   padding: 20px;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
 }
 .iconJob1{
-    
-    height: 100px;
-    width: 120px;
+    margin-right: 20px;
+    max-width: 160px;
+    height: 70px;
+    width: 20%;
     background-image: url('../images/job1.png') ;
     background-size:100% 100%;
+    
 }
 .iconJob2{
-   
-    height: 100px;
-    width: 120px;
+    margin-right: 20px;
+    max-width: 160px;
+    height: 70px;
+    width: 20%;
+    max-width: 120px;
     background-image: url('../images/job2.png') ;
     background-size:100% 100%; 
 }
 .iconJob3{
-   
-    height: 100px;
-    width: 100px;
+    margin-right: 20px;
+    max-width: 160px;
+    height: 70px;
+    width: 20%;
     background-image: url('../images/job3.png') ;
     background-size:100% 100%; 
 }
 .iconJob4{
-    
-    height: 100px;
-    width: 150px;
+    margin-right: 20px;
+    max-width: 160px;
+    height: 70px;
+    width: 20%;
     background-image: url('../images/job4.png') ;
     background-size:100% 100%; 
 }
@@ -205,10 +220,11 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     align-items: center;
     justify-content: center;
     width: 20%;
-    font-size: 28px;
+    max-width: 200px;
+    font-size: 1.3;
     direction: rtl;
     color: white;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 /* -------------- */
