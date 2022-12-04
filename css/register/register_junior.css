@@ -1,4 +1,4 @@
-body{
+body {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -8,37 +8,9 @@ body{
 	font-family: 'Jost', sans-serif;
 	background: linear-gradient(to top, #0f0c29, #302b63, #6c25c3);
 }
-.logo_popUp{
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    width: 20%;
-    min-width: 150px;
-    max-width: 200px;
-    }
-	.wrapImage{
-		
-		text-align: center;
-		cursor: pointer;
-		display: flex;
-		justify-content: center;
-	}
-	.displayImage{
-		
-		color: rgb(116, 116, 116);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #e0dede;
-		height: 100px;
-		width: 20%;
-		border-radius: 5px;
-		
-	   
-	}
 
-.wrrap_signUp{
-	height: 550px;
+.wrrap_signUp {
+	height: 70%;
 	width: 50%;
 	max-width: 700px;
 	min-width: 400px;
@@ -48,14 +20,49 @@ body{
 	box-shadow: 5px 20px 50px #000;
 }
 
+.logo_popUp {
 
-.signup{
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	width: 20%;
+	min-width: 150px;
+	max-width: 200px;
+}
+
+.wrapImage {
+
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+
+.displayImage {
+
+	color: rgb(116, 116, 116);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e0dede;
+	height: 100px;
+	width: 20%;
+	border-radius: 5px;
+
+
+}
+
+
+
+.signup {
 	position: relative;
-	width:100%;
+	width: 100%;
 	height: 100%;
 }
-.signUp_lable,.login_lable{
-	color:#281158;
+
+.signUp_lable,
+.login_lable {
+	color: #281158;
 	font-size: 2.4em;
 	justify-content: center;
 	display: flex;
@@ -64,7 +71,8 @@ body{
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-input{
+
+input {
 	direction: rtl;
 	width: 60%;
 	height: 20px;
@@ -77,7 +85,38 @@ input{
 	outline: none;
 	border-radius: 5px;
 }
-.bttn_SignUp_Junior{
+
+/* שאלון הרשמה */
+
+.jobScope_box {
+	padding: 5px;
+	height: 45px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	
+
+}
+
+.select_jobScope {
+	 appearance: none;
+       padding: 10px;
+        background-color: #e0dede;
+        height: 90%;
+        cursor: pointer;
+		border: none;
+		border-radius: 10px;
+		color: #838383;
+		direction: rtl;
+		width: 65%;
+		outline: white;
+}
+
+  
+
+
+
+.bttn_SignUp_Junior {
 	width: 40%;
 	height: 40px;
 	margin: 10px auto;
@@ -94,7 +133,7 @@ input{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
-button:hover{
+
+button:hover {
 	background: #6d44b8;
 }
-
