@@ -6,7 +6,10 @@
 	<title>SignUp - junior</title>
 
 	<!-- Css link -->
-	<link rel="stylesheet" href="/css/register/register_junior.css">
+		<link href = "/bootstrap/css/bootstrap.min.css" rel = "stylesheet">
+      <script src = "/scripts/jquery.min.js"></script>
+      <script src = "/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/css/register/register_junior.css">
 	<!-- CSS only -->
 
 	<!-- ajax script -->
@@ -14,9 +17,7 @@
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
 	<!-- Firebase script -->
-	<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>	
-	<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
+	
 
 	<!-- js script -->
 	<script src="/js/register/register.js"></script>
@@ -51,6 +52,27 @@
 
 
 				<!-- Registration questionnaire -->
+				<div class="wrap_multiselect">
+					<div class="multiselect">
+						<div class="selectBox_KnowLanguege" onclick="showCheckboxes()">
+							<select class="knowLanguege_select">
+								<option selected disabled value="ידע בשפות תכנות">ידע בשפות תכנות</option>
+								<div class="overSelect"></div>
+							</select>
+						</div>
+				</div>
+				
+					
+				</div>
+				<div class="wrapLables">
+					<div id="checkboxes">
+						<label for="Java"><input type="checkbox" id="Java">Java</label>
+						<label for="C++"><input type="checkbox" id="C++">C++</label>
+						<label for="Python"><input type="checkbox" id="Python">Python</label>
+					</div>
+				</div>
+				
+
 
 
 				<div class="jobScope_box">
@@ -89,12 +111,18 @@
 						<option value="דאטה">דאטה</option>
 
 					</select>
-					
 				</div>
 				
+				<div class="jobScope_box">
+					<select name="" id="" class="select_jobScope">
+						<option selected disabled value="">אזור</option>
+						<option value="דרום">דרום</option>
+						<option value="מרכז">מרכז</option>
+						<option value="צפון">צפון</option>
 
+					</select>
 
-
+				</div>
 				<!------------------->
 
 				<button class="bttn_SignUp_Junior">הרשמה</button>

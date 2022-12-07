@@ -39,7 +39,6 @@ body {
 }
 
 .displayImage {
-
 	color: rgb(116, 116, 116);
 	display: flex;
 	justify-content: center;
@@ -99,20 +98,70 @@ input {
 }
 
 .select_jobScope {
-	 appearance: none;
-       padding: 10px;
-        background-color: #e0dede;
-        height: 90%;
-        cursor: pointer;
-		border: none;
-		border-radius: 10px;
-		color: #838383;
-		direction: rtl;
-		width: 65%;
-		outline: white;
+	appearance: none;
+	padding: 10px;
+	background-color: #e0dede;
+	height: 90%;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	color: #838383;
+	direction: rtl;
+	width: 65%;
+	outline: white;
+	margin-top: 10px;
 }
 
-  
+.knowLanguege_select{
+	padding: 12px;
+	cursor: pointer;
+	border: none;
+	background-color: #e0dede;
+	
+}
+
+.wrapLables{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.wrap_multiselect{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	
+}
+.multiselect{
+	border-radius: 8px;
+	background-color: #e0dede;
+	width: 64%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+}
+.wrapLables label{
+	
+	color: #281158;
+}
+.selectBox_KnowLanguege{
+	
+	position: relative;
+}
+.overSelect{
+	position: absolute;
+	left: 0; right:0; top:0; bottom: 0;
+}
+#checkboxes{
+	display: none;
+	
+}
+#checkboxes label{
+	display: block;
+}
+
+
+  /* ----------------------- */
 
 
 
