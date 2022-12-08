@@ -22,6 +22,9 @@
       src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
     ></script>
 
+    <script src="/js/firebase/firebase-config.js" type="module"></script>
+    <script src="/js/register/register.js"></script>
+    
     <title>Register - prime</title>
 </head>
 
@@ -43,10 +46,10 @@
             <input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
             
 			<div class="signup">
-				<form>
-					<input type="text" name="txt" placeholder="שם החברה" required="">
-					<input type="email" name="email" placeholder="אימייל" required="">
-					<input type="password" name="password" placeholder="ססמא" required="">
+				<form id="signUp-prime-form">
+					<input id="company" type="text" name="txt" placeholder="שם החברה" required="">
+					<input id="email" type="email" name="email" placeholder="אימייל" required="">
+					<input id="password" type="password" name="password" placeholder="ססמא" minlength="6" required>
 					
 					<button class="bttn_SignUp_Prime">הרשמה</button>
 				</form>

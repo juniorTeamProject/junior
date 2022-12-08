@@ -1,7 +1,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc, collection,addDoc,updateDoc,deleteDoc,deleteField } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
+import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
 
 
 const firebaseApp = initializeApp({
@@ -18,11 +18,10 @@ const db = getFirestore(firebaseApp);
 
 
 
-// check if user logged in
+// check if user logged in or not
 onload = onAuthStateChanged(auth,user =>{
   if (user != null)
   {
-    
     console.log('logged in!');
     
   }else{
@@ -30,19 +29,14 @@ onload = onAuthStateChanged(auth,user =>{
   }
  }) 
 
-
-
-   
-
- // form
+ // Junior form
  let signForm = document.querySelector('#signUp-junior-form');
- 
-// --------- when user SIGN IN - on click sumbmit ------
+ if (window.location == "../../screens/register/register-junior.html"){
+// --------- when Junior SIGN UP - on click sumbmit ------
 signForm.addEventListener('submit',(e)=>{
     e.preventDefault();
 
-
-        //get user info
+        //get Junior info
     let _fullName = signForm['fullName'].value;
     let _email = signForm['email'].value;
     let _password = signForm['password'].value;
@@ -54,11 +48,10 @@ signForm.addEventListener('submit',(e)=>{
     let _languages = signForm['languages-select'].value;
 
 
- // func ADDING Ducument to firebase (user data)
+ // func ADDING Ducument to firebase (junior data)
  async function AddDuc_AutoID()
  {
     var ref = collection(db,"juniors");
-
     const docRef = await addDoc(ref,
     {
       name: _fullName,
@@ -71,33 +64,97 @@ signForm.addEventListener('submit',(e)=>{
       jobField: _jobField,
       locationJob: _locationJob
     })
-  .then(()=>{
-    alert("data added");
-  })
   .catch((error)=>{
     alert("Unsuccessful error"+error);
-  })
-   
+  })  
 }
-
-    //user sign in
+    //user sign up
     createUserWithEmailAndPassword(auth, _email, _password)
       .then((userCredential) => {
-        // Signed in 
+        // Signed up 
         const user = userCredential.user;
         
         // ADDING Ducument
-         AddDuc_AutoID();
-        alert('user sign in!');
-       
+        AddDuc_AutoID().then(() => {
+        alert('נרשמת בהצלחה!');
+        window.location.assign("../../screens/home.html");
+        }) 
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
       });
+})
+}else{
 
+// Prime form
+let signPrForm = document.querySelector('#signUp-prime-form');
+// --------- when Prime SIGN UP - on click sumbmit ------
+signPrForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
 
+        //get Prime info
+    let company = signPrForm['company'].value;
+    let email = signPrForm['email'].value;
+    let password = signPrForm['password'].value;
+
+ // func ADDING Ducument to firebase (prime data)
+ async function AddDuc_AutoID_PRIME()
+ {
+    var ref = collection(db,"primes");
+    const docRef = await addDoc(ref,
+    {
+      company: company,
+      email: email,
+      password :password,
+    })
+  .catch((error)=>{
+    alert("Unsuccessful error"+error);
+  })  
+}
+    //user sign up
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        
+        // ADDING Ducument
+        AddDuc_AutoID_PRIME().then(() => {
+        alert('נרשמת בהצלחה!');
+        window.location.assign("../../screens/home.html");
+        }) 
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
+})
+}
+
+// ------Junior Log In------
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e)=>{
+  e.preventDefault();
+ 
+  // get user info
+  let email = loginForm['login-email'].value;
+  let password = loginForm['login-password'].value;  
+  auth.signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert('התחברת בהצלחה!');
+    loginForm.reset();
+    window.location.assign("../../screens/home.html");
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+  });
+ 
 })
 
 
