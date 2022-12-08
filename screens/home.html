@@ -19,7 +19,7 @@
       
     <div class="wrapper">
         
-      <div class="logo">jun</div> 
+      <div class="logo">Jun</div> 
       
          <!--bttn login, etc-->
       <div class="wrapperBttns">
@@ -97,15 +97,15 @@
   <!-- popUp login-->
   <div class="wrapper-popUp-login">
     <div class="popUp-content">
-      <img class = "logo_popUp" src="/images/logo.png" alt="logo">
+      <a href="home.html"><img class = "logo_popUp" src="/images/logo.png" alt="logo"></a>
       <img class = "exit_icon" onclick=toggleLogin() src="/images/exit_icon.png" alt="exit">
       <div class=" wrap_input">
         <div class="loginText">
           <h1>התחברות</h1>
         </div>
-        <form action="">
-        <input class = "input_userName_login" type="text"placeholder="מייל" required="">
-        <input class = "input_password_login" type="password"placeholder="ססמא"required="">
+        <form action="" id="login-form">
+        <input id="login-email" class = "login-email" type="email"placeholder="מייל" required>
+        <input id="login-password" class = "login-password" type="password"placeholder="ססמא" minlength="6" required>
         <div class="div_loginBttn">
           <button class="login_bttn">כניסה</button>
         </div>
