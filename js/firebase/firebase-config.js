@@ -1,7 +1,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc, collection,addDoc,updateDoc,deleteDoc,deleteField } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
+import {getAuth,onAuthStateChanged, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
 
 
 const firebaseApp = initializeApp({
@@ -19,8 +19,8 @@ const db = getFirestore(firebaseApp);
 
 
 // check if user logged in or not
-onload = onAuthStateChanged(auth,user =>{
-  if (user != null)
+auth.onAuthStateChanged(user =>{
+  if (user)
   {
     console.log('logged in!');
     
@@ -29,11 +29,11 @@ onload = onAuthStateChanged(auth,user =>{
   }
  }) 
 
- // Junior form
- let signForm = document.querySelector('#signUp-junior-form');
- if (window.location == "../../screens/register/register-junior.html"){
+ //////////---Junior Sign Up-----///////
+ if (window.location.href == "http://127.0.0.1:5500/screens/register/register_junior.html"){
 // --------- when Junior SIGN UP - on click sumbmit ------
-signForm.addEventListener('submit',(e)=>{
+  let signForm = document.querySelector('#signUp-junior-form');
+  signForm.addEventListener('submit',(e)=>{
     e.preventDefault();
 
         //get Junior info
@@ -86,7 +86,9 @@ signForm.addEventListener('submit',(e)=>{
         alert(errorMessage);
       });
 })
-}else{
+}
+ //////////---Prime Sign Up-----///////
+if (window.location.href == "http://127.0.0.1:5500/screens/register/register_prime.html"){
 
 // Prime form
 let signPrForm = document.querySelector('#signUp-prime-form');
@@ -134,14 +136,16 @@ signPrForm.addEventListener('submit',(e)=>{
 }
 
 // ------Junior Log In------
+if (window.location.href == "http://127.0.0.1:5500/screens/home.html"){
 const loginForm = document.querySelector('#login-form');
+console.log('log!!');
 loginForm.addEventListener('submit', (e)=>{
   e.preventDefault();
  
   // get user info
   let email = loginForm['login-email'].value;
   let password = loginForm['login-password'].value;  
-  auth.signInWithEmailAndPassword(auth, email, password)
+  signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -156,6 +160,7 @@ loginForm.addEventListener('submit', (e)=>{
   });
  
 })
+}
 
 
 
