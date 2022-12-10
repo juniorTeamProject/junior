@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Register - prime</title>
     <!-- Css link -->
     <link rel="stylesheet" href="/css/register/register_prime.css">
-    
-    
-    <!-- js script -->
-	  <script src="/js/register/register.js"></script>
     
     <!-- ajax script --> 
     <script
@@ -21,11 +17,6 @@
       class="jsbin"
       src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
     ></script>
-
-    <script src="/js/firebase/firebase-config.js" type="module"></script>
-    <script src="/js/register/register.js"></script>
-    
-    <title>Register - Prime</title>
 </head>
 
 <body>
@@ -38,18 +29,15 @@
 
             <div class="wrapImage">
                 <div class="displayImage">
-                    <p class="logoTxt">לוגו</p>
-                    <img id= "imageFile" src="" >
+                    <img src="/images/prime_logo.png" >
                 </div>
             </div>
-
-            <input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
             
 			<div class="signup">
-				<form id="signUp-prime-form">
-					<input id="company" type="text" name="txt" placeholder="שם החברה" required="">
-					<input id="email" type="email" name="email" placeholder="אימייל" required="">
-					<input id="password" type="password" name="password" placeholder="ססמא" minlength="6" required>
+				<form id="signUp_prime_form" onsubmit="signUp_Prime(event);">
+					<input id="companyName" type="text" name="txt" placeholder="שם החברה" required="">
+					<input id="email_prime" type="email" name="email" placeholder="אימייל" required="">
+					<input id="password_prime" type="password" name="password" placeholder="סיסמא" minlength="6">
 					
 					<button class="bttn_SignUp_Prime">הרשמה</button>
 				</form>
@@ -59,5 +47,9 @@
 			
 	</div>
    
+
+  <!-- js script -->
+   
+  <script src="/js/register/register.js" ></script>
 </body>
 </html>

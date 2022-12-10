@@ -19,7 +19,7 @@
       
     <div class="wrapper">
         
-      <div class="logo">Jun</div> 
+      <a href="home.html"><div class="logo">Jun</div></a>
       
          <!--bttn login, etc-->
       <div class="wrapperBttns">
@@ -34,47 +34,12 @@
           <div class="textJobs">משרות באתר</div>
         </div>
       </div>
-
-        <!--Search-->
-      <div class="wrapperSearch">
-        <div class="Search">
-            <div class="wrapIconSearch">
-              <i class="fa-regular fa-magnifying-glass"></i>
-            </div>
-            <input class="inputWhere" placeholder='איפה?' type="text"list='cities' >
-            <div class="vertivalLine"></div>
-            <input class="inputWhat" placeholder='איזו עבודה?' type="text" list="jobs">
-              <!-------------->
-
-              <!-- data lists-->
-              <!-- 1.languange-->
-            <datalist id = 'languges'>
-                <option value="JavaScript"></option>
-                <option value="Java"></option>
-                <option value="C++"></option>
-                <option value="C"></option>
-            </datalist>
-            <!-- 2.jobs-->
-            <datalist id = 'jobs'>
-              <option value="web"></option>
-              <option value="mobile"></option>
-              <option value="Embeded"></option>
-              <option value="Ai"></option>
-              <option value="Data analyst"></option>
-              <option value="cyver"></option>
-            </datalist>
-
-            <!-- 3.cities-->
-            <datalist id = 'cities'>
-              <option value="מרכז"></option>
-              <option value="דרום"></option>
-              <option value="צפון"></option>
-              <option value="מחוז ירושלים"></option>
-              <option value="השפלה"></option>
-              <option value="שרון"></option>
-            </datalist>
-            <!-------------->
-        </div>
+      <div class="divSlogen">
+        <h1 id="slogen" calss="slogen">
+          <div class="fullLogoSlogen">
+            <div class="slogenLogo">ior</div>Jun
+          </div> מתאימים את המשרה אלייך!
+        </h1>
       </div>
     </div>    
     
@@ -103,7 +68,7 @@
         <div class="loginText">
           <h1>התחברות</h1>
         </div>
-        <form action="" id="login-form">
+        <form id="signIn_form" onsubmit="signIn(event)">
         <input id="login-email" class = "login-email" type="email"placeholder="מייל" required>
         <input id="login-password" class = "login-password" type="password"placeholder="ססמא" minlength="6" required>
         <div class="div_loginBttn">
@@ -119,9 +84,14 @@
     </div>
   </div>
   <!-- END popUp login-->
-  
-
-  
+  <div class="katavot">
+    <div class="katavot1">
+      <img src="/images/katava1.jpeg" width="600">
+      <img src="/images/katava2.jpg" width="650" height="385">
+    </div>
+    <br>
+    <img src="/images/katava3.png" height="300">
+    <img src="/images/katava4.png"  height="300">
+  </div>
 </body>
-
 </html>
