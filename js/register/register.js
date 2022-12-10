@@ -3,7 +3,8 @@
 //----------------------------------------JUNIOR----------------------------
 
 // global vars 
-let juniors_arr = []; // all Juniors users 
+let currentUser = {}; // the user that online
+let juniors_arr = []; // all Juniors users
 let currentJunior = {} ; // the corrent Junior that Sign-In
 let indexCurrentJunior = 0; // the index and number of juniors that sign-in
 
@@ -23,7 +24,7 @@ const signUp_Jounior = e => {
   //check and convert the item in local to object
    juniors_arr = JSON.parse(localStorage.getItem('juniors_arr')) || [];
    indexCurrentJunior = JSON.parse(localStorage.getItem('indexJunior')) || 0;
-   currentJunior = JSON.parse(localStorage.getItem('coorrentJunior')) || {};
+   currentJunior = JSON.parse(localStorage.getItem('currentJunior')) || {};
 
    // check if the userEmail  exist
   let exist = juniors_arr.length && 
@@ -37,21 +38,25 @@ const signUp_Jounior = e => {
   if(!exist){
      juniors_arr.push(
       { 
-       name: _fullName,
-       email: _email_junior,
-       password: _password_junior,
-       jobScope: _jobScope,
-       langunge : _langunge,
-       jobType: _jobType,
-       knowledge: _knowledge,
-       jobField: _jobField,
-       locationJob: _locationJob
+       User: "Junior",
+       Status: "Online", 
+       Name: _fullName,
+       Email: _email_junior,
+       Password: _password_junior,
+       JobScope: _jobScope,
+       Langunge : _langunge,
+       JobType: _jobType,
+       Knowledge: _knowledge,
+       JobField: _jobField,
+       LocationJob: _locationJob
       });
 
       // save data at local
       localStorage.setItem('juniors_arr', JSON.stringify(juniors_arr));
-      currentJunior = juniors_arr[indexCurrentJunior];
-      localStorage.setItem('coorrentJunior', JSON.stringify(currentJunior));
+      currentUser = juniors_arr[indexCurrentJunior];
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
+      currentJunior = currentUser;
+      localStorage.setItem('currentJunior', JSON.stringify(currentJunior));
       console.log(juniors_arr[indexCurrentJunior]);
       indexCurrentJunior+=1;
       localStorage.setItem('indexJunior', JSON.stringify(indexCurrentJunior));
@@ -89,7 +94,7 @@ const signUp_Prime = e => {
   //check and convert the item in local to object
   primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
   indexCurrentPrime = JSON.parse(localStorage.getItem('indexPrime')) || 0;
-  CurrentPrime = JSON.parse(localStorage.getItem('correntPrime')) || {};
+  CurrentPrime = JSON.parse(localStorage.getItem('CurrentPrime')) || {};
 
   // check if the userEmail  exist
   let exist = primes_arr.length && 
@@ -99,17 +104,21 @@ const signUp_Prime = e => {
   //if user NOT exist add the user to joniors_arr and save local
   if(!exist){
     primes_arr.push(
-     { 
-      companyName: _companyName,
-      email: _email_prime,
-      password: _password_prime,
+     {
+      User : "Prime",
+      Status: "Online", 
+      CompanyName: _companyName,
+      Email: _email_prime,
+      Password: _password_prime,
      });
 
      // save data at local
      localStorage.setItem('primes_arr', JSON.stringify(primes_arr));
-     CurrentPrime = primes_arr[indexCurrentPrime];
-     localStorage.setItem('correntPrime', JSON.stringify(CurrentPrime));
-     console.log(primes_arr[indexCurrentJunior]);
+     currentUser = primes_arr[indexCurrentJunior];
+     localStorage.setItem('currentUser', JSON.stringify(currentUser));
+     CurrentPrime = currentUser;
+     localStorage.setItem('CurrentPrime', JSON.stringify(CurrentPrime));
+     console.log(primes_arr[indexCurrentPrime]);
      indexCurrentPrime+=1;
      localStorage.setItem('indexPrime', JSON.stringify(indexCurrentPrime));
      //-----
@@ -117,7 +126,7 @@ const signUp_Prime = e => {
     document.querySelector('#signUp_prime_form').reset();
     document.getElementById('companyName').focus();
     alert("נרשמת בהצלחה!");
-    window.location.assign("/screens/after-Login/juniorAfterLogin.html"); 
+    window.location.assign("/screens/after-Login/primeAfterLogIn.html"); 
   } else
   {
     // ERROR - user exist
@@ -129,14 +138,46 @@ const signUp_Prime = e => {
 
 
 
-
-
-
-
 //----------------------------------------END PRIME--------------------------------
 
 
+//-------------------------------ADMIN-------------------------------------
 
+
+let admins_arr = []; // all Admin users
+let indexCurrentAdmin = 0; // the index and number of Admins
+let _emailAdmin;
+
+for (let i = 0; i < 4; i++) {
+  if (i == 0){
+    _emailAdmin = "omcl97@gmail.com";
+  }
+  if (i == 1){
+    _emailAdmin = "matanka7@gmail.com";
+  }
+  if (i == 2){
+    _emailAdmin = "sahargabay@gmail.com";
+  }
+  if (i == 3){
+    _emailAdmin = "ofekatayak@gmail.com";
+  }
+  admins_arr.push(
+    {
+     User : "Admin",
+     Status: "Offline", 
+     Email: _emailAdmin,
+     Password: "123456",
+    });
+  localStorage.setItem('admins_arr', JSON.stringify(admins_arr));
+  console.log(admins_arr[indexCurrentAdmin]);
+  indexCurrentAdmin+=1;
+  localStorage.setItem('indexAdmin', JSON.stringify(indexCurrentAdmin));
+}
+
+
+
+
+//----------------------------------------END ADMIN--------------------------------
 
 
 
