@@ -26,9 +26,13 @@ const signUp_Jounior = e => {
    currentJunior = JSON.parse(localStorage.getItem('coorrentJunior')) || {};
 
    // check if the userEmail  exist
-   let exist = (juniors_arr.length && 
-    JSON.parse(localStorage.getItem('juniors_arr')).some(data => data.email.toLowerCase() == email)
-    || (primes_arr.length && JSON.parse(localStorage.getItem('primes_arr')).some(data => data.email.toLowerCase() == email);
+  let exist = juniors_arr.length && 
+      JSON.parse(localStorage.getItem('juniors_arr')).some(data => 
+          data.email.toLowerCase() == _email_junior.toLowerCase()  
+         
+      );
+
+
   //if user NOT exist add the user to joniors_arr and save local
   if(!exist){
      juniors_arr.push(
@@ -88,9 +92,9 @@ const signUp_Prime = e => {
   CurrentPrime = JSON.parse(localStorage.getItem('correntPrime')) || {};
 
   // check if the userEmail  exist
-  let exist = (juniors_arr.length && 
-    JSON.parse(localStorage.getItem('juniors_arr')).some(data => data.email.toLowerCase() == email)
-    || (primes_arr.length && JSON.parse(localStorage.getItem('primes_arr')).some(data => data.email.toLowerCase() == email);   
+  let exist = primes_arr.length && 
+    JSON.parse(localStorage.getItem('primes_arr')).some(data => 
+      data.email.toLowerCase() == _email_prime.toLowerCase());    
     
   //if user NOT exist add the user to joniors_arr and save local
   if(!exist){
