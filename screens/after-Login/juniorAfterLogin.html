@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="/css/after-Login/juniorAfterLogIn.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-  <script src="/js/home.js"></script>
-
 </head>
 
 <body>
@@ -28,7 +26,7 @@
 
       <!--bttn login, etc-->
       <div class="wrapperBttns">
-        <button id="logout" class="logoutButton">התנתק</button>
+        <button id="logout" class="logoutButton" onclick="signOut(event)" >התנתק</button>
         <a href="JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
         <a href="juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
       </div>
@@ -70,6 +68,9 @@
     <img src="/images/katava3.png" height="300">
     <img src="/images/katava4.png"  height="300">
   </div>
+
+
+<script src="/js/home.js"></script>
 </body>
 
 </html>

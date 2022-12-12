@@ -1,8 +1,8 @@
 // ---------local data--------
-let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
+allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
 //corrent User
-let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-let AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) || 0; //admins Setup
+currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) || 0; //admins Setup
 //-----------
 
 //-------------------------------ADMIN-------------------------------------
@@ -53,7 +53,8 @@ if (AdminsSetup == 0){
 
 
 
-//----------------------------SIGNIN--------------------------------------
+//----------------------------SIGNIN/ Login--------------------------------------
+
 // user signIn after signUp
 function signIn(e) {
     let email = document.querySelector('#login-email').value;
@@ -62,9 +63,8 @@ function signIn(e) {
     currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     // check if user exist
     let exist = (allUsers_arr.length && 
-    JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password))
+    JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
     let user  = allUsers_arr.filter(user => user.Email == email);
-    
     
     //user not exist
     if(!exist){
@@ -72,26 +72,39 @@ function signIn(e) {
     }
     else{
         localStorage.setItem("currentUser",JSON.stringify(user));
-        currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+        currentUser = user;
         console.log(currentUser);
         alert("התחברת בהצלחה!");
-        switch (currentUser.UserType) {
-            case "Junior":
-                window.location.assign("/screens/after-Login/juniorAfterLogin.html"); 
-                break;
-            case "Prime":
-                window.location.assign("/screens/after-Login/primeAfterLogIn.html"); 
-                break;
-            case "Admin":
-                window.location.assign("/screens/after-Login/adminAfterLogIn.html"); 
-                break;
+        if (currentUser[0].UserType == "Admin") {
+            window.location.assign("/screens/after-Login/adminAfterLogIn.html"); 
         }
-        //And put the editted object back to cache
+        if (currentUser[0].UserType == "Prime") {
+            window.location.assign("/screens/after-Login/primeAfterLogIn.html");
+        }
+        if (currentUser[0].UserType == "Junior") {
+            window.location.assign("/screens/after-Login/juniorAfterLogIn.html");
+        }
     }
     e.preventDefault();  
   }
+
+  //---------------------------- End SIGNIN/ Login--------------------------------------
   
+
+//----------------------------LOGOUT--------------------------------------
+
+function signOut(e) {
+    // reset currentUser
+    currentUser = {};
+    localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    console.log(currentUser);
+    // move to Home.html
+    window.location.assign("/screens/home.html");
+    e.preventDefault();  
+  }
+
+
+//----------------------------End Logout--------------------------------------
 
   //------------------------------------FUNC------------------------------------
   // login bttn - func to open\close the popUp
