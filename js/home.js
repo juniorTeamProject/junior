@@ -1,69 +1,97 @@
 // ---------local data--------
-//corrent JUNIOR
-let currentJunior = JSON.parse(localStorage.getItem('coorrentJunior')) || {};
-//corrent PRIME
-let currentPrime = JSON.parse(localStorage.getItem('correntPrime')) || {};
+let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
+//corrent User
+let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+let AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) || 0; //admins Setup
 //-----------
-// let currentUser = {}; // the user that online
+
+//-------------------------------ADMIN-------------------------------------
+if (AdminsSetup == 0){
+    let admins_arr = []; // all Admin users
+    let indexCurrentAdmin = 0; // the index and number of Admins
+    let _emailAdmin;
+  
+    for (let i = 0; i < 4; i++) {
+      if (i == 0){
+        _emailAdmin = "omcl97@gmail.com";
+      }
+      if (i == 1){
+        _emailAdmin = "matanka7@gmail.com";
+      }
+      if (i == 2){
+        _emailAdmin = "sahargabay@gmail.com";
+      }
+      if (i == 3){
+        _emailAdmin = "ofekatayak@gmail.com";
+      }
+      admins_arr.push(
+        {
+        UserType: "Admin",
+        Email: _emailAdmin,
+        Password: "123456",
+        });
+      allUsers_arr.push(
+        {
+        UserType: "Admin",
+        Email: _emailAdmin,
+        Password: "123456",
+        });
+      AdminsSetup = 1;
+      indexCurrentAdmin+=1;
+      localStorage.setItem('AdminsSetup', JSON.stringify(AdminsSetup));
+      localStorage.setItem('indexAdmin', JSON.stringify(indexCurrentAdmin));
+      localStorage.setItem('admins_arr', JSON.stringify(admins_arr));
+      localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr));
+      console.log(admins_arr[indexCurrentAdmin]);
+    }
+  }
+  
+  //----------------------------------------END ADMIN--------------------------------
 
 
-//----------------------------SIGN-IN / Log In--------------------------------------
+
+
+
+
+//----------------------------SIGNIN--------------------------------------
 // user signIn after signUp
 function signIn(e) {
     let email = document.querySelector('#login-email').value;
     let password = document.querySelector('#login-password').value;
 
-    let juniors_arr = JSON.parse(localStorage.getItem('juniors_arr')) || [];
-    let primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
-
+    currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     // check if user exist
-    let exist = (juniors_arr.length && 
-    JSON.parse(localStorage.getItem('juniors_arr')).some(data => data.email.toLowerCase() == email && data.password.toLowerCase() == password))
-    || (primes_arr.length && JSON.parse(localStorage.getItem('primes_arr')).some(data => data.email.toLowerCase() == email && data.password.toLowerCase() == password));
+    let exist = (allUsers_arr.length && 
+    JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password))
+    let user  = allUsers_arr.filter(user => user.Email == email);
+    
     
     //user not exist
     if(!exist){
         alert("שם משתמש או סיסמא אינם נכונים!");
     }
     else{
-        for (let index = 0; i < juniors_arr.length; index++) {
-            if (juniors_arr[index].JSON.parse(localStorage.getItem('juniors_arr')).some(data => data.email.toLowerCase() == email)) {
-                alert("התחברת בהצלחה!");
-                currentUser = juniors_arr[index];
-                window.location.assign("/screens/after-Login/juniorAfterLogIn.html"); 
+        localStorage.setItem("currentUser",JSON.stringify(user));
+        currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+        console.log(currentUser);
+        alert("התחברת בהצלחה!");
+        switch (currentUser.UserType) {
+            case "Junior":
+                window.location.assign("/screens/after-Login/juniorAfterLogin.html"); 
                 break;
-            }
-        }
-        for (let index = 0; index < primes_arr.length; index++) {
-            if (primes_arr[index].JSON.parse(localStorage.getItem('primes_arr')).some(data => data.email.toLowerCase() == email)) {
-                alert("התחברת בהצלחה!");
-                currentUser = primes_arr[index];
+            case "Prime":
                 window.location.assign("/screens/after-Login/primeAfterLogIn.html"); 
                 break;
-            }
-        }
-        for (let index = 0; index < admins_arr.length; index++) {
-            if (admins_arr[index].JSON.parse(localStorage.getItem('admins_arr')).some(data => data.email.toLowerCase() == email)) {
-                alert("התחברת בהצלחה!");
-                currentUser = admins_arr[index];
+            case "Admin":
                 window.location.assign("/screens/after-Login/adminAfterLogIn.html"); 
                 break;
-            }  
         }
-        }
-
-    e.preventDefault();
+        //And put the editted object back to cache
     }
-    
-//   changeDiv();
-//   function changeDiv()
-//   {
-//       document.querySelector('.userName').innerHTML = JSON.stringify(currentPrime.companyName);
-//   }
+    e.preventDefault();  
+  }
   
-
-
-
 
   //------------------------------------FUNC------------------------------------
   // login bttn - func to open\close the popUp
