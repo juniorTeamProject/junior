@@ -9,7 +9,7 @@ let indexCorrentJunior = 0; // the index and number of juniors that sign in
 
 
 //signUp Junior
-const signUp_Jounior = e => {
+exoprt.signUp_Jounior = e => {
   // get Junior data
   let _fullName = document.querySelector('#fullName').value;
   let _email_junior = document.querySelector('#email').value;
