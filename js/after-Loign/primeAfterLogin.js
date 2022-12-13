@@ -1,2 +1,5 @@
+
+//add image with current user
 // currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-// document.querySelector('#check').innerHTML = `שלום ${currentUser[0].CompanyName}`;
+// // document.querySelector('#check').innerHTML = currentUser.img; 
+//  document.querySelector("#check").setAttribute('src',currentUser.img);

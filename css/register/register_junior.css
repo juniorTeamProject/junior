@@ -40,14 +40,18 @@ body {
 
 .displayImage {
 	display: flex;
-	text-align: center;
+	align-items: center;
 	justify-content: center;
 	background-color: #e0dede;
-	height: 150px;
-	width: 125px;
+	height: 100px;
+	width: 110px;
 	border-radius: 5px;
 }
 
+.imageFile{
+	border-radius: 12px;
+	height: 100px;
+}
 
 
 .signup {

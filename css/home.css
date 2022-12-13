@@ -118,24 +118,15 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 /* ------------ */
 
 .divSlogen{
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
 }
-.slogenLogo{
-    color: #DC3549;
-    display: inline-block;
-}
-.fullLogoSlogen{
-    font-size: 1.5em;
-    display: inline-block;
-    font-weight: bold;
-}
+
 #slogen{
     direction: rtl;
     text-align: center;
     color: white;
-    font-size: 3em;
-    border: solid white 4px;
+    font-size: 2em;
 }
 
 /* start div iconsJobs */
@@ -147,9 +138,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
-.wrapIconsJobs .divServicerNum{
-    font-size: 1.5em;
+.wrapIconsJobs{
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
 }
+
 .iconJob1{
     margin-right: 20px;
     max-width: 160px;

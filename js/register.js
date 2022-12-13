@@ -25,6 +25,7 @@ const signUp_Jounior = e => {
   juniors_arr = JSON.parse(localStorage.getItem('juniors_arr')) || [];
   indexCorrentJunior = JSON.parse(localStorage.getItem('indexJunior')) || 0;
   currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+  let _img = localStorage.getItem('userImg'); // get img
 
    // check if the userEmail  exist
    let exist = (allUsers_arr.length && 
@@ -44,7 +45,8 @@ const signUp_Jounior = e => {
        JobType: _jobType,
        Knowledge: _knowledge,
        JobField: _jobField,
-       LocationJob: _locationJob
+       LocationJob: _locationJob,
+       img:_img
       });
     juniors_arr.push(
       { 
@@ -57,7 +59,8 @@ const signUp_Jounior = e => {
       JobType: _jobType,
       Knowledge: _knowledge,
       JobField: _jobField,
-      LocationJob: _locationJob
+      LocationJob: _locationJob,
+      img:_img
       });
       
     // save data at local
@@ -97,7 +100,8 @@ const signUp_Prime = e => {
   let _companyName = document.querySelector('#companyName').value;
   let _email_prime = document.querySelector('#email_prime').value;
   let _password_prime = document.querySelector('#password_prime').value;
-
+  let _img = localStorage.getItem('userImg');
+  
   //check and convert the item in local to object
   primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
   indexCurrentPrime = JSON.parse(localStorage.getItem('indexPrime')) || 0;
@@ -115,6 +119,7 @@ const signUp_Prime = e => {
        CompanyName: _companyName,
        Email: _email_prime,
        Password: _password_prime,
+       img: _img
       });
     primes_arr.push(
      {
@@ -122,6 +127,7 @@ const signUp_Prime = e => {
       CompanyName: _companyName,
       Email: _email_prime,
       Password: _password_prime,
+      img: _img
      });
      // save data at local
      localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users
@@ -155,19 +161,21 @@ const signUp_Prime = e => {
 
 //-----------------------------------------another funf-----------------------------
 
-// choose image in signup from file
-// function pickImage(input) {    
-//     document.querySelector('.logoTxt').innerHTML = '';  // clean logo txt
-//     if (input.files && input.files[0]) {
-//       var reader = new FileReader();
-  
-//       reader.onload = function (e) {
-//         $('#imageFile').attr('src', e.target.result).width(100).height(90);
-//         console.log(e.target.result);
-//       };
+//choose image in signup from file
+function pickImage(input) {    
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
       
-//       reader.readAsDataURL(input.files[0]);
-//     }
-//   }
+      reader.onload = function (e) {
+        let url = e.target.result;
+      $('.imageFile').attr('src', url).width(100).height(90);
+      localStorage.setItem('userImg',url);
+      console.log(e.target.result);
+
+      };
+      
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
 
  

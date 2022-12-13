@@ -16,7 +16,10 @@ body{
     min-width: 150px;
     max-width: 200px;
     }
-
+.imageFile{
+	border-radius: 12px;
+	
+}
 
 .wrrap_signUp{
 	height: 580px;
@@ -39,14 +42,14 @@ body{
 
 .displayImage {
 	display: flex;
-	text-align: center;
+	align-items: center;
 	justify-content: center;
 	background-color: #e0dede;
-	height: 130px;
-	width: 130px;
-	border-radius: 5px;
+	height: 100px;
+	width: 110px;
+	border-radius: 10px;
 }
-
+.image
 
 .signup{
 	position: relative;
