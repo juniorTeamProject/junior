@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/css/after-Login/primeAfterLogIn.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-  <script src="/js/home.js"></script>
+  
 
 </head>
 
@@ -28,7 +28,7 @@
 
       <!--bttn  after login, etc-->
       <div class="wrapperBttns">
-        <a href="home.html"><button class="logoutButton">התנתק</button></a>
+      <button class="logoutButton" onclick="signOut(this)">התנתק</button>
         <a href="#"><button class="myProfile">הפרופיל שלי</button></a>
         <a href="#"><button class="uploudJobs">העלאת משרות</button></a>
       </div>
@@ -68,6 +68,8 @@
     <img class="tipImg"src="/images/tip2.jpeg" width="25%">
     <img class="tipImg" src="/images/tip3.jpeg" width="25%">
   </div>
+
+  <script src="/js/home.js"></script>
 </body>
 
 </html>
