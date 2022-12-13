@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 
@@ -104,74 +105,29 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 .numOfJobs{
     font-size: 3.4em;
-    font-family: 'Noto Sans Warang Citi';
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 600;
 }
 .textJobs{
-    font-family: 'Open Sans';
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5em;
 }
 /* ------------ */
 
-/* search */
-.wrapperSearch{
-    display: flex;
-    justify-content: center;
-   
+.divSlogen{
+    max-width: 900px;
+    margin: 0 auto;
 }
-.Search{
-    padding: 10px;
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-    background-color: white;
-    width: 50%;
-    height: 65px;
-    border-radius: 40px;
-   
-  
-}
-.Search > input{
-    margin-right: 10px;
-    height: 60px;
-    width: 20%;
-    min-width: 100px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-}
-.wrapIconSearch{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:7px;
-    height: 45px;
-    width: 45px;
-    color: white;
-    background-color: #DC3549;
-    vertical-align: bottom;
-    font-size: 1em;
-    border-radius: 150px;
-    cursor: pointer;
-    
-}
-.wrapIconSearch:hover{
-   font-size: 35px;
-}
-.vertivalLine{
-    border-left: 3px solid #e9e9e9;
-    height: 40;
-  
-}
-.inputWhat,.inputWhere{
-    direction: rtl;
-    text-align: right;
-}
-/* --------- */
 
+#slogen{
+    direction: rtl;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
 
 /* start div iconsJobs */
 .wrapIconsJobs{
@@ -181,12 +137,21 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     padding: 20px;
     background-color: rgb(255, 255, 255);
 }
+
+.wrapIconsJobs{
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
 .iconJob1{
     margin-right: 20px;
     max-width: 160px;
     height: 70px;
     width: 20%;
-    background-image: url('../images/job1.png') ;
+    background-image: url('/images/job1.png') ;
     background-size:100% 100%;
     
 }
@@ -196,7 +161,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     height: 70px;
     width: 20%;
     max-width: 120px;
-    background-image: url('../images/job2.png') ;
+    background-image: url('/images/job2.png') ;
     background-size:100% 100%; 
 }
 .iconJob3{
@@ -204,7 +169,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     max-width: 160px;
     height: 70px;
     width: 20%;
-    background-image: url('../images/job3.png') ;
+    background-image: url('/images/job3.png') ;
     background-size:100% 100%; 
 }
 .iconJob4{
@@ -212,7 +177,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     max-width: 160px;
     height: 70px;
     width: 20%;
-    background-image: url('../images/job4.png') ;
+    background-image: url('/images/job4.png') ;
     background-size:100% 100%; 
 }
 .divServicerNum{
@@ -321,4 +286,12 @@ color: #281158;
 .signUp_ishere a {
     color: #281158;
 }
+
 /* -------------- */
+
+.katavot{
+    display: flex;
+    display: block;
+    text-align: center;
+    margin:0 auto;
+}

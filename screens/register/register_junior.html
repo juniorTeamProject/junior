@@ -8,21 +8,17 @@
 	<!-- Css link -->
 	
 	<link rel="stylesheet" href="/css/register/register_junior.css">
-	<!-- CSS only --> 
+	
 
 	<!-- ajax script -->
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
-	<script src="/js/firebase/firebase-config.js" type="module"></script>
-	<script src="/js/register/register.js"></script>
-	
-
+	<!-- src script -->
 </head>
 
 
 <body>
-
 	<a href="/screens/home.html">
 		<img class="logo_popUp" src="/images/logo.png" alt="logo">
 	</a>
@@ -32,36 +28,36 @@
 
 		<div class="wrapImage">
 			<div class="displayImage">
-				<p class="logoTxt">לוגו</p>
-				<img id="imageFile" src="">
+				<img src="/images/junior_logo.png" class="imageFile" width="100">
 			</div>
 		</div>
 
 		<input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
 
 		<div class="signup">
-			<form id="signUp-junior-form">
+			<form id="signUp-junior-form" onsubmit="signUp_Jounior(event);">
 				<input id ="fullName" type="text" name="txt" placeholder="שם מלא" required="">
 				<input id ="email" type="email" name="email" placeholder="אימייל" required="">
-				<input id ="password" type="password" name="password" placeholder="ססמא" required="">
+				<input id ="password" type="password" name="password" placeholder="סיסמא" minlength="6">
+				<br>
 				<h2 style="text-align:center ;">שאלון הרשמה</h2>
 
 
 				<!-- Registration questionnaire -->
 				
 				<div class="jobScope_box">
-					<select name="" id="languages-select" class="select_jobScope">
-						<option selected disabled value="">התמקצעות בשפת</option>
+					<select name="" id="languages-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">התמקצעות בשפת תכנות</option>
 						<option value="Java">Java</option>
-						<option value="C++">C++</option>
+						<option value="C++">++C</option>
 						<option value="Python">Python</option>
 					</select>
 				</div>
 
 
 				<div class="jobScope_box">
-					<select name="" id="scopeJob-select" class="select_jobScope">
-						<option selected disabled value="">היקף משרה</option>
+					<select name="" id="scopeJob-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">היקף משרה</option>
 						<option value="מלאה">מלאה</option>
 						<option value="סטודנט" >סטודנט</option>
 
@@ -71,8 +67,8 @@
 			
 
 				<div class="jobScope_box">
-					<select name="" id="typeJob-select" class="select_jobScope">
-						<option selected disabled value="">סוג משרה</option>
+					<select name="" id="typeJob-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">סוג משרה</option>
 						<option value="פרונטלית">פרונטלית</option>
 						<option value="היברידית">היברידית</option>
 						<option value="מהבית">מהבית</option>
@@ -81,8 +77,8 @@
 
 				</div>
 				<div class="jobScope_box">
-					<select name="" id="knowledge-select" class="select_jobScope">
-						<option selected disabled value="">השכלה</option>
+					<select name="" id="knowledge-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">השכלה</option>
 						<option value="תואר ראשון">תואר ראשון</option>
 						<option value="קורס יעודי">קורס יעודי</option>
 
@@ -90,8 +86,8 @@
 
 				</div>
 				<div class="jobScope_box">
-					<select name="" id="jobField-select" class="select_jobScope">
-						<option selected disabled value="">תחום משרה</option>
+					<select name="" id="jobField-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">תחום משרה</option>
 						<option value="אוטומצייה">אוטומצייה</option>
 						<option value="פיתוח">פיתוח</option>
 						<option value="דאטה">דאטה</option>
@@ -100,8 +96,8 @@
 				</div>
 
 				<div class="jobScope_box">
-					<select name="" id="locationJob-select" class="select_jobScope">
-						<option selected disabled value="">אזור</option>
+					<select name="" id="locationJob-select" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">אזור</option>
 						<option value="דרום">דרום</option>
 						<option value="מרכז">מרכז</option>
 						<option value="צפון">צפון</option>
@@ -110,12 +106,11 @@
 
 				</div>
 				<!------------------->
-
-				<button class="bttn_SignUp_Junior" onclick="">הרשמה</button>
+				<button class="bttn_SignUp_Junior" >הרשמה</button>
 			</form>
 			<!---------END form---------->
 
-			<p style="text-align:center ;">רשום? <a href="/screens/home.html">הכניסה מהדף הראשי</a></p>
+			<p id = "outpot_signUp_junior"style="text-align:center ;">רשום? <a href="/screens/home.html">הכניסה מהדף הראשי</a></p>
 
 		</div>
 
@@ -124,14 +119,7 @@
 
 	
 	
-	<!-- src script -->
-	
-
-</body>
-
-</html>
-
-
+<script src="/js/register.js" ></script>
 </body>
 
 </html>

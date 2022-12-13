@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Junior</title>
+    <title>Junior</title>
     <link rel="stylesheet" href="/css/home.css">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">  
-    <script src="/js/home.js"></script>
-    
 </head>
 <body>
 
@@ -19,7 +17,7 @@
       
     <div class="wrapper">
         
-      <div class="logo">Jun</div> 
+      <a href="home.html"><div class="logo">Jun</div></a>
       
          <!--bttn login, etc-->
       <div class="wrapperBttns">
@@ -34,63 +32,34 @@
           <div class="textJobs">משרות באתר</div>
         </div>
       </div>
-
-        <!--Search-->
-      <div class="wrapperSearch">
-        <div class="Search">
-            <div class="wrapIconSearch">
-              <i class="fa-regular fa-magnifying-glass"></i>
-            </div>
-            <input class="inputWhere" placeholder='איפה?' type="text"list='cities' >
-            <div class="vertivalLine"></div>
-            <input class="inputWhat" placeholder='איזו עבודה?' type="text" list="jobs">
-              <!-------------->
-
-              <!-- data lists-->
-              <!-- 1.languange-->
-            <datalist id = 'languges'>
-                <option value="JavaScript"></option>
-                <option value="Java"></option>
-                <option value="C++"></option>
-                <option value="C"></option>
-            </datalist>
-            <!-- 2.jobs-->
-            <datalist id = 'jobs'>
-              <option value="web"></option>
-              <option value="mobile"></option>
-              <option value="Embeded"></option>
-              <option value="Ai"></option>
-              <option value="Data analyst"></option>
-              <option value="cyver"></option>
-            </datalist>
-
-            <!-- 3.cities-->
-            <datalist id = 'cities'>
-              <option value="מרכז"></option>
-              <option value="דרום"></option>
-              <option value="צפון"></option>
-              <option value="מחוז ירושלים"></option>
-              <option value="השפלה"></option>
-              <option value="שרון"></option>
-            </datalist>
-            <!-------------->
-        </div>
+      <div class="divSlogen">
+        <h1 id="slogen" calss="slogen">
+          מתאימים את המשרה בשבילך!
+        </h1>
       </div>
-    </div>    
-    
   </header>
   <!-- END Header-->
-  
 
-   <!-- start companies Icons-->
+
+  <!-- start companies Icons-->
   <div class="wrapIconsJobs">
-    
     <div class="iconJob1"></div>
     <div class="iconJob2"></div>
     <div class="iconJob4"></div>
     <div class="iconJob3"></div>
     <div class="divServicerNum">מעל אלף <br> מעסיקים!</div>
     <!-------------->
+  </div>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <h2 style="text-align: center; color: #32125a;">יכול לעניין אותך</h2>
+  <!-- END companies Icons-->
+  <div class="katavot">
+    <img class="tipImg" src="/images/tip1.jpeg" width="25%">
+    <img class="tipImg" src="/images/tip2.jpeg" width="25%">
+    <img class="tipImg" src="/images/tip3.jpeg" width="25%">
   </div>
   <!-- END companies Icons-->
 
@@ -103,7 +72,7 @@
         <div class="loginText">
           <h1>התחברות</h1>
         </div>
-        <form action="" id="login-form">
+        <form id="signIn_form" onsubmit="signIn(event)">
         <input id="login-email" class = "login-email" type="email"placeholder="מייל" required>
         <input id="login-password" class = "login-password" type="password"placeholder="ססמא" minlength="6" required>
         <div class="div_loginBttn">
@@ -119,9 +88,8 @@
     </div>
   </div>
   <!-- END popUp login-->
-  
 
-  
+  <script src="/js/home.js"></script>
+  <script src="/js/admin.js"></script>
 </body>
-
 </html>

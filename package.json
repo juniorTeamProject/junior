@@ -1,14 +1,14 @@
 {
   "dependencies": {
+    "chai-http": "^4.3.0",
     "firebase": "^9.14.0"
   },
   "name": "junior",
   "description": "web app for find a job to juniors",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/juniorTeamProject/junior/issues"
   },
-  "homepage": "https://github.com/juniorTeamProject/junior#readme"
+  "homepage": "https://github.com/juniorTeamProject/junior#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }

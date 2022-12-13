@@ -16,7 +16,10 @@ body{
     min-width: 150px;
     max-width: 200px;
     }
-
+.imageFile{
+	border-radius: 12px;
+	
+}
 
 .wrrap_signUp{
 	height: 580px;
@@ -29,26 +32,24 @@ body{
 	box-shadow: 5px 20px 50px #000;
 
 }
-.wrapImage{
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+.wrapImage {
+
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
 }
-.displayImage{
-    
-    color: rgb(116, 116, 116);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e0dede;
-    height: 100px;
-    width: 20%;
-    border-radius: 5px;
-    background-position: center;
-    background-size: 100% 100%;
-   
+
+.displayImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e0dede;
+	height: 100px;
+	width: 110px;
+	border-radius: 10px;
 }
+.image
 
 .signup{
 	position: relative;
