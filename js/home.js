@@ -24,6 +24,7 @@ function signIn(e) {
     }
     else{
         localStorage.setItem("currentUser",JSON.stringify(user));
+        
         currentUser = user;
         console.log(currentUser);
         alert("התחברת בהצלחה!");
