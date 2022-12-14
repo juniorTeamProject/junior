@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    height: 150px;
+    background: #7A3DC6;
+
+}
+
+.headline {
+    color: white;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.logo {
+    padding: 5px;
+    padding-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 3.6em;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    direction: ltr;
+}
+
+.logo::after {
+    content: "ior";
+    color: #DC3549;
+}
+
+.logoutButton {
+    color: #DC3549;
+    background-color: #7A3DC6;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border: none;
+    font-weight: bold;
+}
+
+.myProfile {
+    color: white;
+    background-color: #7A3DC6;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border: none;
+}
+
+.offerJobs {
+    color: #281158;
+    background-color: white;
+    border-radius: 10px;
+    font-size: large;
+    border: none;
+    font-weight: bold;
+    width: 120px;
+    height: 35px;
+}
+
+.offerJobs:hover{
+    width: 123px;
+    height: 38px;
+}
+
+.profileNav {
+    background-color: #E6E6E6;
+    max-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    color: #8e8b8b;
+    padding: 20px 0px 20px 50px;
+}
+
+.profileNav a {
+    color: #8e8b8b;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-left: 50px;
+    text-decoration: none;
+    margin: 20px 0px 20px 50px;
+    margin: 0 auto;
+}
+
+.profileNav a:hover {
+    color: #281158;
+    transition: 1000ms;
+}
+
+i {
+    color: #BDBDBD;
+    display: block;
+    padding-right: 50px;
+}
+
+.profileNav .fa-address-card-o {
+    font-size: 1.4em;
+}
+
+.profileNav .fa-heart {
+    font-size: 1.4em;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+}
+
+.joblist {
+    width: 80%;
+    max-height: 100%;
+    display: block;
+    direction: rtl;
+    justify-content: baseline;
+}
+
+.first {
+    background: #F5F5F5;
+    max-width: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.right-side {
+    width: 20%;
+    max-height: 500px;
+    color: #EAEAEA;
+    font-size: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.number {
+    padding-top: 20%;
+    padding-right: 30%;
+}
+
+.left-side {
+    width: 70%;
+    max-height: 500px;
+    padding: 10px;
+}
+
+.top {
+    background: white;
+    width: 580px;
+    max-height: 200px;
+    display: flex;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    direction: rtl;
+}
+
+.bottom {
+    width: 580px;
+    max-height: 100px;
+    direction: rtl;
+}
+
+.picture {
+    width: 180px;
+    height: 100%;
+    direction: rtl;
+    padding-top: 70px;
+    padding-right: 40px;
+}
+
+.picture img[src="/images/job3.png"] {
+    padding-top: 45px;
+    padding-right: 20px;
+    direction: rtl;
+
+}
+
+.info {
+    background: white;
+    width: 800px;
+    height: 200px;
+    display: block;
+    border-top-left-radius: 20px;
+    direction: rtl;
+
+}
+
+.info h1 {
+    text-align: center;
+    padding-top: 10px;
+    direction: rtl;
+
+}
+
+.info section {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    direction: rtl;
+
+}
+
+.info section p {
+    color: #7A3DC6;
+    direction: rtl;
+
+}
+
+.info section p2 {
+    color: black;
+    direction: rtl;
+
+}
+
+.icons {
+    color: #DC3549;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+
+}
+
+.info p3 {
+    padding-top: 10px;
+    padding-right: 250px;
+    font-size: 2em;
+    direction: rtl;
+
+}
+
+.icons {
+    display: inline-block;
+}
+
+.icons button {
+    background: #DC3549;
+    color: white;
+    border-color: #DC3549;
+    border-radius: 5%;
+    height: 30px;
+    width: 90px;
+    font-weight: bold;
+    font-size: 0.5em;
+    text-decoration: none;
+}
+
+.icons p3 i {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.icons p3 i:hover {
+    color: red;
+    transition: 1000ms;
+}
+
+.bottom {
+    background: #EBEBEB;
+    max-height: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 5px;
+    direction: rtl;
+    padding-bottom: 10px;
+}
