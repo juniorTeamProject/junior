@@ -150,7 +150,7 @@ const signUp_Prime = e => {
 }
 
 
-
+export default signUp_Prime
 
 //----------------------------------------END PRIME--------------------------------
 
