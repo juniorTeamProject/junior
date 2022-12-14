@@ -131,6 +131,7 @@ i{
     display: flex;
     font-weight: bold;
     justify-content: center;
+    align-content: space-between;
 }
 
 .personalInfo{
