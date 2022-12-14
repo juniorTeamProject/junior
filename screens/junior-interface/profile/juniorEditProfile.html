@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/bdf8853241.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/junior-interface/profile/juniorEditProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Junior Edit Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="/screens/home.html"><button class="logoutButton">התנתק</button></a>
+            <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
+            <a href="/screens/junior-interface/juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
+            <a href="/screens/junior-interface/profile/JuniorProfile.html"><h1 class="headline">הפרופיל שלי</h1></a>
+            <a href="/screens/after-Login/juniorAfterLogin.html"><div class="logo">Jun</div> </a>
+        </div>
+    </header>
+    <div class="profileNav">
+        <nav>
+            |<a href="/screens/junior-interface/profile/juniorEditProfile.html" class="current">עדכון פרטים</a>
+            <i class="fa fa-address-card-o" aria-hidden="true"></i>|
+            <a href="/screens/junior-interface/juniorjobs.html">משרות שאהבתי</a>
+            <i class="fa fa-heart" aria-hidden="true"></i>|
+        </nav>
+    </div>
+    <div class="headlineAndPhoto">
+        <h3>עריכת פרטים אישיים</h3>
+        <div class="profilePhoto">
+            <img src="/images/junior_logo.png" class="photoProfile">
+        </div>
+    </div>
+    <div class="profileEdit">
+        <formn id="editForm_junior">
+            <h3 class="quesHeadLine">עדכון פרטי המשתמש</h3>
+            <input id="name" type="text" name="txt" placeholder="שם מלא">
+			<input id="email" type="email" name="email" placeholder="אימייל">
+			<input id="password" type="password" name="password" placeholder="ססמא">
+
+
+            <!-- Registration questionnaire -->
+            <h4 class="quesHeadLine">עדכון שאלון התאמה</h4>
+            <br>
+
+            <div class="jobScope_box">
+                <select name="" id="select" class="select_jobScope">
+                    <option selected disabled value="">התקמצעות בשפת</option>
+                    <option value="JS">Java Script</option>
+                    <option value="C++">C++</option>
+                    <option value="C">C</option>
+                    <option value="PY">Python</option>
+                </select>
+            </div>
+            <div class="jobScope_box">
+                <select name="" id="" class="select_jobScope">
+                    <option selected disabled value="">סוג משרה</option>
+                    <option value="פרונטלית">פרונטלית</option>
+                    <option value="היברידית">היברידית</option>
+                    <option value="מהבית">מהבית</option>
+
+                </select>
+            </div>
+            <div class="jobScope_box">
+                <select name="" id="" class="select_jobScope">
+                    <option selected disabled value="">השכלה</option>
+                    <option value="תואר ראשון">תואר ראשון</option>
+                    <option value="קורס יעודי">קורס יעודי</option>
+
+                </select>
+
+            </div>
+            <div class="jobScope_box">
+                <select name="" id="" class="select_jobScope">
+                    <option selected disabled value="">תחום משרה</option>
+                    <option value="אוטומצייה">אוטומצייה</option>
+                    <option value="פיתוח">פיתוח</option>
+                    <option value="דאטה">דאטה</option>
+
+                </select>
+            </div>
+
+            <div class="jobScope_box">
+                <select name="" id="" class="select_jobScope">
+                    <option selected disabled value="">אזור</option>
+                    <option value="דרום">דרום</option>
+                    <option value="מרכז">מרכז</option>
+                    <option value="צפון">צפון</option>
+
+                </select>
+
+            </div>
+            <!------------------->
+
+            <button class="update">עדכן</button>
+        </form>
+    </div>
+
+    <script src="/js//junior-interface/editProfie.js"></script>
+</body>
+
+</html>

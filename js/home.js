@@ -18,7 +18,6 @@ function signIn(e) {
     JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
     let user  = allUsers_arr.filter(user => user.Email == email);
     currentUser = user[0];
-    
     //user not exist
     if(!exist){
         alert("שם משתמש או סיסמא אינם נכונים!");
@@ -26,7 +25,7 @@ function signIn(e) {
     else{
         localStorage.setItem("currentUser",JSON.stringify(currentUser));
         
-        console.log(currentUser);
+        
         alert("התחברת בהצלחה!");
         if (currentUser.UserType == "Admin") {
             window.location.assign("/screens/after-Login/adminAfterLogIn.html"); 
