@@ -17,24 +17,24 @@ function signIn(e) {
     let exist = (allUsers_arr.length && 
     JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
     let user  = allUsers_arr.filter(user => user.Email == email);
+    currentUser = user[0];
     
     //user not exist
     if(!exist){
         alert("שם משתמש או סיסמא אינם נכונים!");
     }
     else{
-        localStorage.setItem("currentUser",JSON.stringify(user));
+        localStorage.setItem("currentUser",JSON.stringify(currentUser));
         
-        currentUser = user;
         console.log(currentUser);
         alert("התחברת בהצלחה!");
-        if (currentUser[0].UserType == "Admin") {
+        if (currentUser.UserType == "Admin") {
             window.location.assign("/screens/after-Login/adminAfterLogIn.html"); 
         }
-        if (currentUser[0].UserType == "Prime") {
+        if (currentUser.UserType == "Prime") {
             window.location.assign("/screens/after-Login/primeAfterLogIn.html");
         }
-        if (currentUser[0].UserType == "Junior") {
+        if (currentUser.UserType == "Junior") {
             window.location.assign("/screens/after-Login/juniorAfterLogIn.html");
         }
     }
