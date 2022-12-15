@@ -9,6 +9,12 @@ let Knowledge = document.querySelector("#knowledge")
 let JobField = document.querySelector("#jobField")
 let LocationJob = document.querySelector("#locationJob")
 
+
+document.querySelector("#name").value = currentUser.Name
+document.querySelector("#email").value = currentUser.Email
+document.querySelector("#password").value = currentUser.Password
+
+
 if(window.location == '/screens/junior-interface-profile/juniorEditProfile'){
     fullName.value = currentUser.Name
     email.value = currentUser.Email;
