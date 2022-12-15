@@ -1,6 +1,5 @@
 class Job {
-    constructor(_num,_img, _name, _location, _scope, _type,_information) {
-        this.num = _num;
+    constructor(_img, _name, _location, _scope, _type,_information) {
         this.img = _img;
         this.name = _name;
         this.location = _location;
@@ -11,23 +10,24 @@ class Job {
 
         addToHtml()
         {
-            let numOfJobs = 0;
+            
             let jobList = document.querySelector(".joblist");
             this.newBox = document.createElement("div");
             
             jobList.appendChild(this.newBox);
             this.newBox.innerHTML = `<div class="first">
             <div class="right-side">
-                <div class="number">${this.num}</div>
+                <div class="number"><i id = "iconJob" class="fa fa-circle" aria-hidden="true"></i></div>
             </div>
             <div class="left-side">
                 <div class="top">
                     <!-- picture -->
                     <div class="picture">
-                        <img src="/images/${this.img}" height="70" width="70">
+                        <img src="${this.img}" height="70" width="70">
                     </div>
                     <!-- information -->
                     <div class="info">
+                        
                         <h1 style="color:#281158"> ${this.name} </h1>
                         <section>
                             <p> מיקום: <p2 class = "location"> ${this.location}</p2>
@@ -39,7 +39,7 @@ class Job {
                         </section>
                         <div class="icons">
                             <p3>
-                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <i onclick = "likeBttn(e)" class="fa fa-heart" aria-hidden="true"></i>
                                 <button class="appley"> הגש </button>
                             </p3>
                         </div>

@@ -125,17 +125,24 @@ main {
 .first {
     background: #F5F5F5;
     max-width: 100%;
-    max-height: 500px;
+    max-width: 2000px;
+    min-width: 1000px;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
 .right-side {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 20%;
     max-height: 500px;
+    max-width: 250px;
     color: #EAEAEA;
-    font-size: 10em;
+    font-size: 6em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -288,4 +295,9 @@ p{
 .ImgNoJobs{
     width: 300px;
     height: 300px;
+}
+#iconJob{
+    color:#27115883;
+    
+    
 }

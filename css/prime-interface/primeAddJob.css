@@ -66,6 +66,27 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     padding-top: 20px;
     font-weight:lighter;
 }
+.imageFile{
+	border-radius: 12px;
+	
+}
+.wrapImage {
+
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+
+.displayImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e0dede;
+	height: 100px;
+	width: 110px;
+	border-radius: 10px;
+}
 
 main{
     justify-content: space-around;
@@ -77,9 +98,9 @@ main{
     color: #281158;
 }
 
-.jobRole, .jobPosition{
+.jobRole, .jobPosition,.JobCompanyName,#image_input{
     direction: rtl;
-	width:350px;
+	width:40%;
 	height: 25px;
 	background: #e0dede;
     display: flex;

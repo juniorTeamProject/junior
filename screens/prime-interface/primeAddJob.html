@@ -33,18 +33,15 @@
     <!-- start main -->
     <main>
         <!-- form -->
-          <form class="upload_Job">
-                
-                <!-- job description -->
-                <h2>פירוט המשרה:</h2>
-                <input class="jobRole" type="text" name="txt" placeholder="תפקיד המשרה">
-                <input class="jobPosition" type="text" name="txt" placeholder="מיקום המשרה">
-                <textarea class="jobDescription" type="text" name="txt" placeholder="תיאור המשרה"></textarea>
-                
-                <!-- job requirments -->
+          <form class="upload_Job_form" onsubmit="addJob(event);">
+
+                  <!-- job requirments -->
+               
                 <h2>דרישות המשרה:</h2>
+                <input class="JobCompanyName" type="text" name="txt" placeholder="שם החברה" required>
+                
                 <div class="jobScope_box">
-                    <select name="" id="select" class="select_jobScope">
+                    <select name="" id="select_languenge" class="select_jobScope" required>
                         <option selected disabled value="">התקמצעות בשפת</option>
                         <option value="JS">Java Script</option>
                         <option value="C++">C++</option>
@@ -54,7 +51,7 @@
                     </select>
                 </div>
                 <div class="jobScope_box">
-                    <select name="" id="" class="select_jobScope">
+                    <select name="" id="select_type" class="select_jobScope" required>
                         <option selected disabled value="">סוג משרה</option>
                         <option value="פרונטלית">פרונטלית</option>
                         <option value="היברידית">היברידית</option>
@@ -63,7 +60,7 @@
                     </select>
                 </div>
                 <div class="jobScope_box">
-                    <select name="" id="" class="select_jobScope">
+                    <select name="" id="select_Knowledge" class="select_jobScope" required>
                         <option selected disabled value="">השכלה</option>
                         <option value="תואר ראשון">תואר ראשון</option>
                         <option value="קורס יעודי">קורס יעודי</option>
@@ -72,7 +69,7 @@
     
                 </div>
                 <div class="jobScope_box">
-                    <select name="" id="" class="select_jobScope">
+                    <select name="" id="select_JobField" class="select_jobScope" required>
                         <option selected disabled value="">תחום משרה</option>
                         <option value="אוטומצייה">אוטומצייה</option>
                         <option value="פיתוח">פיתוח</option>
@@ -82,7 +79,7 @@
                 </div>
     
                 <div class="jobScope_box">
-                    <select name="" id="" class="select_jobScope">
+                    <select name="" id="select_LocationJob" class="select_jobScope" required>
                         <option selected disabled value="">אזור</option>
                         <option value="דרום">דרום</option>
                         <option value="מרכז">מרכז</option>
@@ -91,12 +88,14 @@
                     </select>
     
                 </div>
-                
+                <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור המשרה"></textarea>
                 <!-- button - update -->
-                 <button class="update">עדכן</button>
+                 <button class="update">הוספה</button>
 
             </form>
         </div>
     </main>
+
+    <script src="/js/prime-interface/addJob.js"></script>
 </body>
 </html>
