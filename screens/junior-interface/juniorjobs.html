@@ -27,44 +27,19 @@
     <main>
         <div class="joblist">
             <!-- the first job offer -->
-            <div class="first">
-                <div class="right-side">
-                    <div class="number">1</div>
-                </div>
-                <div class="left-side">
-                    <div class="top">
-                        <!-- picture -->
-                        <div class="picture">
-                            <img src="/images/job1.png" height="70" width="70">
-                        </div>
-                        <!-- information -->
-                        <div class="info">
-                            <h1> MICROSOFT </h1>
-                            <section>
-                                <p> מיקום: <p2> דרום </p2>
-                                </p>
-                                <p> משרה: <p2> מפתח web </p2>
-                                </p>
-                                <p> סוג: <p2> היברידי </p2>
-                                </p>
-                            </section>
-                            <div class="icons">
-                                <p3>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <button class="appley"> הגש </button>
-                                </p3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- the explanation of the job -->
-                    <div class="bottom">
-                        <p>לחברת מיקרוסופט דרוש בודק תוכנה עם ניסיון מעל שנה.
-                            במסגרת התפקיד ביצוע בדיקות ליבה, קבלת איפיונים וכתיבת
-                            תסריטי בדיקות על פיהם, דיווח תקלות וכתיבת סיכומי
-                            בדיקות.
-                        </p>
-                    </div>
-                </div>
+
+
+            <!-- if the job list empty show img -->
+            <div class="noJobsToShow">
+                <img class ="ImgNoJobs" src="" alt="">
             </div>
+            <h1 class ="txtNoJobs" style="text-align: center;margin-top:100px ;"> </h1>
+            <!------------>
+
         </div>
     </main>
+
+    <script src="/js/allJobs.js"></script>
+    <script src="/js/Job.js"></script>
+    <script src="/js/junior-interface/juniorJobs.js"></script>
+</body>
