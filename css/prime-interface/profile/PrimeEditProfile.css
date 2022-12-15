@@ -14,7 +14,6 @@ body{
 .header{
     height: 150px;
     background: #7A3DC6;
-
 }
 
 .headline{
@@ -58,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-.offerJobs{
+.uploudJobs{
     color: #281158;
     background-color: white;
     border-radius: 10px;
@@ -67,6 +66,14 @@ body{
     border:none;
     font-weight: bold;
     padding: 8px;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.topBttns{
+    max-height: 15px;
+    max-width: 400px;
+    justify-content: space-between;
 }
 
 .profileNav{
@@ -110,7 +117,7 @@ i{
     color:#281158;
 }
 
-.profileNav .fa-heart{
+.profileNav .fa-suitcase{
     font-size: 1.4em;
 }
 .headlineAndPhoto{
@@ -119,31 +126,54 @@ i{
 }
 
 .headlineAndPhoto h3{
-    color: #7A3DC6;
+    color: #281158;
     font-size: 1.6em;
-    padding-bottom: 40px;
 }
 
-
+.editCompanyHL{
+    padding-bottom: 20px;
+}
 
 .photoProfile{
     border-radius: 10%;
     width: 120px;
 }
 
-.photoUploud button i{
-    font-size: 5em;
-    padding:50px 50px 50px 50px;
-    border: none;
+.wrapImage {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.displayImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 110px;
+	border-radius: 5px;
+}
+
+.imageFile{
+	border-radius: 12px;
+}
+
+#image_input{
+    background-color: white;
+    font-size: 1em;
 }
 
 .profileEdit{
     text-align: center;
-    padding-top:20px;
-    padding-bottom: 50px;
     align-items: center;
 	justify-content: center;
 	display: flex;
+}
+
+
+.profileEdit .exitForm_Prime .editProfileHL{
+    background-color: #7A3DC6;
+
 }
 
 input {
@@ -160,33 +190,82 @@ input {
 	border-radius: 5px;
 }
 
-.quesHeadLine{
-    font-size: 1.3em;
-    color:#281158;
-    padding-top: 30px;
+.businessPackage{
+    text-align: center;
+    padding-top:20px;
+    align-items: center;
+	justify-content: center;
+    max-width: 100%;
 }
 
-.select_jobScope {
-	appearance: none;
-	padding: 10px;
-	background-color: #e0dede;
-	height: 40px;
-	cursor: pointer;
-	border: none;
-	border-radius: 10px;
-	color: #838383;
-	direction: rtl;
-	width: 500px;
-	outline: white;
-	margin-top: 10px;
+.businessHeadLine{
+    font-size: 1.3em;
+    color:#281158;
+    padding-bottom: 0; 
+}
+
+.WarrapPackage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    max-width: 800px;
+    height: 400px;
+    background-color: #E7E7E7;
+    margin:0 auto;
+}
+
+.businessBox1{
+    background-color: white;
+    width: 150px;
+    height: 250px;
+    margin-left: 100px;
+    border-radius: 20px;
+}
+
+
+.businessBox2{
+    background-color: white;
+    width: 150px;
+    height: 250px;
+    border-radius: 20px;
+
+}
+
+.businessBox3{
+    background-color: white;
+    width: 150px;
+    height: 250px;
+    margin-right: 100px;
+    border-radius: 20px;
+}
+
+.insideDiv{
+    background-color: #281158;
+    height: 40%;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.packageName{
+    padding-top: 35px;
+}
+
+.insideHeadLine{
+    color: #281158;
+    padding-top: 20px;
+}
+
+.businessBox1:hover , .businessBox2:hover , .businessBox3:hover{
+    border: solid #7A3DC6;
 }
 
 
 .update {
-	width: 40%;
+	width: 150px;
 	height: 40px;
-	margin: 10px auto;
-	justify-content: center;
 	display: block;
 	color: #fff;
 	background: #E56A78;
@@ -200,6 +279,33 @@ input {
 	cursor: pointer;
 }
 
-.update button:hover {
-	background: #6d44b8;
+.deleteAccount {
+	width: 100px;
+	height: 30px;
+	display: flex;
+    background-color: white;
+	color: black;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.deleteAccount:hover{
+    color: #DC3549;
+}
+
+.updateAndDelete{
+    display: flex;
+    align-items: center;
+    margin:0 auto;
+    max-width: 400px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-top: 15px;
 }
