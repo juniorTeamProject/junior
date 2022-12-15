@@ -24,7 +24,7 @@ class Job {
                 <div class="top">
                     <!-- picture -->
                     <div class="picture">
-                        <img src="/images/${this.img}" height="70" width="70">
+                        <img src="${this.img}" height="70" width="70">
                     </div>
                     <!-- information -->
                     <div class="info">
@@ -39,7 +39,7 @@ class Job {
                         </section>
                         <div class="icons">
                             <p3>
-                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <i onclick = "likeBttn(e)" class="fa fa-heart" aria-hidden="true"></i>
                                 <button class="appley"> הגש </button>
                             </p3>
                         </div>
