@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper{
+    max-height: 150px;
+    height: 150px;
+    background: #7A3DC6;
+    position: relative;
+}
+
+.logo{
+padding: 5px;
+padding-right: 15px;
+position: absolute;
+right: 0;
+top: 0;
+font-size:3.6em ;
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+}
+.logo::after {
+    content: "ior";
+    color: #DC3549;
+}
+
+/* bttns sign */
+
+.logoutButton{
+    color: #DC3549;
+    background-color: #7A3DC6;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top:10px;
+}
+
+.myProfile{
+    color: white;
+    background-color: #7A3DC6;
+    font-size: large;
+    border:none;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top:10px;
+}
+
+.logoutButton:hover, .myProfile:hover{
+    font-size: larger;
+}
+
+.wrapperBttns{
+    max-height: 30px;
+    max-width: 400px;
+    display: flex;
+}
+
+.headline{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-weight:lighter;
+}
+
+main{
+    justify-content: space-around;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding-top: 30px;
+    direction: rtl;
+    color: #281158;
+}
+
+.jobRole, .jobPosition{
+    direction: rtl;
+	width:350px;
+	height: 25px;
+	background: #e0dede;
+    display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+.jobDescription{
+    direction: rtl;
+	width:350px;
+	height: 150px;
+	background: #e0dede;
+    display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.select_jobScope {
+	padding: 10px;
+	background-color: #e0dede;
+	height: 40px;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	color: #838383;
+	direction: rtl;
+	width: 500px;
+	outline: white;
+	margin-top: 10px;
+}
+
+.update {
+	width: 100px;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #E56A78;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
