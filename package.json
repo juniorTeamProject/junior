@@ -23,7 +23,8 @@
   "homepage": "https://github.com/juniorTeamProject/junior#readme",
   "devDependencies": {
     "jest": "^29.3.1",
-    "vitest": "^0.25.8"
+    "vitest": "^0.25.8",
+    "webpack": "^5.75.0"
   },
   "directories": {
     "test": "tests"

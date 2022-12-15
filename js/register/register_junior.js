@@ -8,23 +8,12 @@ let indexCorrentJunior = 0; // the index and number of juniors that sign in
 
 
 //signUp Junior
-const signUp_Jounior = e => {
-  // get Junior data
-  let _fullName = document.querySelector('#fullName').value;
-  let _email_junior = document.querySelector('#email').value;
-  let _password_junior = document.querySelector('#password').value;
-  let _langunge = document.querySelector('#languages-select').value;
-  let _jobScope =  document.querySelector('#scopeJob-select').value;
-  let _jobType = document.querySelector('#typeJob-select').value;
-  let _knowledge = document.querySelector('#knowledge-select').value;
-  let _jobField = document.querySelector('#jobField-select').value;
-  let _locationJob = document.querySelector('#locationJob-select').value;
+function signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _jobScope, _jobType, _knowledge, _jobField, _locationJob, _img){
 
   //check and convert the item in local to object
   juniors_arr = JSON.parse(localStorage.getItem('juniors_arr')) || [];
   indexCorrentJunior = JSON.parse(localStorage.getItem('indexJunior')) || 0;
   currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-  let _img = localStorage.getItem('userImg'); // get img
 
    // check if the userEmail  exist
    let exist = (allUsers_arr.length && 
@@ -82,6 +71,22 @@ const signUp_Jounior = e => {
   else{
       alert("משתמש זה קיים במערכת.\nאנא הרשם מחדש או התחבר בדף הראשי.");
   }
+}
+
+function dataJunior(e){
+
+  // get Junior data
+  let _fullName = document.querySelector('#fullName').value;
+  let _email_junior = document.querySelector('#email').value;
+  let _password_junior = document.querySelector('#password').value;
+  let _langunge = document.querySelector('#languages-select').value;
+  let _jobScope =  document.querySelector('#scopeJob-select').value;
+  let _jobType = document.querySelector('#typeJob-select').value;
+  let _knowledge = document.querySelector('#knowledge-select').value;
+  let _jobField = document.querySelector('#jobField-select').value;
+  let _locationJob = document.querySelector('#locationJob-select').value;
+  let _img = localStorage.getItem('userImg'); // get img
+  signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _jobScope, _jobType, _knowledge, _jobField, _locationJob, _img);
   e.preventDefault();
 }
 //----------------------------------------END JUNIOR----------------------------
@@ -89,19 +94,21 @@ const signUp_Jounior = e => {
 
 
 
+//-----------------------------------------another funf-----------------------------
+
 //choose image in signup from file
 function pickImage(input) {    
-  if (input.files && input.files[0]) {
-    let reader = new FileReader();
-    
-    reader.onload = function (e) {
-      let url = e.target.result;
-    $('.imageFile').attr('src', url).width(100).height(90);
-    localStorage.setItem('userImg',url);
-    console.log(e.target.result);
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      
+      reader.onload = function (e) {
+        let url = e.target.result;
+      $('.imageFile').attr('src', url).width(100).height(90);
+      localStorage.setItem('userImg',url);
+      console.log(e.target.result);
 
-    };
-    
-    reader.readAsDataURL(input.files[0]);
+      };
+      
+      reader.readAsDataURL(input.files[0]);
+    }
   }
-}
