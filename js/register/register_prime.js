@@ -1,5 +1,7 @@
 //----------------------------------------PRIME---------------------------------
 
+
+
 // global vars
 function signUp_Prime(_companyName, _email_prime, _password_prime){
 
@@ -67,8 +69,6 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
     signUp_Prime(_companyName, _email_prime, _password_prime);
     e.preventDefault();
   }
-  
-  
   //----------------------------------------END PRIME--------------------------------
   
   
