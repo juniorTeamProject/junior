@@ -20,7 +20,7 @@
             <a href="/screens/home.html"><button class="logoutButton">התנתק</button></a>
             <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
             <a href="/screens/junior-interface/juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
-            <h1 class="headline">הפרופיל שלי</h1>
+            <a href="/screens/junior-interface/profile/JuniorProfile.html"><h1 class="headline">הפרופיל שלי</h1></a>
             <a href="/screens/after-Login/juniorAfterLogin.html"><div class="logo">Jun</div> </a>
         </div>
     </header>
@@ -39,11 +39,11 @@
         </div>
     </div>
     <div class="profileEdit">
-        <form>
+        <formn id="editForm_junior">
             <h3 class="quesHeadLine">עדכון פרטי המשתמש</h3>
-            <input type="text" name="txt" placeholder="שם מלא">
-			<input type="email" name="email" placeholder="אימייל">
-			<input type="password" name="password" placeholder="ססמא">
+            <input id="name" type="text" name="txt" placeholder="שם מלא">
+			<input id="email" type="email" name="email" placeholder="אימייל">
+			<input id="password" type="password" name="password" placeholder="ססמא">
 
 
             <!-- Registration questionnaire -->
@@ -51,7 +51,8 @@
             <br>
 
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
+
+                <select name="" id="select" class="select_jobScope">
                     <option selected disabled value="">התקמצעות בשפת</option>
                     <option value="JS">Java Script</option>
                     <option value="C++">C++</option>
@@ -102,6 +103,8 @@
             <button class="update">עדכן</button>
         </form>
     </div>
+    <script src="/js//junior-interface/editProfie.js"></script>
+
 </body>
 
 </html>

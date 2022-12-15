@@ -94,7 +94,7 @@ let primes_arr = []; // all primes users
 let indexCurrentPrime = 0; // the index and number of Primes that sign in
 
 // signUp prime
-const signUp_Prime = e => {
+const signUp_Prime = function(e) {
 
   // data prime
   let _companyName = document.querySelector('#companyName').value;

@@ -2,16 +2,14 @@
 allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
 //corrent User
 currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
-AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) || 0; //admins Setup
+AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) ||  0; //admins Setup
 //-----------
 
 //----------------------------SIGNIN/ Login--------------------------------------
 
 // user signIn after signUp
-function signIn(e) {
-    let email = document.querySelector('#login-email').value;
-    let password = document.querySelector('#login-password').value;
 
+function signIn(email,password){
     currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     // check if user exist
     let exist = (allUsers_arr.length && 
@@ -38,8 +36,17 @@ function signIn(e) {
             window.location.assign("/screens/after-Login/juniorAfterLogIn.html");
         }
     }
+}
+
+
+function data_signIn(e) {
+    let email = document.querySelector('#login-email').value;
+    let password = document.querySelector('#login-password').value;
+    signIn(email,password);
+
     e.preventDefault();  
   }
+
 
   //---------------------------- End SIGNIN/ Login--------------------------------------
   

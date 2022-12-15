@@ -7,7 +7,7 @@
 
 /* start header */
 .wrapper{
-    height: 475px;
+    height: 400px;
     background: #7A3DC6;
 }
 
@@ -290,8 +290,12 @@ color: #281158;
 /* -------------- */
 
 .katavot{
-    display: flex;
     display: block;
     text-align: center;
     margin:0 auto;
+}
+.tipImg{
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 30px;
 }
