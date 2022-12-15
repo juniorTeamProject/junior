@@ -7,6 +7,11 @@ let pass = document.querySelector("#password")
 let img;
 document.querySelector('.imageFile').setAttribute("src",currentUser.img);
 let Package;
+let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
+
+document.querySelector("#companyName").value = currentUser.CompanyName
+document.querySelector("#email").value = currentUser.Email
+document.querySelector("#password").value = currentUser.Password
 
 
 function updatePrime(){
@@ -17,10 +22,17 @@ function updatePrime(){
         updateUser_P_arr(currentUser.Email,"CompanyName",CompanyName.value);
     }
     if(email.value != currentUser.Email && email.value != ""){
+        let exist = (allUsers_arr.length && 
+            JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == currentUser.Email));
+        if(exist){
+                alert( "משתמש זה קיים במערכת.\nאנא הרשם עם מייל אחר.");
+        }
+        else{
         currentUser.Email = email.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Email",email.value);
         updateUser_P_arr(currentUser.Email,"Email",email.value);
+        }
     }
     if(pass.value != currentUser.Password && pass.value != ""){
         currentUser.Password = pass.value;
@@ -45,7 +57,6 @@ function updatePrime(){
 }
 
 function updateUser(email,info, value){
-    let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
     for (let i = 0; i < allUsers_arr.length; i++) {
         if (allUsers_arr[i].Email == email){
             if(info == "CompanyName"){
