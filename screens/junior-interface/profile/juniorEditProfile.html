@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="profileEdit">
-        <formn id="editForm_junior">
+        <form id="editForm_junior">
             <h3 class="quesHeadLine">עדכון פרטי המשתמש</h3>
             <input id="name" type="text" name="txt" placeholder="שם מלא">
 			<input id="email" type="email" name="email" placeholder="אימייל">
@@ -52,25 +52,30 @@
 
             <div class="jobScope_box">
 
-                <select name="" id="select" class="select_jobScope">
-                    <option selected disabled value="">התקמצעות בשפת</option>
+                <select id="languages" name="" class="select_jobScope">
+                    <option selected disabled value ="">התקמצעות בשפת</option>
                     <option value="JS">Java Script</option>
-                    <option value="C++">C++</option>
+                    <option value="C++">++C</option>
                     <option value="C">C</option>
                     <option value="PY">Python</option>
                 </select>
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
+                <select name="" id="JobScope" class="select_jobScope">
+                    <option selected disabled value="">היקף משרה</option>
+                    <option value="מלאה">מלאה</option>
+                    <option value="סטודנט" >סטודנט</option>
+                </select>
+            <div class="jobScope_box">
+                <select name="" id="typeJob" class="select_jobScope">
                     <option selected disabled value="">סוג משרה</option>
                     <option value="פרונטלית">פרונטלית</option>
                     <option value="היברידית">היברידית</option>
                     <option value="מהבית">מהבית</option>
-
                 </select>
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
+                <select name="" id="knowledge" class="select_jobScope">
                     <option selected disabled value="">השכלה</option>
                     <option value="תואר ראשון">תואר ראשון</option>
                     <option value="קורס יעודי">קורס יעודי</option>
@@ -79,7 +84,7 @@
 
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
+                <select name="" id="jobField" class="select_jobScope">
                     <option selected disabled value="">תחום משרה</option>
                     <option value="אוטומצייה">אוטומצייה</option>
                     <option value="פיתוח">פיתוח</option>
@@ -89,7 +94,7 @@
             </div>
 
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
+                <select name="" id="locationJob" class="select_jobScope">
                     <option selected disabled value="">אזור</option>
                     <option value="דרום">דרום</option>
                     <option value="מרכז">מרכז</option>
@@ -100,7 +105,7 @@
             </div>
             <!------------------->
 
-            <button class="update">עדכן</button>
+            <button onclick="updateJunior();" class="update">עדכן</button>
         </form>
     </div>
     <script src="/js//junior-interface/editProfie.js"></script>

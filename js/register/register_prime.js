@@ -30,6 +30,7 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
       primes_arr.push(
        {
         UserType: "Prime",
+        Package: "Bronze",
         CompanyName: _companyName,
         Email: _email_prime,
         Password: _password_prime,
