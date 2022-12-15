@@ -23,7 +23,8 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
     if(!exist){
       allUsers_arr.push(
         {
-         UserType: "Prime", 
+         UserType: "Prime",
+         Package: "Bronze",
          CompanyName: _companyName,
          Email: _email_prime,
          Password: _password_prime,
@@ -75,7 +76,7 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
   
   //-----------------------------------------another funf-----------------------------
   
-  //choose image in signup from file
+  //change Prime image in 
   function pickImage(input) {    
       if (input.files && input.files[0]) {
         let reader = new FileReader();
