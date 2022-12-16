@@ -48,6 +48,7 @@ body{
     font-size: large;
     border:none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .myProfile{
@@ -56,6 +57,7 @@ body{
     margin: 10px 10px 10px 10px;
     font-size: large;
     border:none;
+    cursor: pointer;
 }
 
 .offerJobs{
@@ -67,6 +69,7 @@ body{
     border:none;
     font-weight: bold;
     padding: 8px;
+    cursor: pointer;
 }
 
 .profileNav{

@@ -25,7 +25,8 @@ function showJobs()
       
             if(currentUser.LocationJob == j.location
                 && currentUser.JobType == j.type
-                && currentUser.JobField == j.field)
+                && currentUser.JobField == j.field
+                )
             {  
                 
                 document.querySelector('.noJobsToShow').style.display = "none"
