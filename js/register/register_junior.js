@@ -1,7 +1,7 @@
 // global vars 
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];  // all users
 let juniors_arr = []; // all Juniors users
-let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {}; // the corrent User that SignIn
+let currentUser = {}; // the corrent User that SignIn
 let indexCorrentJunior = 0; // the index and number of juniors that sign in
 
 //----------------------------------------JUNIOR----------------------------

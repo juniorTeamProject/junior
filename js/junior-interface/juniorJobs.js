@@ -2,18 +2,17 @@
 
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let numOfOfferJobs = JSON.parse(localStorage.getItem('numOfOfferJobs')) || 0
-let offerJobs_arr = JSON.parse(localStorage.getItem('offerJobs_arr')) || []
+
 let jobs = JSON.parse(localStorage.getItem('jobs')) || []
 
 console.log(jobs.length)
 console.log(numOfOfferJobs)
-console.log(offerJobs_arr.length)
+
 
 
 
 
 showJobs()
-    
     
 
 
@@ -48,9 +47,4 @@ function showJobs()
     }
     
    
-}
-function likeBttn() 
-{
-    
-    
 }

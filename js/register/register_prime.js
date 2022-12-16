@@ -13,7 +13,7 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
     //check and convert the item in local to object
     primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
     indexCurrentPrime = JSON.parse(localStorage.getItem('indexPrime')) || 0;
-    currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    currentUser = {};
     let _img = localStorage.getItem('userImg');
     // check if the userEmail  exist
     let exist = (allUsers_arr.length && 

@@ -147,9 +147,11 @@ function updatePackege(e){
 function removePrime(){
     let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
+    let primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
     let temp = allUsers_arr.filter(item => item.Email != currentUser.Email);
+    let temp2 = primes_arr.filter(item => item.Email != currentUser.Email);
     localStorage.setItem('allUsers_arr', JSON.stringify(temp));
-    localStorage.setItem('primes_arr', JSON.stringify(temp));
+    localStorage.setItem('primes_arr', JSON.stringify(temp2));
         currentUser = {};
     localStorage.setItem("currentUser",JSON.stringify(currentUser));
     window.location.assign("/screens/home.html");
