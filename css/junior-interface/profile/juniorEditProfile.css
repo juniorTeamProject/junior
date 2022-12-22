@@ -137,9 +137,16 @@ i{
     border: none;
 }
 
+.imageFile{
+    border-radius:20px;
+    width: 150px;
+    padding-bottom: 15px;
+    display: block;
+    margin:0 auto;
+}
+
 .profileEdit{
     text-align: center;
-    padding-top:20px;
     padding-bottom: 50px;
     align-items: center;
 	justify-content: center;
@@ -202,4 +209,35 @@ input {
 
 .update button:hover {
 	background: #6d44b8;
+}
+
+.deleteAccount {
+	width: 100px;
+	height: 30px;
+	display: flex;
+    background-color: white;
+	color: black;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.deleteAccount:hover{
+    color: #DC3549;
+}
+
+.updateAndDelete{
+    display: flex;
+    align-items: center;
+    margin:0 auto;
+    max-width: 400px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-top: 15px;
 }

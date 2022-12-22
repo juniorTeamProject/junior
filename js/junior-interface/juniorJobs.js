@@ -49,3 +49,16 @@ function showJobs()
     
    
 }
+
+
+
+//----------------------------LOGOUT--------------------------------------
+
+function signOut(e) {
+    // reset currentUser
+    currentUser = {};
+    localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    // move to Home.html
+    window.location.assign("/screens/home.html");
+    e.preventDefault();  
+  }
