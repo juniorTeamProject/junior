@@ -19,7 +19,6 @@ function updatePrime(){
         currentUser.CompanyName = CompanyName.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"CompanyName",CompanyName.value);
-        updateUser_P_arr(currentUser.Email,"CompanyName",CompanyName.value);
     }
     if(email.value != currentUser.Email && email.value != ""){
         let exist = (allUsers_arr.length && 
@@ -31,29 +30,25 @@ function updatePrime(){
         currentUser.Email = email.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Email",email.value);
-        updateUser_P_arr(currentUser.Email,"Email",email.value);
         }
     }
     if(pass.value != currentUser.Password && pass.value != ""){
         currentUser.Password = pass.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Password",pass.value);
-        updateUser_P_arr(currentUser.Email,"Password",pass.value);
     }
     if(img != currentUser.img && img != null){
         currentUser.img = img;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"img",img);
-        updateUser_P_arr(currentUser.Email,"img",img);
     }
     if(Package != currentUser.Package && Package != null){
         currentUser.Package = Package;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Package",Package);
-        updateUser_P_arr(currentUser.Email,"Package",Package);
     }
     // document.querySelector('.imageFile').setAttribute("src",currentUser.img);
-    // window.location.assign("/screens/prime-interface/profile/PrimeEditProfile.html");
+    window.location.assign("/screens/prime-interface/profile/PrimeEditProfile.html");
 }
 
 function updateUser(email,info, value){
@@ -78,31 +73,6 @@ function updateUser(email,info, value){
     }
 
     localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users
-}
-
-function updateUser_P_arr(email,info, value){
-    let primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
-    for (let i = 0; i < primes_arr.length; i++) {
-        if (primes_arr[i].Email == email){
-            if(info == "CompanyName"){
-            primes_arr[i].CompanyName = value; 
-            }
-            if(info == "Email"){
-            primes_arr[i].Email = value; 
-            }
-            if(info == "Password"){
-            primes_arr[i].Password = value; 
-            }
-            if(info == "img"){
-            primes_arr[i].img = value; 
-            }
-            if(info == "Package"){
-            primes_arr[i].Package = value; 
-            }
-        }  
-    }
-
-    localStorage.setItem('primes_arr', JSON.stringify(primes_arr)); // save to all users
 }
 
 
@@ -147,11 +117,8 @@ function updatePackege(e){
 function removePrime(){
     let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
-    let primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
     let temp = allUsers_arr.filter(item => item.Email != currentUser.Email);
-    let temp2 = primes_arr.filter(item => item.Email != currentUser.Email);
-    localStorage.setItem('allUsers_arr', JSON.stringify(temp));
-    localStorage.setItem('primes_arr', JSON.stringify(temp2));
+    localStorage.setItem('allUsers_arr', JSON.stringify(temp));;
         currentUser = {};
     localStorage.setItem("currentUser",JSON.stringify(currentUser));
     window.location.assign("/screens/home.html");
