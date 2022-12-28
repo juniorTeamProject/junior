@@ -67,14 +67,7 @@ for (var j of jobs)
                 bttn.style.color = 'red'
                 currentUser.likedJobs.push(j) // push the current job to current likedJobs_arr user
                 localStorage.setItem('currentUser',JSON.stringify(currentUser)) // set local the new likedJob in arr
-                for(let user = 0; user < allUsers_arr.length; user++ )
-                {
-                    if(allUsers_arr[user].Email == currentUser.Email)
-                    {
-                        allUsers_arr[user] = currentUser
-                        localStorage.setItem('allUsers_arr',JSON.stringify(allUsers_arr))
-                    }
-                }
+                updateCurrent_InAllUsers_Local()
             }
         }
         
@@ -100,9 +93,54 @@ function markLikes()
 // submit job Bttn
 function submitJob(e)
 {
- console.log(e.target.id) 
+    let _index = e.target.id  // index of the clicked job
+    console.log("index of sumbit bttn in jobs arr :" ,_index) 
+    // add to the current user - submit arr the job that he submit
+    for (var j of jobs)
+    {
+        let exist = currentUser.submitJobs.some(job=> job.index == _index)
+        if(!exist)
+        {
+            if(j.index == _index)
+            {
+                currentUser.submitJobs.push(j)
+                localStorage.setItem('currentUser',JSON.stringify(currentUser))
+                updateCurrent_InAllUsers_Local() // update the currenr in all users arr
+                updateJobinLocal(_index) // update the job request in jobs arr
+            }
+
+            
+        }
+        
+    } 
+    
 }
 
+
+function updateJobinLocal(_index)
+{
+    for(let i = 0; i < jobs.length; i++ )
+    {
+        if(jobs[i].index == _index)
+        {
+            jobs[i].requestJuniors.push(currentUser.Email)
+            localStorage.setItem('jobs',JSON.stringify(jobs))
+        }
+    }
+}
+
+// func that update the current user detales at all user arr
+function updateCurrent_InAllUsers_Local()
+{
+    for(let user = 0; user < allUsers_arr.length; user++ )
+    {
+        if(allUsers_arr[user].Email == currentUser.Email)
+        {
+            allUsers_arr[user] = currentUser
+            localStorage.setItem('allUsers_arr',JSON.stringify(allUsers_arr))
+        }
+    }
+}
 
 //----------------------------LOGOUT--------------------------------------
 
