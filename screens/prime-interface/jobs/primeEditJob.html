@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/prime-interface/primeAddJob.css">
-    <title>Document</title>
+    <title>Prime Edit Jobs</title>
+    <link rel="stylesheet" href="/css/prime-interface/jobs/primeEditJob.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <!-- start header -->
     <header>
-        <div class="wrapper">
-    
-          <a href="/screens/after-Login/primeAfterLogIn.html">
-            <div class="logo">Jun</div>
-          </a>
-    
-          <!--bttn  after login, etc-->
-          <div class="wrapperBttns">
-          <button class="logoutButton" onclick="signOut(event)">התנתק</button>
-            <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
-          </div>
-
-          <div class="headline">
-            <h1>העלאת משרה</h1>
-          </div>
+        <div class="header">
+            <div class="topBttns">
+                <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
+                <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל
+                        שלי</button></a>
+            </div>
+            <br>
+            <h1 class="headline"> ערוך משרה</h1>
+            <a href="/screens/after-Login/primeAfterLogIn.html">
+                <div class="logo">Jun</div>
+            </a>
         </div>
     </header>
-      <!-- END Header-->
 
     <!-- start main -->
     <main>
-        <!-- form -->
-          <form class="upload_Job_form" onsubmit="addJob(event);">
+        <div>
+            <!-- form -->
+            <form class="upload_Job_form" onsubmit="addJob(event);">
 
-                  <!-- job requirments -->
-               
-                <h2>דרישות המשרה:</h2>
+                <!-- job requirments -->
                 <input class="JobCompanyName" type="text" name="txt" placeholder="שם החברה" required>
-                
+
                 <div class="jobScope_box">
                     <select name="" id="select_languenge" class="select_jobScope" required>
-                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">התקמצעות בשפת</option>
+                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">התקמצעות בשפת
+                        </option>
                         <option value="JS">Java Script</option>
                         <option value="++C">++C</option>
                         <option value="C">C</option>
@@ -51,11 +49,12 @@
                 </div>
                 <div class="jobScope_box">
                     <select name="" id="select_type" class="select_jobScope" required>
-                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">סוג משרה</option>
+                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">סוג משרה
+                        </option>
                         <option value="פרונטלית">פרונטלית</option>
                         <option value="היברידית">היברידית</option>
                         <option value="מהבית">מהבית</option>
-    
+
                     </select>
                 </div>
                 <div class="jobScope_box">
@@ -63,38 +62,37 @@
                         <option style="color: blueviolet; font-weight: bold;" selected disabled value="">השכלה</option>
                         <option value="תואר ראשון">תואר ראשון</option>
                         <option value="קורס יעודי">קורס יעודי</option>
-    
+
                     </select>
-    
+
                 </div>
                 <div class="jobScope_box">
                     <select name="" id="select_JobField" class="select_jobScope" required>
-                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">תחום משרה</option>
+                        <option style="color: blueviolet; font-weight: bold;" selected disabled value="">תחום משרה
+                        </option>
                         <option value="אוטומצייה">אוטומצייה</option>
                         <option value="פיתוח">פיתוח</option>
                         <option value="דאטה">דאטה</option>
-                    
+
                     </select>
                 </div>
-    
+
                 <div class="jobScope_box">
                     <select name="" id="select_LocationJob" class="select_jobScope" required>
                         <option style="color: blueviolet; font-weight: bold;" selected disabled value="">אזור</option>
                         <option value="דרום">דרום</option>
                         <option value="מרכז">מרכז</option>
                         <option value="צפון">צפון</option>
-    
+
                     </select>
-    
+
                 </div>
                 <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור המשרה"></textarea>
                 <!-- button - update -->
-                 <button class="update">הוספה</button>
+                <button class="update">עדכן</button>
 
             </form>
         </div>
     </main>
 
-    <script src="/js/prime-interface/addJob.js"></script>
 </body>
-</html>
