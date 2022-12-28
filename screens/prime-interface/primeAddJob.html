@@ -17,7 +17,7 @@
           </a>
     
           <!--bttn  after login, etc-->
-          <div class="wrapperBttns">
+          <div class="wrapperBttns" >
           <button class="logoutButton" onclick="signOut(event)">התנתק</button>
             <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
           </div>
@@ -35,17 +35,16 @@
           <form class="upload_Job_form" onsubmit="addJob(event);">
 
                   <!-- job requirments -->
-               
+
                 <h2>דרישות המשרה:</h2>
                 <input class="JobCompanyName" type="text" name="txt" placeholder="שם החברה" required>
                 
                 <div class="jobScope_box">
                     <select name="" id="select_languenge" class="select_jobScope" required>
                         <option style="color: blueviolet; font-weight: bold;" selected disabled value="">התקמצעות בשפת</option>
-                        <option value="JS">Java Script</option>
-                        <option value="++C">++C</option>
-                        <option value="C">C</option>
-                        <option value="PY">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">++C</option>
+                        <option value="Python">Python</option>
 
                     </select>
                 </div>
@@ -67,6 +66,15 @@
                     </select>
     
                 </div>
+                <div class="jobScope_box">
+					<select name="" id="select-scopeJob" class="select_jobScope" required>
+						<option style="color: blueviolet; font-weight: bold;" selected disabled value="">היקף משרה</option>
+						<option value="מלאה">מלאה</option>
+						<option value="סטודנט" >סטודנט</option>
+
+					</select>
+				</div>
+
                 <div class="jobScope_box">
                     <select name="" id="select_JobField" class="select_jobScope" required>
                         <option style="color: blueviolet; font-weight: bold;" selected disabled value="">תחום משרה</option>

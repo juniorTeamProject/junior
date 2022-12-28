@@ -32,6 +32,9 @@ function signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _j
        Knowledge: _knowledge,
        JobField: _jobField,
        LocationJob: _locationJob,
+       img:_img,
+       likedJobs:[],
+       submitJobs:[]
        img:_img 
       });
       
