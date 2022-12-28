@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Jobs</title>
+    <link rel="stylesheet" href="/css/prime-interface/jobs/primeJobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="header">
+            <div class="topBttns">
+                <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
+                <a href="/screens/prime-interface/profile/PrimeProfile.html"><button class="myProfile">הפרופיל
+                        שלי</button></a>
+                <a href="/screens/prime-interface/jobs/primeAddJob.html"><button class="uploudJobs">העלאת
+                        משרות</button></a>
+            </div>
+            <br>
+            <a href="/screens/prime-interface/profile/PrimeProfile.html" style="text-decoration: none";>
+                <h1 class="headline">הפרופיל שלי</h1>
+            </a>
+            <a href="/screens/after-Login/primeAfterLogIn.html">
+                <div class="logo">Jun</div>
+            </a>
+        </div>
+    </header>
+    <div class="profileNav">
+        <nav>
+            |<a href="/screens/prime-interface/profile/PrimeEditProfile.html">עדכון פרטים</a>
+            <i class="fa fa-address-card-o" aria-hidden="true"></i>|
+            <a href="/screens/prime-interface/jobs/primeJobs.html" class="current">משרות שהעליתי</a>
+            <i class="fa fa-suitcase" aria-hidden="true"></i>|
+        </nav>
+    </div>
+    <!-- start main -->
+    <main>
+        <div class="joblist">
+            <!-- the first job -->
+            <div class="first">
+                <div class="right-side">
+                    <div class="number"><i id="iconJob" class="fa fa-circle" aria-hidden="true"></i></div>
+                </div>
+                <div class="left-side">
+                    <div class="num_of_requests" onclick="toggleReq_popUp()">בקשות</div>
+                    <div class="top">
+                        <!-- picture -->
+                        <div class="picture">
+                            <img src="${this.img}" height="70" width="70">
+                        </div>
+                        <!-- information -->
+                        <div class="info">
+                            <h1 style="color:#281158"> ${this.name} </h1>
+                            <section>
+                                <p> מיקום: <p2 class="location"> ${this.location}</p2>
+                                </p>
+                                <p> משרה: <p2 class="type"> ${this.type} </p2>
+                                </p>
+                                <p> סוג: <p2 class="scope"> ${this.scope} </p2>
+                                </p>
+                            </section>
+                            <div class="icons">
+                                <p3>
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <a href="/screens/prime-interface/jobs/primeEditJob.html"><button
+                                            class="appley">ערוך</button> </a>
+                                </p3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- the explanation of the job -->
+                    <div class="bottom">
+                        <p>
+                            ${this.information}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- if the job list empty show img -->
+            <div class="noJobsToShow">
+                <img class="ImgNoJobs" src="" alt="">
+            </div>
+            <h1 class="txtNoJobs" style="text-align: center;margin-top:100px ;"> </h1>
+            <!------------>
+    </main>
+
+    <!-- popUp login-->
+    <div class="wrapper-popUp-REQUEST">
+        <div class="content">
+            <img class = "exit_icon" onclick=toggleReq_popUp() src="/images/exit_icon.png" alt="exit">
+                <div class="top_content">
+                    <div class="request">
+                        <h1>בקשות משרה</h1>
+                    </div>
+                </div>
+                <div>
+                    <div class= "bottom_content">
+                        <!--- function junior names --->
+                 
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- END popUp login-->
+    </div>
+
+    <script src="/js/prime-interface/primeJobs.js"></script>
+</body>

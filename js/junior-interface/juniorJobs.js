@@ -5,8 +5,8 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let jobs = JSON.parse(localStorage.getItem('jobs')) || [] // all jobs in the system
 
 
-showJobs()
-markLikes()    
+showJobs() // show to the user jobs
+markLikes() // mark the jobs that the user liked  
 
 
 
