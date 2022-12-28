@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/bdf8853241.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/prime-interface/profile/PrimeProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Prime Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="topBttns">
+                <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
+                <a href="/screens/prime-interface/profile/PrimeProfile.html"><button class="myProfile">הפרופיל
+                        שלי</button></a>
+                <a href="/screens/prime-interface/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
+            </div>
+            <br>
+            <a href="/screens/prime-interface/profile/PrimeProfile.html">
+                <h1 class="headline">הפרופיל שלי</h1>
+            </a>
+            <a href="/screens/after-Login/primeAfterLogIn.html">
+                <div class="logo">Jun</div>
+            </a>
+        </div>
+    </header>
+    <div class="profileNav">
+        <nav>
+            |<a href="/screens/prime-interface/profile/PrimeEditProfile.html" class="current">עדכון פרטים</a>
+            <i class="fa fa-address-card-o" aria-hidden="true"></i>|
+            <a href="#">משרות שהעליתי</a>
+            <i class="fa fa-suitcase" aria-hidden="true"></i>|
+        </nav>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="infoBackground">
+        <div class="profilePhoto">
+            <img src="/images/junior_logo.png" class="photoProfile">
+        </div>
+        <h2 id="quesHL">פרטי המשתמש</h2>
+        <div class="currentProfile">
+            שם החברה:
+            <br>
+            אימייל:
+            <br>
+            <br>
+            <div class="personalInfo">
+                <!--פרטים אישיים עדכניים-->
+                <div class="userName">name</div>
+                <div class="email">email</div>
+                <!--END-->
+            </div>
+            <br>
+            <br>
+
+        </div>
+        <div class="businessPackage">
+            <h2 id="businessHeadLine">חבילה עסקית נוכחית</h2>
+            <br>
+            <div class="WarrapPackage">
+                <div id="Box1" class="businessBox1">
+                    <div class="insideDiv">
+                        <p id="packageName">Silver</p>
+                    </div>
+                    <h4 class="insideHeadLine">משרות</h4>
+                     <div id="price">10</div>&nbsp;עד
+                    <h4 class="insideHeadLine">מחיר</h4>
+                    &nbsp;ש״ח <div id="price">199</div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <script src="/js/home.js"></script>
+    <script src="/js/junior-interface/juniorProfile.js"></script>
+</body>
