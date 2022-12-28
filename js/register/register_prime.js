@@ -1,17 +1,16 @@
 //----------------------------------------PRIME---------------------------------
 
+
+
 // global vars
 function signUp_Prime(_companyName, _email_prime, _password_prime){
 
-  let primes_arr = []; // all primes users
-  let indexCurrentPrime = 0; // the index and number of Primes that sign in
+  let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of Primes that sign in
   let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
   let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {}; // the corrent User that SignIn
      
     //check and convert the item in local to object
-    primes_arr = JSON.parse(localStorage.getItem('primes_arr')) || [];
-    indexCurrentPrime = JSON.parse(localStorage.getItem('indexPrime')) || 0;
-    currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    currentUser = {};
     let _img = localStorage.getItem('userImg');
     // check if the userEmail  exist
     let exist = (allUsers_arr.length && 
@@ -21,28 +20,19 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
     if(!exist){
       allUsers_arr.push(
         {
-         UserType: "Prime", 
+         UserType: "Prime",
+         Package: "Bronze",
          CompanyName: _companyName,
          Email: _email_prime,
          Password: _password_prime,
          img: _img
         });
-      primes_arr.push(
-       {
-        UserType: "Prime",
-        CompanyName: _companyName,
-        Email: _email_prime,
-        Password: _password_prime,
-        img: _img
-       });
        // save data at local
        localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users
-       localStorage.setItem('primes_arr', JSON.stringify(primes_arr)); // add to all users arr
-       currentUser = primes_arr[indexCurrentPrime];
+       currentUser = allUsers_arr[indexUsers];
        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-       console.log(primes_arr[indexCurrentPrime]);
-       indexCurrentPrime += 1;
-       localStorage.setItem('indexPrime', JSON.stringify(indexCurrentPrime));
+       indexUsers += 1;
+       localStorage.setItem('indexUsers', JSON.stringify(indexUsers));
        //-----
        document.querySelector('#signUp_prime_form').reset();
        document.getElementById('companyName').focus();
@@ -67,14 +57,12 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
     signUp_Prime(_companyName, _email_prime, _password_prime);
     e.preventDefault();
   }
-  
-  
   //----------------------------------------END PRIME--------------------------------
   
   
   //-----------------------------------------another funf-----------------------------
   
-  //choose image in signup from file
+  //change Prime image in 
   function pickImage(input) {    
       if (input.files && input.files[0]) {
         let reader = new FileReader();

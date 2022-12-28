@@ -11,13 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- img -->
+        <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+    ></script>
+    <!-- img -->
     <title>Junior Edit Profile</title>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <a href="/screens/home.html"><button class="logoutButton">התנתק</button></a>
+            <a ><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
             <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
             <a href="/screens/junior-interface/juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
             <a href="/screens/junior-interface/profile/JuniorProfile.html"><h1 class="headline">הפרופיל שלי</h1></a>
@@ -35,11 +45,12 @@
     <div class="headlineAndPhoto">
         <h3>עריכת פרטים אישיים</h3>
         <div class="profilePhoto">
-            <img src="/images/junior_logo.png" class="photoProfile">
+            <img type="file" class="imageFile" src="/images/junior_logo.png" class="photoProfile">
         </div>
     </div>
+    <input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
     <div class="profileEdit">
-        <formn id="editForm_junior">
+        <form id="editForm_junior">
             <h3 class="quesHeadLine">עדכון פרטי המשתמש</h3>
             <input id="name" type="text" name="txt" placeholder="שם מלא">
 			<input id="email" type="email" name="email" placeholder="אימייל">
@@ -52,26 +63,31 @@
 
             <div class="jobScope_box">
 
-                <select name="" id="select" class="select_jobScope">
-                    <option selected disabled value="">התקמצעות בשפת</option>
+                <select id="languages" name="" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value ="">התקמצעות בשפת</option>
                     <option value="JS">Java Script</option>
-                    <option value="C++">C++</option>
+                    <option value="++C">++C</option>
                     <option value="C">C</option>
-                    <option value="PY">Python</option>
+                    <option value="Python">Python</option>
                 </select>
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
-                    <option selected disabled value="">סוג משרה</option>
+                <select name="" id="JobScope" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value="">היקף משרה</option>
+                    <option value="מלאה">מלאה</option>
+                    <option value="סטודנט" >סטודנט</option>
+                </select>
+            <div class="jobScope_box">
+                <select name="" id="typeJob" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value="">סוג משרה</option>
                     <option value="פרונטלית">פרונטלית</option>
                     <option value="היברידית">היברידית</option>
                     <option value="מהבית">מהבית</option>
-
                 </select>
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
-                    <option selected disabled value="">השכלה</option>
+                <select name="" id="knowledge" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value="">השכלה</option>
                     <option value="תואר ראשון">תואר ראשון</option>
                     <option value="קורס יעודי">קורס יעודי</option>
 
@@ -79,8 +95,8 @@
 
             </div>
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
-                    <option selected disabled value="">תחום משרה</option>
+                <select name="" id="jobField" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value="">תחום משרה</option>
                     <option value="אוטומצייה">אוטומצייה</option>
                     <option value="פיתוח">פיתוח</option>
                     <option value="דאטה">דאטה</option>
@@ -89,8 +105,8 @@
             </div>
 
             <div class="jobScope_box">
-                <select name="" id="" class="select_jobScope">
-                    <option selected disabled value="">אזור</option>
+                <select name="" id="locationJob" class="select_jobScope">
+                    <option style="color: blueviolet; font-weight: bold;" selected disabled value="">אזור</option>
                     <option value="דרום">דרום</option>
                     <option value="מרכז">מרכז</option>
                     <option value="צפון">צפון</option>
@@ -100,8 +116,12 @@
             </div>
             <!------------------->
 
-            <button class="update">עדכן</button>
-        </formn>
+            <div class="updateAndDelete">
+                <button onclick="removeJunior();" class="deleteAccount">מחק משתמש</button>
+                <button onclick="updateJunior();" class="update">עדכן</button>
+            </div>
+        </form>
+
     </div>
     <script src="/js//junior-interface/editProfie.js"></script>
 

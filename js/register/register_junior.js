@@ -1,8 +1,7 @@
 // global vars 
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];  // all users
-let juniors_arr = []; // all Juniors users
-let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {}; // the corrent User that SignIn
-let indexCorrentJunior = 0; // the index and number of juniors that sign in
+let currentUser = {}; // the corrent User that SignIn
+let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of juniors that sign in
 
 //----------------------------------------JUNIOR----------------------------
 
@@ -11,8 +10,6 @@ let indexCorrentJunior = 0; // the index and number of juniors that sign in
 function signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _jobScope, _jobType, _knowledge, _jobField, _locationJob, _img){
 
   //check and convert the item in local to object
-  juniors_arr = JSON.parse(localStorage.getItem('juniors_arr')) || [];
-  indexCorrentJunior = JSON.parse(localStorage.getItem('indexJunior')) || 0;
   currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 
    // check if the userEmail  exist
@@ -36,29 +33,13 @@ function signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _j
        LocationJob: _locationJob,
        img:_img
       });
-    juniors_arr.push(
-      { 
-      UserType: "Junior",
-      Name: _fullName,
-      Email: _email_junior,
-      Password: _password_junior,
-      Langunge : _langunge,
-      JobScope: _jobScope,
-      JobType: _jobType,
-      Knowledge: _knowledge,
-      JobField: _jobField,
-      LocationJob: _locationJob,
-      img:_img
-      });
       
     // save data at local
     localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr));
-    localStorage.setItem('juniors_arr', JSON.stringify(juniors_arr));
-    currentUser = juniors_arr[indexCorrentJunior];
+    currentUser = allUsers_arr[indexUsers];
     localStorage.setItem('currentUser', JSON.stringify(currentUser));
-    console.log(juniors_arr[indexCorrentJunior]);
-    indexCorrentJunior+=1;
-    localStorage.setItem('indexJunior', JSON.stringify(indexCorrentJunior));
+    indexUsers+=1;
+    localStorage.setItem('indexUsers', JSON.stringify(indexUsers));
     //-----
 
     document.querySelector('#signUp-junior-form').reset();

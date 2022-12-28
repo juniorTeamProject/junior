@@ -49,7 +49,7 @@ body{
 	width: 110px;
 	border-radius: 10px;
 }
-.image
+
 
 .signup{
 	position: relative;
@@ -99,4 +99,5 @@ input{
 button:hover{
 	background: #6d44b8;
 }
+
 

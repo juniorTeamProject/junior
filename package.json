@@ -3,6 +3,7 @@
     "chai-http": "^4.3.0",
     "firebase": "^9.14.0"
   },
+  "type": "module",
   "name": "junior",
   "description": "web app for find a job to juniors",
   "version": "1.0.0",

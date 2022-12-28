@@ -1,7 +1,10 @@
 //-------------------------------ADMIN-------------------------------------
+let AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup'))
+
 if (AdminsSetup == 0){
     let admins_arr = []; // all Admin users
-    let indexCurrentAdmin = 0; // the index and number of Admins
+    let indexAdmin = 0; // the index and number of Admins
+    let indexUsers = 0 // all users index
     let _emailAdmin, _name;
   
     for (let i = 0; i < 4; i++) {
@@ -36,12 +39,13 @@ if (AdminsSetup == 0){
         Password: "123456",
         });
       AdminsSetup = 1;
-      indexCurrentAdmin+=1;
+      indexAdmin +=1;
+      indexUsers += 1;
+      localStorage.setItem('indexUsers', JSON.stringify(indexUsers));
       localStorage.setItem('AdminsSetup', JSON.stringify(AdminsSetup));
-      localStorage.setItem('indexAdmin', JSON.stringify(indexCurrentAdmin));
+      localStorage.setItem('indexAdmin', JSON.stringify(indexAdmin));
       localStorage.setItem('admins_arr', JSON.stringify(admins_arr));
       localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr));
-      console.log(admins_arr[indexCurrentAdmin]);
     }
   }
   
