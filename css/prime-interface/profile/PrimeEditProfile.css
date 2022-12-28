@@ -130,6 +130,15 @@ i{
     font-size: 1.6em;
 }
 
+.imageFile{
+    border-radius:20px;
+    width: 150px;
+    padding-top: 50px;
+    display: block;
+    margin:0 auto;
+    padding-bottom: 30px;
+}
+
 .editCompanyHL{
     padding-bottom: 20px;
 }

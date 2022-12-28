@@ -1,4 +1,7 @@
+
+// Junior Data
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
 let fullName = document.querySelector("#name")
 let email = document.querySelector("#email")
 let pass = document.querySelector("#password")
@@ -8,6 +11,10 @@ let JobType = document.querySelector("#typeJob")
 let Knowledge = document.querySelector("#knowledge")
 let JobField = document.querySelector("#jobField")
 let LocationJob = document.querySelector("#locationJob")
+
+//img
+let img;
+document.querySelector('.imageFile').setAttribute("src",currentUser.img);
 
 
 document.querySelector("#name").value = currentUser.Name
@@ -22,24 +29,40 @@ if(window.location == '/screens/junior-interface-profile/juniorEditProfile'){
 }
 
 function updateJunior(){
+    if(img != currentUser.img && img != null){
+        currentUser.img = img;
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        updateUser(currentUser.Email,"img",img);
+        updateUser_J_arr(currentUser.Email,"img",img);
+    }
     if(fullName.value != currentUser.Name && fullName.value != ""){
         currentUser.Name = fullName.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Name",fullName.value);
+        updateUser_J_arr(currentUser.Email,"Name",fullName.value);
     }
     if(email.value != currentUser.Email && email.value != ""){
+        let exist = (allUsers_arr.length && 
+            JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == currentUser.Email));
+        if(exist){
+            alert( "משתמש זה קיים במערכת.\nאנא הרשם עם מייל אחר.");
+        }
+        else{
         currentUser.Email = email.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Email",email.value);
+        updateUser_J_arr(currentUser.Email,"Email",email.value);
+        }
     }
     if(pass.value != currentUser.Password && pass.value != ""){
         currentUser.Password = pass.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Password",pass.value);
+        updateUser_J_arr(currentUser.Email,"Password",pass.value);
     }
     if(Langunge.value != currentUser.Langunge && Langunge.value != ""){
         currentUser.Langunge = Langunge.value;
-        localStorage.setItem('Langunge', JSON.stringify(currentUser));
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Langunge",Langunge.value);
     }
     if(JobScope.value != currentUser.JobScope && JobScope.value != ""){
@@ -68,7 +91,6 @@ function updateJunior(){
         updateUser(currentUser.Email,"LocationJob",LocationJob.value);
     }
 
-
     window.location.assign("/screens/junior-interface/profile/JuniorProfile.html");
 }
 
@@ -77,6 +99,9 @@ function updateUser(email,info, value){
     // let change = eval(info);
     for (let i = 0; i < allUsers_arr.length; i++) {
         if (allUsers_arr[i].Email == email){
+            if(info == "img"){
+                allUsers_arr[i].img = value; 
+                }
             if(info == "Name"){
             allUsers_arr[i].Name = value; 
             }
@@ -108,4 +133,45 @@ function updateUser(email,info, value){
     }
 
     localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users
+}
+
+ //choose image in signup from file
+ function pickImage(input) {    
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      
+      reader.onload = function (e) {
+        let url = e.target.result;
+        img = url;
+      $('.imageFile').attr('src', url).width(100).height(90);
+      localStorage.setItem('userImg',url);
+      console.log(e.target.result);
+
+      }; 
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+
+//----------------------------LOGOUT--------------------------------------
+
+function signOut(e) {
+    // reset currentUser
+    currentUser = {};
+    localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    // move to Home.html
+    window.location.assign("/screens/home.html");
+    e.preventDefault();  
+  }
+
+
+  //---------------------------Remove Junior User----------------------/-----
+function removeJunior(){
+    let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
+    let temp = allUsers_arr.filter(item => item.Email != currentUser.Email);
+    localStorage.setItem('allUsers_arr', JSON.stringify(temp));
+        currentUser = {};
+    localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    window.location.assign("/screens/home.html");
 }

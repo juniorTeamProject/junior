@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- img -->
+        <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      class="jsbin"
+      src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+    ></script>
+    <!-- img -->
     <title>Prime Edit Profile</title>
 </head>
 
@@ -18,9 +28,9 @@
     <header>
         <div class="header">
             <div class="topBttns">
-            <a href="/screens/home.html"><button class="logoutButton">התנתק</button></a>
+            <a ><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
             <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
-            <a href="#"><button class="uploudJobs">העלאת משרות</button></a>
+            <a href="/screens/prime-interface/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
             </div>
             <br>
             <a href="#"><h1 class="headline">הפרופיל שלי</h1></a>
@@ -39,11 +49,13 @@
     </div>
     <div class="headlineAndPhoto">
         <h3 class="editCompanyHL">עריכת פרטי החברה</h3>
+        <br>
         <div class="wrapImage">
             <div class="displayImage">
-                <img src="/images/job1.png" class="photoProfile">
+                <img class="imageFile" src="/images/prime_logo.png">
             </div>
         </div>
+        <br>
         <input type="file" id="image_input" accept="image/png ,image/jpg" onchange="pickImage(this)">
         <div class="profileEdit">
             <form id="editForm_Prime">
@@ -57,7 +69,7 @@
             <h4 class="businessHeadLine">עדכון חבילה עסקית</h4>
             <br>
             <div class="WarrapPackage">
-                <div class="businessBox1">
+                <div id="Box1" class="businessBox1">
                     <div class="insideDiv">
                         <p class="packageName">Silver</p>
                     </div>
@@ -65,8 +77,13 @@
                     עד 10
                     <h4 class="insideHeadLine">מחיר</h4>
                     199 ש״ח
+                    <div>
+                        <button id="Silver" class="Box1" onclick="updatePackege(event)">
+                            בחר חבילה
+                        </button>
+                    </div>
                 </div>
-                <div class="businessBox2">
+                <div id="Box2" class="businessBox2">
                     <div class="insideDiv">
                         <p class="packageName">Gold</p>
                     </div>
@@ -74,8 +91,13 @@
                     ללא הגבלה
                     <h4 class="insideHeadLine">מחיר</h4>
                     599 ש״ח
+                    <div>
+                        <button id="Gold" class="Box2" onclick="updatePackege(event)">
+                            בחר חבילה
+                        </button>
+                    </div>
                 </div>
-                <div class="businessBox3">
+                <div id="Box3" class="businessBox3">
                     <div class="insideDiv">
                         <p class="packageName">Bronze</p>
                     </div>
@@ -83,14 +105,20 @@
                     עד 100
                     <h4 class="insideHeadLine">מחיר</h4>
                     499 ש״ח
+                    <div>
+                        <button id="Bronze" class="Box3" onclick="updatePackege(event)">
+                            בחר חבילה
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="updateAndDelete">
-            <button class="deleteAccount">מחק משתמש</button>
-            <button class="update">עדכן</button>
+            <button onclick="removePrime();" class="deleteAccount">מחק משתמש</button>
+            <button onclick="updatePrime();" class="update">עדכן</button>
         </div>
-        
+        <script src="/js/prime-interface/editProfile.js"></script>
+
 </body>
 
 </html>

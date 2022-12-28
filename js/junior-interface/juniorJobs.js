@@ -5,14 +5,9 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let jobs = JSON.parse(localStorage.getItem('jobs')) || [] // all jobs in the system
 
 
-
-
-
-
-
-
 showJobs()
 markLikes()    
+
 
 
 function showJobs()
@@ -53,7 +48,6 @@ function showJobs()
    
 }
 
-//צריך לעשות שיהיה לכל משתמש רשימת לייקים משלו
 // like Bttn
 function likeBttn(e) 
 {
@@ -108,3 +102,15 @@ function submitJob(e)
 {
  console.log(e.target.id) 
 }
+
+
+//----------------------------LOGOUT--------------------------------------
+
+function signOut(e) {
+    // reset currentUser
+    currentUser = {};
+    localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    // move to Home.html
+    window.location.assign("/screens/home.html");
+    e.preventDefault();  
+  }
