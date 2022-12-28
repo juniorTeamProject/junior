@@ -104,6 +104,19 @@ function submitJob(e)
 }
 
 
+
+let searchInput = document.querySelector("#sreachJobs")
+searchInput.addEventListener("input", e => {
+    let value = e.target.value
+    console.log(value)
+    jobs.forEach(job => {
+        let isVisible = job.name.includes(value)
+        job.classList.toggle("hide", !isVisible)
+    })
+})
+
+
+
 //----------------------------LOGOUT--------------------------------------
 
 function signOut(e) {
