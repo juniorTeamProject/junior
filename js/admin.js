@@ -1,5 +1,5 @@
 //-------------------------------ADMIN-------------------------------------
-let AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup'))
+let AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) || 0
 
 if (AdminsSetup == 0){
     let admins_arr = []; // all Admin users

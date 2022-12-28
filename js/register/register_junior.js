@@ -2,6 +2,7 @@
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];  // all users
 let currentUser = {}; // the corrent User that SignIn
 let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of juniors that sign in
+let flagImg = 0;
 
 //----------------------------------------JUNIOR----------------------------
 
@@ -31,7 +32,7 @@ function signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _j
        Knowledge: _knowledge,
        JobField: _jobField,
        LocationJob: _locationJob,
-       img:_img
+       img:_img 
       });
       
     // save data at local
@@ -67,6 +68,9 @@ function dataJunior(e){
   let _jobField = document.querySelector('#jobField-select').value;
   let _locationJob = document.querySelector('#locationJob-select').value;
   let _img = localStorage.getItem('userImg'); // get img
+  if(flagImg == 0){
+    _img = "/images/junior_logo.png";
+  }
   signUp_Junior(_fullName, _email_junior, _password_junior, _langunge, _jobScope, _jobType, _knowledge, _jobField, _locationJob, _img);
   e.preventDefault();
 }
@@ -81,7 +85,7 @@ function dataJunior(e){
 function pickImage(input) {    
     if (input.files && input.files[0]) {
       let reader = new FileReader();
-      
+      flagImg = 1;
       reader.onload = function (e) {
         let url = e.target.result;
       $('.imageFile').attr('src', url).width(100).height(90);

@@ -1,9 +1,9 @@
 //----------------------------------------PRIME---------------------------------
 
+let flagImg = 0;
+let _img;
 
-
-// global vars
-function signUp_Prime(_companyName, _email_prime, _password_prime){
+function signUp_Prime(_companyName, _email_prime, _password_prime, _img){
 
   let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of Primes that sign in
   let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
@@ -11,7 +11,6 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
      
     //check and convert the item in local to object
     currentUser = {};
-    let _img = localStorage.getItem('userImg');
     // check if the userEmail  exist
     let exist = (allUsers_arr.length && 
       JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == _email_prime)); 
@@ -50,11 +49,14 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
   function dataPrime(e){
   
     // data prime
+    _img = localStorage.getItem('userImg');
     let _companyName = document.querySelector('#companyName').value;
     let _email_prime = document.querySelector('#email_prime').value;
     let _password_prime = document.querySelector('#password_prime').value;
-    
-    signUp_Prime(_companyName, _email_prime, _password_prime);
+    if(flagImg == 0){
+      _img = "/images/prime_logo.png";
+    }
+    signUp_Prime(_companyName, _email_prime, _password_prime, _img);
     e.preventDefault();
   }
   //----------------------------------------END PRIME--------------------------------
@@ -66,7 +68,7 @@ function signUp_Prime(_companyName, _email_prime, _password_prime){
   function pickImage(input) {    
       if (input.files && input.files[0]) {
         let reader = new FileReader();
-        
+        flagImg = 1;
         reader.onload = function (e) {
           let url = e.target.result;
         $('.imageFile').attr('src', url).width(100).height(90);
