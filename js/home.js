@@ -13,9 +13,11 @@ function signIn(email,password){
     currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     // check if user exist
     let exist = (allUsers_arr.length && 
-    JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
+    allUsers_arr.some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
     let user  = allUsers_arr.filter(user => user.Email == email);
+    console.log(user)
     currentUser = user[0];
+    console.log(currentUser)
     
     //user not exist
     if(!exist){
