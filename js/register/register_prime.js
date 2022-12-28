@@ -24,7 +24,8 @@ function signUp_Prime(_companyName, _email_prime, _password_prime, _img){
          CompanyName: _companyName,
          Email: _email_prime,
          Password: _password_prime,
-         img: _img
+         img: _img,
+         postedJobs:[]
         });
        // save data at local
        localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users

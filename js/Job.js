@@ -1,5 +1,7 @@
+
 class Job {
-    constructor(_img, _name, _location, _scope, _type,_information) {
+    constructor(_index,_img, _name, _location, _scope, _type,_information) {
+        this.index = _index;
         this.img = _img;
         this.name = _name;
         this.location = _location;
@@ -39,8 +41,8 @@ class Job {
                         </section>
                         <div class="icons">
                             <p3>
-                                <i onclick = "likeBttn(e)" class="fa fa-heart" aria-hidden="true"></i>
-                                <button class="appley"> הגש </button>
+                                <i id = ${this.index} onclick = "likeBttn(event)" class="fa fa-heart heartBttn" aria-hidden="true"></i>
+                                <button id = ${this.index} onclick = "submitJob(event)" class="appley"> הגש </button>
                             </p3>
                         </div>
                     </div>
@@ -57,4 +59,3 @@ class Job {
     
    
 }
-

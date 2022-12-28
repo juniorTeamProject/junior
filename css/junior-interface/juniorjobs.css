@@ -111,6 +111,7 @@ i {
     font-size: 1.4em;
 }
 
+
 main {
     display: flex;
     justify-content: space-around;
@@ -241,6 +242,10 @@ p{
     justify-content: space-between;
     direction: rtl;
 
+}
+
+.heartBttn, .appley{
+    cursor: pointer;
 }
 
 .info p3 {
