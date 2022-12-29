@@ -55,9 +55,19 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     cursor: pointer;
 }
 
-.logoutButton:hover, .managment:hover{
-    font-size: larger;
+.message{
+    color: #281158;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
 }
+
+
 
 .wrapperBttns{
     max-width: 400px;
