@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/bdf8853241.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/AdminInterface.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Managment</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="topBttns">
+                <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
+                <a href="/screens/AdminInterface.html"><button class="managment">ניהול האתר</button></a>
+                <a href="/screens/AdminMessage.html"><button class="message">תיבת פניות</button></a>
+            </div>
+            <br>
+            <h1 class="headline">ניהול האתר</h1>
+            <a href="/screens/after-Login/adminAfterLogIn.html">
+                <div class="logo">Jun</div>
+            </a>
+        </div>
+    </header>
+    <div id="Admin_Prem">
+        <h3 class="HL">הוספת אדמין</h3>
+        <form>
+            <input id="name" type="text" name="txt" placeholder="שם מלא">
+			<input id="email" type="email" name="email" placeholder="אימייל">
+			<input id="password" type="password" name="password" placeholder="ססמא">
+        </form>
+        <button class="update">הוסף</button>
+    </div>
+
+    <div id="delete_account">
+        <h3 class="HL">מחיקת משתמש</h3>
+        <form>
+			<input id="email_delete_user" type="email" name="email" placeholder="אימייל">
+        </form>
+        <button class="update">מחק</button>
+    </div>
+
+    <div id="block_account">
+        <h3 class="HL">חסימת משתמש</h3>
+        <form>
+			<input id="email_block_user" type="email" name="email" placeholder="אימייל">
+        </form>
+        <button class="update">חסום</button>
+    </div>
+
+    <div id="unblock_account">
+        <h3 class="HL">ביטול חסימה</h3>
+        <form>
+			<input id="email_remove_block" type="email" name="email" placeholder="אימייל">
+        </form>
+        <button class="update">עדכן</button>
+    </div>
+
+    <div id="upgrade_plan">
+        <h3 class="HL">שדרוג חבילת פריים</h3>
+        <form>
+			<input id="email_upgrade_plan" type="email" name="email" placeholder="אימייל">
+            <select name="" id="plan" class="plan">
+                <option style="color: blueviolet; font-weight: bold;" selected disabled value="">חבילה</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+            </select>
+        </form>
+        <button class="update">שדרג</button>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
