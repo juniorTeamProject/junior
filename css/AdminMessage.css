@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+}
+.header{
+    height: 150px;
+    background: #7A3DC6;
+}
+
+.headline{
+    color: white;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.logo{
+    padding: 5px;
+    padding-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size:3.6em ;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;   
+}
+
+.logo::after {
+    content: "ior";
+    color: #DC3549;
+}
+
+.logoutButton{
+    color: #DC3549;
+    background-color: #7A3DC6;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.topBttns{
+    max-height: 15px;
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+.managment{
+    color: #ff0000;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.message{
+    color: #281158;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#mess{
+    margin:0 auto;
+    width: 700px;
+    min-height: 200px;
+    background: #e7e7e777;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    direction: rtl;
+}
+
+.messBox{
+    padding-top: 20px;
+    max-width: 100%;
+    font-size: 1.2em;
+    display: flex;
+    font-weight: bold;
+    align-content: space-between;
+}
+
+.info{
+    font-weight: normal;
+    display: inline-block;
+}
+
+.details{
+    margin:0 auto;
+    min-width: 450px;
+    min-height: 200px;
+    background: #e7e7e7b3;
+    border-radius: 20px;
+    padding: 10px;
+    direction: rtl;
+
+}
+
+
+.sections{
+   padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
