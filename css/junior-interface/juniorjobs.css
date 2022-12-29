@@ -1,11 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 body {
     background: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header {
@@ -68,10 +68,6 @@ body {
     cursor: pointer;
 }
 
-.offerJobs:hover{
-    width: 123px;
-    height: 38px;
-}
 
 .profileNav {
     background-color: #E6E6E6;
