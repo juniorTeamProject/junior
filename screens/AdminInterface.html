@@ -31,52 +31,54 @@
     </header>
     <div id="Admin_Prem">
         <h3 class="HL">הוספת אדמין</h3>
-        <form>
-            <input id="name" type="text" name="txt" placeholder="שם מלא">
-			<input id="email" type="email" name="email" placeholder="אימייל">
-			<input id="password" type="password" name="password" placeholder="ססמא">
+        <form onsubmit="admin_Permission(event);">
+            <input id="name" type="text" name="txt" placeholder="שם מלא" required="">
+			<input id="email" type="email" name="email" placeholder="אימייל" required="">
+			<input id="password" type="password" name="password" placeholder="ססמא" minlength="6">
+            <button  class="update">הוסף</button>
         </form>
-        <button class="update">הוסף</button>
     </div>
 
     <div id="delete_account">
         <h3 class="HL">מחיקת משתמש</h3>
-        <form>
-			<input id="email_delete_user" type="email" name="email" placeholder="אימייל">
+        <form onsubmit="deleteUser(event);">
+			<input id="email_delete_user" type="email" name="email" placeholder="אימייל" required="">
+            <button class="update">מחק</button>
         </form>
-        <button class="update">מחק</button>
     </div>
 
     <div id="block_account">
         <h3 class="HL">חסימת משתמש</h3>
-        <form>
-			<input id="email_block_user" type="email" name="email" placeholder="אימייל">
+        <form onsubmit="BlockUser(event);">
+			<input id="email_block_user" type="email" name="email" placeholder="אימייל" required="">
+            <button class="update">חסום</button>
         </form>
-        <button class="update">חסום</button>
     </div>
 
     <div id="unblock_account">
         <h3 class="HL">ביטול חסימה</h3>
-        <form>
-			<input id="email_remove_block" type="email" name="email" placeholder="אימייל">
+        <form onsubmit="removeBlock(event);">
+			<input id="email_remove_block" type="email" name="email" placeholder="אימייל" required="">
+            <button class="update">עדכן</button>
         </form>
-        <button class="update">עדכן</button>
     </div>
 
     <div id="upgrade_plan">
         <h3 class="HL">שדרוג חבילת פריים</h3>
-        <form>
-			<input id="email_upgrade_plan" type="email" name="email" placeholder="אימייל">
-            <select name="" id="plan" class="plan">
+        <form onsubmit="upgradePlan(event);">
+			<input id="email_upgrade_plan" type="email" name="email" placeholder="אימייל" required="">
+            <select name="" id="plan" class="plan" required>
                 <option style="color: blueviolet; font-weight: bold;" selected disabled value="">חבילה</option>
                 <option value="Bronze">Bronze</option>
                 <option value="Silver">Silver</option>
                 <option value="Gold">Gold</option>
             </select>
+            <button class="update">שדרג</button>
         </form>
-        <button class="update">שדרג</button>
     </div>
     <br>
     <br>
     <br>
+    <script src="/js/home.js"></script>
+    <script src="/js/admin-interface/adminActions.js"></script>
 </body>

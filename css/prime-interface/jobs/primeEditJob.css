@@ -48,7 +48,14 @@ body{
     cursor: pointer;
 }
 
-
+.myProfile{
+    color: white;
+    background-color: #7A3DC6;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    cursor: pointer;
+}
 
 .topBttns{
     max-height: 15px;
@@ -56,58 +63,34 @@ body{
     justify-content: space-between;
 }
 
-.managment{
-    color: #ff0000;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px 10px 10px 10px;
-    font-size: large;
-    border:none;
-    font-weight: bold;
-    padding: 8px;
-    cursor: pointer;
-}
-
-.message{
-    color: #281158;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px 10px 10px 10px;
-    font-size: large;
-    border:none;
-    font-weight: bold;
-    padding: 8px;
-    cursor: pointer;
-}
-
-#Admin_Prem, #delete_account, #block_account, #unblock_account, #upgrade_plan {
-    margin:0 auto;
-    max-width: 900px;
-    min-height: 200px;
-    background: #e7e7e777;
-    border-radius: 20px;
-    justify-content: center;
+main{
+    justify-content: space-around;
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-
-
-.HL{
-    font-size: 1.5em;
-    color:#281158;
+    justify-items: center;
+    align-items: center;
     padding-top: 30px;
-    margin:0 auto;
+    direction: rtl;
+    color: #281158;
 }
 
-input, #plan{
-	direction: rtl;
-	width:200px;
+.jobRole, .jobPosition,.JobCompanyName,#image_input{
+    direction: rtl;
+	width:31%;
 	height: 25px;
 	background: #e0dede;
-	justify-content: center;
-	display: flex;
+    display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+.jobDescription{
+    direction: rtl;
+	width:350px;
+	height: 150px;
+	background: #e0dede;
+    display: flex;
 	margin: 20px auto;
 	padding: 10px;
 	border: none;
@@ -115,24 +98,22 @@ input, #plan{
 	border-radius: 5px;
 }
 
-#plan{
-    appearance: none;
+.select_jobScope {
 	padding: 10px;
 	background-color: #e0dede;
-	height: 45px;
+	height: 40px;
 	cursor: pointer;
 	border: none;
-	border-radius: 5px;
-	color: #8383839f;
+	border-radius: 10px;
+	color: #838383;
 	direction: rtl;
-	width: 220px;
+	width: 500px;
 	outline: white;
 	margin-top: 10px;
 }
 
-
 .update {
-	width: 80px;
+	width: 100px;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
@@ -147,6 +128,4 @@ input, #plan{
 	border-radius: 5px;
 	transition: .2s ease-in;
 	cursor: pointer;
-    margin-bottom: 20px;
 }
-

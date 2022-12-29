@@ -33,13 +33,11 @@ function updateJunior(){
         currentUser.img = img;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"img",img);
-        updateUser_J_arr(currentUser.Email,"img",img);
     }
     if(fullName.value != currentUser.Name && fullName.value != ""){
         currentUser.Name = fullName.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Name",fullName.value);
-        updateUser_J_arr(currentUser.Email,"Name",fullName.value);
     }
     if(email.value != currentUser.Email && email.value != ""){
         let exist = (allUsers_arr.length && 
@@ -51,14 +49,12 @@ function updateJunior(){
         currentUser.Email = email.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Email",email.value);
-        updateUser_J_arr(currentUser.Email,"Email",email.value);
         }
     }
     if(pass.value != currentUser.Password && pass.value != ""){
         currentUser.Password = pass.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Password",pass.value);
-        updateUser_J_arr(currentUser.Email,"Password",pass.value);
     }
     if(Langunge.value != currentUser.Langunge && Langunge.value != ""){
         currentUser.Langunge = Langunge.value;
