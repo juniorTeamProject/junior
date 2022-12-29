@@ -9,7 +9,6 @@ showJobs() // show to the user jobs
 markLikes() // mark the jobs that the user liked  
 
 
-
 function showJobs()
 {
     let flag = 0
@@ -30,12 +29,9 @@ function showJobs()
                 let index = j.index // current index of the current job
                 document.querySelector('.noJobsToShow').style.display = "none"
                 var job = new Job(index,j.img,j.name,j.location,j.field,j.type,j.information) // crate job
-                job.addToHtml() // add the current job to user interface
-                
+                job.addToHtml() // add the current job to user interface 
             }
         }
-    
-       
     }
     // if there is no offer jobs show to user image and txt that he has not offers job
     if( jobs.length == 0|| jobs == null || flag == 0 )
