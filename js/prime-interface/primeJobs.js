@@ -48,12 +48,6 @@ function signOut(e) {
 
 
 
-
-
-
-
-
-
 // login bttn - func to open\close the popUp
 var toggle = false;
 function toggleReq_popUp() 

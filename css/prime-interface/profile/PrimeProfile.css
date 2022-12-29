@@ -9,6 +9,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
 }
 .header{
     height: 150px;
