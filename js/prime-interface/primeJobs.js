@@ -30,6 +30,36 @@ function editJob(e)
     console.log(e.target.id)
 }
 
+//----------------- DeleteJob
+function deleteJob(e){
+    let numOfJobs = JSON.parse(localStorage.getItem('numOfJobs')) || 0
+    let index = e.target.id;
+    for (let i = 0; i < allUsers_arr.length; i++) {
+        if(allUsers_arr[i].Email == currentUser.Email){
+            allUsers_arr[i].postedJobs = allUsers_arr[i].postedJobs.filter(item => item.index != parseInt(index));
+            localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to local
+        }    
+    }
+    let temp = jobs.filter(item => item.index != parseInt(index));
+    localStorage.setItem('jobs', JSON.stringify(temp)); // save to local
+
+    currentUser.postedJobs = currentUser.postedJobs.filter(item => item.index != parseInt(index));
+    localStorage.setItem('currentUser', JSON.stringify(currentUser)); // save to local
+
+    // numOfJobs-=1; // decrease the num of jobs
+    // localStorage.setItem('numOfJobs', JSON.stringify(numOfJobs)); // save to local
+    alert( "משרה הוסרה בהצלחה!");
+    location.reload();
+}
+
+
+
+
+
+
+
+
+
 function signOut(e) {
     // reset currentUser
     currentUser = {};
