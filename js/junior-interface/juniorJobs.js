@@ -47,27 +47,45 @@ function showJobs()
 // like Bttn
 function likeBttn(e) 
 {
-let _index = e.target.id // index of the job in jobs arr
-console.log(_index) 
-let id_indexString = _index.toString() // convert the index to string for use in style 
-let bttn = document.getElementById(id_indexString)
+    let _index = e.target.id // index of the job in jobs arr
+    console.log(_index) 
+    let id_indexString = _index.toString() // convert the index to string for use in style 
+    let bttn = document.getElementById(id_indexString)
+    let exist = currentUser.likedJobs.some(job => job.index == parseInt(_index)) // check if he did already like
 
-for (var j of jobs) 
+    if(!exist)
     {
-        bttn = document.getElementById(id_indexString)
-        let exist = currentUser.likedJobs.some(job=> job.index == _index) // check if he did already like
-        if(!exist)
+        //like
+        for (var j of jobs) 
         {
-            if (j.index == _index)
+            
+            if (j.index == parseInt(_index))
             {
+                bttn = document.getElementById(id_indexString)
                 bttn.style.color = 'red'
                 currentUser.likedJobs.push(j) // push the current job to current likedJobs_arr user
                 localStorage.setItem('currentUser',JSON.stringify(currentUser)) // set local the new likedJob in arr
                 updateCurrent_InAllUsers_Local()
             }
+            
+            
         }
-        
+    }else{
+        // dislike 
+        for (var j of currentUser.likedJobs)
+        {
+            if (j.index == parseInt(_index))
+            {
+                let indexInLikesArr = currentUser.likedJobs.indexOf(j)
+                console.log("index in likes arrr: " ,parseInt(indexInLikesArr))
+                currentUser.likedJobs.splice(indexInLikesArr,1)
+                bttn.style.color = '#D3D3D3'
+                localStorage.setItem('currentUser',JSON.stringify(currentUser))
+                
+            }
+        }
     }
+    
 }
 function markLikes()
 { 
@@ -92,10 +110,10 @@ function submitJob(e)
     let _index = e.target.id  // index of the clicked job
     console.log("index of sumbit bttn in jobs arr :" ,_index) 
     // add to the current user - submit arr the job that he submit
-    for (var j of jobs)
+    let exist = currentUser.submitJobs.some(job=> job.index == _index)
+    if(!exist)
     {
-        let exist = currentUser.submitJobs.some(job=> job.index == _index)
-        if(!exist)
+        for (var j of jobs)
         {
             if(j.index == _index)
             {
@@ -105,14 +123,16 @@ function submitJob(e)
                 updateJobinLocal(_index) // update the job request in jobs arr
             }
 
-            
-        }
         
-    } 
+        } 
+    }else{
+        alert('כבר הגשת בקשה למשרה זו!')
+    }
+    
     
 }
 
-
+//update the requestsArr of the current job
 function updateJobinLocal(_index)
 {
     for(let i = 0; i < jobs.length; i++ )
