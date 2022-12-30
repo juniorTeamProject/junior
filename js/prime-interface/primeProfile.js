@@ -1,6 +1,7 @@
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[]; 
+let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];
 
+document.querySelector('.photoProfile').setAttribute("src",currentUser.img) 
 document.querySelector(".companyName").innerHTML = currentUser.CompanyName
 document.querySelector(".email").innerHTML = currentUser.Email
 

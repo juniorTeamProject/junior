@@ -148,6 +148,8 @@ main {
 .num_of_requests{
 padding-right: 260px;
 font-size: small;
+color: #DC3549;
+cursor: pointer;
 }
 
 .right-side {
@@ -324,7 +326,7 @@ p{
 .wrapper-popUp-REQUEST{
     background: rgb(0, 0, 0,0.6);
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     overflow-y: hidden;
     position: absolute;
     top: 0;

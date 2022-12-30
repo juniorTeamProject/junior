@@ -40,6 +40,17 @@ function signOut(e) {
     e.preventDefault();  
   }
 
+  let popup = document.querySelector('.wrapper-popUp-REQUEST')
+  window.addEventListener('scroll', function() {
+    // If the pop-up is visible, keep it fixed at the top of the page
+    if (popup.style.display === 'flex') {
+      popup.style.top = window.pageYOffset + 'px';
+    }
+  });
+
+
+
+
 
 
 
