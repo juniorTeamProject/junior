@@ -17,3 +17,16 @@ function contact_Us(){
 }
 
 // ------------------Junior Contact Us--------------------------//
+
+
+var toggle = false;
+function toggleLogin() 
+{
+   if(toggle == false){
+       document.querySelector(".popUp").style.display = "flex";
+       toggle = true;
+   }else{
+       document.querySelector(".popUp").style.display = "none";
+       toggle = false;
+   }
+}
