@@ -1,6 +1,8 @@
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
-let jobs = JSON.parse(localStorage.getItem('jobs'))
+let jobs = JSON.parse(localStorage.getItem('jobs'));
+let index;
+
 
 showPostedJobs()
 
@@ -25,12 +27,8 @@ function showPostedJobs()
     }
 }
 
-function editJob(e)
-{
-    console.log(e.target.id)
-}
 
-//----------------- DeleteJob
+//----------------- Delet eJob-----------/////
 function deleteJob(e){
     let numOfJobs = JSON.parse(localStorage.getItem('numOfJobs')) || 0
     let index = e.target.id;
@@ -46,17 +44,19 @@ function deleteJob(e){
     currentUser.postedJobs = currentUser.postedJobs.filter(item => item.index != parseInt(index));
     localStorage.setItem('currentUser', JSON.stringify(currentUser)); // save to local
 
-    // numOfJobs-=1; // decrease the num of jobs
-    // localStorage.setItem('numOfJobs', JSON.stringify(numOfJobs)); // save to local
+    numOfJobs-=1; // decrease the num of jobs
+    localStorage.setItem('numOfJobs', JSON.stringify(numOfJobs)); // save to local
     alert( "משרה הוסרה בהצלחה!");
     location.reload();
 }
 
 
-
-
-
-
+//----------------- Edit Job-----------/////
+function Jobindex(e){
+    index = e.target.id;
+    localStorage.setItem('Jobindex', JSON.stringify(index));
+    window.location.assign("/screens/prime-interface/jobs/primeEditJob.html");
+}
 
 
 

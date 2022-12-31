@@ -89,8 +89,8 @@ class Job {
                         <div class="icons">
                             <p3>
                                 <i id = ${this.index} onclick = "deleteJob(event)" class="fa fa-trash" aria-hidden="true"></i>
-                                <a href="/screens/prime-interface/jobs/primeEditJob.html"><button
-                                        class="appley"  id = ${this.index} onclick = "editJob(event)">ערוך</button> </a>
+                                <a><button
+                                        class="appley"  id = ${this.index} onclick = "Jobindex(event)">ערוך</button> </a>
                             </p3>
                         </div>
                     </div>

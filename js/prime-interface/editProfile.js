@@ -1,6 +1,8 @@
 
 // Prime data
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of juniors that sign in
+
 let CompanyName = document.querySelector("#companyName")
 let email = document.querySelector("#email")
 let pass = document.querySelector("#password")
@@ -119,8 +121,14 @@ function removePrime(){
     let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
     let temp = allUsers_arr.filter(item => item.Email != currentUser.Email);
     localStorage.setItem('allUsers_arr', JSON.stringify(temp));;
-        currentUser = {};
+    currentUser = {};
     localStorage.setItem("currentUser",JSON.stringify(currentUser));
+    indexUsers-=1;
+    localStorage.setItem('indexUsers', JSON.stringify(indexUsers));
+    setTimeout(homepagefunc, 500);
+}
+
+function homepagefunc(){
     window.location.assign("/screens/home.html");
 }
 
