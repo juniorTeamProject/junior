@@ -15,3 +15,16 @@ function contact_Us(){
     localStorage.setItem('contactUs', JSON.stringify(contactUs));
     alert( "הפנייה נמסרה!");
 }
+
+
+var toggle = false;
+function toggleLogin() 
+{
+   if(toggle == false){
+       document.querySelector(".popUp").style.display = "flex";
+       toggle = true;
+   }else{
+       document.querySelector(".popUp").style.display = "none";
+       toggle = false;
+   }
+}

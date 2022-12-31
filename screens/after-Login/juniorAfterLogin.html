@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/css/after-Login/JuniorAfterLogIn.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-  
+
 
 </head>
 
@@ -29,7 +29,8 @@
       <!--bttn  after login, etc-->
       <div class="wrapperBttns">
         <button class="logoutButton" onclick="signOut(event)">התנתק</button>
-        <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
+        <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל
+            שלי</button></a>
         <a href="/screens/junior-interface/juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
       </div>
 
@@ -64,11 +65,47 @@
   <h2 style="text-align: center; color: #32125a;">יכול לעניין אותך</h2>
   <!-- END companies Icons-->
   <div class="katavot">
-    <img class="tipImg"src="/images/tip1.jpeg" width="25%">
-    <img class="tipImg"src="/images/tip2.jpeg" width="25%">
+    <img class="tipImg" src="/images/tip1.jpeg" width="25%">
+    <img class="tipImg" src="/images/tip2.jpeg" width="25%">
     <img class="tipImg" src="/images/tip3.jpeg" width="25%">
   </div>
+  <!-- popUp begins -->
+  <div class="popUp">
+    <div class="popUp-content">
+      <h1>צור קשר</h1>
+      <input class="JobCompanyName" type="text" name="txt" placeholder="נושא" required>
+      <br>
+      <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור הנושא"></textarea>
+      <!-- button send -->
+      <br>
+      <br>
+      <button class="send">שלח</button>
+    </div>
+  </div>
+  <!-- popUp ends -->
+
 
   <script src="/js/home.js"></script>
 </body>
+<hr>
+<!-- footer begins -->
+<footer>
+  כל הזכויות שמורות לאתר ג'וניור מקבוצת META.
+  <br>
+  כל פגיעה בחוקי האתר תגרור חסימה\פגיעה בזכויות יוצרים תגרור עילה לתביעה.
+  <br>
+  <br>
+  <br>
+  צריך עזרה? לחץ למטה!
+  <br>
+  <button>
+    <i onclick = toggleLogin() class="fa fa-headphones" aria-hidden="true"></i>&nbsp;צור קשר
+  </button>
+   
+
+</footer>
+<!--     end      -->
+
+<script src="/js/junior-interface/JuniorEtc.js"></script>
+
 </html>
