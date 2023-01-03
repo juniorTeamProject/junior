@@ -17,14 +17,23 @@ function contact_Us(){
 }
 
 
-var toggle = false;
-function toggleLogin() 
+var toggle1 = false;
+function toggleCOntact() 
 {
-   if(toggle == false){
+   if(toggle1 == false){
        document.querySelector(".popUp").style.display = "flex";
-       toggle = true;
+       toggle1 = true;
    }else{
        document.querySelector(".popUp").style.display = "none";
-       toggle = false;
+       toggle1 = false;
    }
 }
+
+// make the popUp of requestUsers to fix and steak to top at scrolling
+let popup = document.querySelector('.popUp')
+window.addEventListener('scroll', function() {
+  // If the pop-up is visible, keep it fixed at the top of the page
+  if (popup.style.display === 'flex') {
+    popup.style.top = window.pageYOffset + 'px';
+  }
+});
