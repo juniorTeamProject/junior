@@ -18,7 +18,7 @@ function contact_Us(){
 
 
 var toggle1 = false;
-function toggleCOntact() 
+function toggleContact() 
 {
    if(toggle1 == false){
        document.querySelector(".popUp").style.display = "flex";

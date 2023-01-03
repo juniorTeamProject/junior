@@ -17,13 +17,11 @@
 <body>
     <header>
         <div class="header">
-            <a href="/screens/home.html"><button class="logoutButton">התנתק</button></a>
+            <a href="/screens/home.html"><button onclick="signOut()" class="logoutButton">התנתק</button></a>
             <a href="/screens/junior-interface/profile/JuniorProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
             <a href="/screens/junior-interface/juniorjobs.html"><button class="offerJobs">הצעת משרות</button></a>
-            <a href="/screens/junior-interface/profile/JuniorProfile.html"><h1 class="headline" href="JuniorProfile.html">הפרופיל שלי</h1></a>
-            <a href="/screens/after-Login/juniorAfterLogin.html">
-                <div class="logo">Jun</div>
-            </a>
+            <a href="/screens/junior-interface/profile/JuniorProfile.html"><h1 class="headline">הפרופיל שלי</h1></a>
+            <a href="/screens/after-Login/juniorAfterLogin.html"><div class="logo">Jun</div> </a>
         </div>
     </header>
     <div class="profileNav">
@@ -46,7 +44,7 @@
                 <!-- information -->
                     <div class="info">
                          <div class="image">
-                            <img src=""> <!-- put image in here -->
+                            <img id="imgJob" src="/images/job1.png"> <!-- put image in here -->
                          </div>
                          <div class="information">
                             <div class="right">

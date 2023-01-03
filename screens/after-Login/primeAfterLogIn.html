@@ -74,14 +74,14 @@
   <div class="popUp">
     <div class="popUp-content">
       <h1>צור קשר</h1>
-      <img class = "exit_icon" onclick=toggleCOntact() src="/images/exit_icon.png" alt="exit">
+      <img class = "exit_icon" onclick=toggleContact() src="/images/exit_icon.png" alt="exit">
       <input class="JobCompanyName" type="text" name="txt" placeholder="נושא" required>
       <br>
       <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור הנושא"></textarea>
       <!-- button send -->
       <br>
       <br>
-      <button class="send">שלח</button>
+      <button onclick=contact_Us() class="send">שלח</button>
     </div>
   </div>
   <!-- popUp ends -->
@@ -91,18 +91,17 @@
 <hr>
 <!-- footer begins -->
 <footer>
+  
+  <div class="contact" onclick = toggleContact();>
+    <i   class="fa fa-headphones" aria-hidden="true"></i>&nbsp;צור קשר
+  </div>
+  <br>
   כל הזכויות שמורות לאתר ג'וניור מקבוצת META.
   <br>
   כל פגיעה בחוקי האתר תגרור חסימה\פגיעה בזכויות יוצרים תגרור עילה לתביעה.
   <br>
   <br>
   <br>
-  צריך עזרה? לחץ למטה!
-  <br>
-  
-  <i  onclick = toggleCOntact(); class="fa fa-headphones" aria-hidden="true"></i>&nbsp;צור קשר
-  
-
 </footer>
 <!--     end      -->
   <script src="/js/prime-interface/PrimeEtc.js"></script>
