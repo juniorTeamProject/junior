@@ -2,15 +2,16 @@
 
 let contactUs = JSON.parse(localStorage.getItem('contactUs')) ||[];
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-let msg;
+let msg = document.querySelector("#msg") || {};
+let subject = document.querySelector("#sub") || {};
 
 function contact_Us(){
     contactUs.push(
         {
-        UserType: currentUser.UserType,            
-        Name: currentUser.Name,           
+        UserType: currentUser.UserType,                 
         Email: currentUser.Email,
-        Msg: msg
+        Subject: subject.value,
+        Msg: msg.value
         });
     localStorage.setItem('contactUs', JSON.stringify(contactUs));
     alert( "הפנייה נמסרה!");

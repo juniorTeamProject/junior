@@ -80,7 +80,7 @@ function updateJob(info, value){
     for (let j = 0; j < jobs.length; j++){
         if(jobs[j].index == parseInt(index))
             if(info == "CompanyName"){
-                jobs[j].CompanyName = value; 
+                jobs[j].name = value; 
             }
             if(info == "languenge"){
                 jobs[j].languenge = value; 

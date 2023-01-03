@@ -31,7 +31,7 @@
         <button class="logoutButton" onclick="signOut(event)">התנתק</button>
         <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל
             שלי</button></a>
-        <a href="/screens/prime-interface/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
+        <a href="/screens/prime-interface/jobs/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
       </div>
 
       <div class="wraperNumofJobs">
@@ -75,13 +75,15 @@
     <div class="popUp-content">
       <h1>צור קשר</h1>
       <img class = "exit_icon" onclick=toggleContact() src="/images/exit_icon.png" alt="exit">
-      <input class="JobCompanyName" type="text" name="txt" placeholder="נושא" required>
+      <form onsubmit=contact_Us();>
+      <input id="sub" class="JobCompanyName" type="text" name="txt" placeholder="נושא" required>
       <br>
-      <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור הנושא"></textarea>
+      <textarea id="msg" class="jobDescription" type="text" name="txt" placeholder="תיאור הנושא" required></textarea>
       <!-- button send -->
       <br>
       <br>
-      <button onclick=contact_Us() class="send">שלח</button>
+      <button class="send">שלח</button>
+    </form>
     </div>
   </div>
   <!-- popUp ends -->
@@ -96,7 +98,7 @@
     <i   class="fa fa-headphones" aria-hidden="true"></i>&nbsp;צור קשר
   </div>
   <br>
-  כל הזכויות שמורות לאתר ג'וניור מקבוצת META.
+  כל הזכויות שמורות לאתר Junior מקבוצת META.
   <br>
   כל פגיעה בחוקי האתר תגרור חסימה\פגיעה בזכויות יוצרים תגרור עילה לתביעה.
   <br>

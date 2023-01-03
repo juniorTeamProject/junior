@@ -248,7 +248,6 @@ footer a {
     padding: 10px;
     background-color: #e0dede;
     height: 40px;
-    cursor: pointer;
     border: none;
     border-radius: 10px;
     color: #838383;
@@ -296,6 +295,8 @@ footer a {
 .contact{
     cursor: pointer;
     font-size: 2em;
+    color: #7A3DC6;
+    font-weight: bold;
 }
 
 /* -------------- */
