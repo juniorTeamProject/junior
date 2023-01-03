@@ -291,7 +291,12 @@ footer a {
     left: 10px;
     width: 30px;
     cursor: pointer;
-    }
+}
+
+.contact{
+    cursor: pointer;
+    font-size: 2em;
+}
 
 /* -------------- */
 
