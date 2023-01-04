@@ -66,6 +66,7 @@ body{
     border:none;
     font-weight: bold;
     padding: 8px;
+    cursor: pointer;
 }
 
 .profileNav{
@@ -92,9 +93,14 @@ body{
     transition: 1000ms;
 }
 
+.profileNav i:hover{
+    color: #281158;
+    transition: 1000ms; 
+}
+
 .profileNav .current{
     color:#281158;
-    display: inline-block;
+   
 }
 
 

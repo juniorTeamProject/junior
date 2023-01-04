@@ -19,6 +19,7 @@ body{
     color: white;
     text-align: center;
     padding-top: 24px;
+    justify-content: center;
 }
 
 .logo{
@@ -97,6 +98,11 @@ body{
 .profileNav a:hover{
     color: #281158;
     transition: 1000ms;
+}
+
+.profileNav i:hover{
+    color: #281158;
+    transition: 1000ms; 
 }
 
 .profileNav .current{
