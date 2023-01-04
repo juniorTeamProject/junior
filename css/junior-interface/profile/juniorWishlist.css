@@ -9,7 +9,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
 }
 .header{
     height: 150px;
@@ -46,6 +45,7 @@ body{
     font-size: large;
     border:none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .myProfile{
@@ -54,6 +54,7 @@ body{
     margin: 10px 10px 10px 10px;
     font-size: large;
     border:none;
+    cursor: pointer;
 }
 
 .offerJobs{
@@ -65,6 +66,7 @@ body{
     border:none;
     font-weight: bold;
     padding: 8px;
+    cursor: pointer;
 }
 
 .profileNav{
@@ -128,95 +130,163 @@ i{
     padding-right: 7px;
 }
 
-main{
-    max-width:100%;
-    max-height:100%;
-    height: 1000px;
-    background-color:white;
-    justify-content: space-around;
+main {
     display: flex;
+    justify-content: space-around;
+    background: white;
 }
 
-.wishlist{
-    max-width:60%;
-    max-height: 100%;
-    height: 1000px;
+.joblist {
     width: 80%;
+    max-height: 100%;
     display: block;
+    direction: rtl;
+    justify-content: baseline;
+    padding-bottom: 80px;
 }
 
-.firstjob{
+.first {
     background: #F5F5F5;
     max-width: 100%;
-    max-height:180px;
-    height: 180px;
-    margin-bottom: 20px;
+    max-width: 2000px;
+    min-width: 1000px;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+}
+
+.right-side {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    max-height: 500px;
+    max-width: 250px;
+    color: #EAEAEA;
+    font-size: 6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.number {
+    padding-top: 20%;
+    padding-right: 30%;
+}
+
+.left-side {
+    width: 70%;
+    max-height: 500px;
+    padding: 10px;
+}
+
+.top {
+    background: white;
+    width: 580px;
+    max-height: 200px;
+    display: flex;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     direction: rtl;
 }
 
-.info{
-    max-width: 80%;
-    max-height: 100%;
-    width: 70%;
-    display: flex;
+.bottom {
+    width: 580px;
+    max-height: 100px;
+    direction: rtl;
+}
+p{
+    font-weight: normal;
+    font-size: 0.9em;
 }
 
-.buttons{
-    max-width: 20%;
+.picture {
+    width: 180px;
     height: 100%;
-    width: 20%;
-    display: flex;
-    justify-content:end;
-    padding-left: 25px;
+    direction: rtl;
+    padding-top: 70px;
+    padding-right: 40px;
 }
 
-.image{
-    max-width: 25%;
-    max-height: 100%;
-    height: 90%;
-    width: 25%;
-    margin: 10px 10px 10px 10px;
+.picture img[src="/images/job3.png"] {
+    padding-top: 45px;
+    padding-right: 20px;
+    direction: rtl;
+
 }
 
-.image img[src="/images/job1.png"]{
-    width: 110px;
-    height: 110px;
-    padding-top: 20%;
-    padding-right: 30px;
+.info {
+    background: white;
+    width: 800px;
+    height: 200px;
+    display: block;
+    border-top-left-radius: 20px;
+    direction: rtl;
+
 }
 
-.information{
-    padding-top: 60px;
+.info h1 {
+    text-align: center;
+    justify-content: center;
+    margin-left: 130px;
+    padding-top: 10px;
+    direction: rtl;
+
+}
+
+.info section {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    direction: rtl;
+
+}
+
+.info section p {
+    color: #7A3DC6;
+    direction: rtl;
+
+}
+
+.info section p2 {
+    color: black;
+    direction: rtl;
+    font-weight: normal;
+
+}
+#sts{
+    color: #DC3549;
+    font-weight: bold;
+}
+
+.icons {
+    color: #DC3549;
     display: flex;
     justify-content: space-between;
+    direction: rtl;
+
 }
 
-.left{
-    padding-right: 20px;
+.appley{
+    cursor: pointer;
 }
 
-.spaceline{
-    background-color: #8e8b8b;
-    margin-right: 20px;
-    height: 70px;
-    width: 4px;
+.info p3 {
+    padding-top: 10px;
+    padding-right: 250px;
+    font-size: 2em;
+    direction: rtl;
+
 }
 
-.information p{
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #7A3DC6;
+.icons {
+    display: inline-block;
 }
 
-.information p2{
-    color: black;
-    padding-right: 10px;
-}
-
-.button{
-    margin-top: 80px;
+.icons button {
     background: #DC3549;
     color: white;
     border-color: #DC3549;
@@ -224,23 +294,47 @@ main{
     height: 30px;
     width: 90px;
     font-weight: bold;
-    font-size: 1.2em;
-    text-decoration: red;
+    font-size: 0.5em;
 }
 
-.buttons .button:hover{
-    font-size: 1.3em;
+.icons p{
+    font-size: 1em;
 }
 
-.buttons i{
-    margin-top: 80px;
+
+
+.icons p3 i {
+    margin-bottom: 10px;
     font-size: 25px;
-    padding-left: 20px;
     color: red;
 }
 
+
+.bottom {
+    background: #EBEBEB;
+    max-height: 100%;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 10px;
+    direction: rtl;
+    padding-bottom: 10px;
     
-.buttons i:hover{
-    color: #BDBDBD;
-    transition: 1000ms;
+}
+.noJobsToShow{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.ImgNoJobs{
+    width: 300px;
+    height: 300px;
+}
+#iconJob{
+    color:#27115883;
+    font-size: 100px;
+    margin-bottom: 25px;
+    margin-left: 15px;
 }
