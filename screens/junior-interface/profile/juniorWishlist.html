@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Junior Wishlist Profile</title>
+    <title>Junior-Wishlist Profile</title>
 </head>
 
 <body>
@@ -26,47 +26,30 @@
     </header>
     <div class="profileNav">
         <nav>
-            |<a href="/screens/junior-interface/profile/juniorEditProfile.html">עדכון פרטים</a>
-            <i class="fa fa-address-card-o" aria-hidden="true"></i>|
+            <a href="/screens/junior-interface/profile/juniorsubmittedJobs.html" >משרות שהגשתי</a>
+            |<i class="fa fa-heart" aria-hidden="true"></i>
             <a href="/screens/junior-interface/profile/juniorWishlist.html" class="current">משרות שאהבתי</a>
-            <i class="fa fa-heart" aria-hidden="true"></i>|
+            |<i class="fa fa-address-card-o" aria-hidden="true"></i>
+            <a href="/screens/junior-interface/profile/juniorEditProfile.html">עדכון פרטים</a>
+            <i class="fa fa-list" aria-hidden="true"></i>
         </nav>
     </div>
-    <div class="amountofjobs">
-        <div class="number">2</div>
-        <p>משרות שאהבתי</p>
-    </div>
     <main>
-        <!-- main start -->
-        <div class="wishlist">
-            <!-- first job in the list -->
-               <div class="firstjob">
-                <!-- information -->
-                    <div class="info">
-                         <div class="image">
-                            <img id="imgJob" src="/images/job1.png"> <!-- put image in here -->
-                         </div>
-                         <div class="information">
-                            <div class="right">
-                             <p>חברה:<p2>MICROSOFT</p2></p>
-                             <br>
-                             <p>מיקום:<p2>צפון הארץ</p2></p>
-                            </div>
-                            <div class="spaceline">
-                            </div>
-                            <div class="left">
-                             <p>סוג:<p2>היברידי</p2></p>
-                             <br>
-                             <p>משרה:<p2>מפתח WEB</p2></p>
-                            </div>
-                         </div> 
-                    </div>
-                    <!-- the buttons -->
-                    <div class="buttons">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                         <button class="button"> הגש </button>
-                    </div>
-                </div>
+        <div class="joblist">
+            <!-- the first job offer -->
+
+
+            <!-- if the job list empty show img -->
+            <div class="noJobsToShow">
+                <img class ="ImgNoJobs" src="" alt="">
+            </div>
+            <h1 class ="txtNoJobs" style="text-align: center;margin-top:70px ;"> </h1>
+            <!------------>
+
         </div>
     </main>
+
+    
+    <script src="/js/junior-interface/whislist.js"></script>
+    <script src="/js/junior-interface/juniorWhislist.js"></script>
 </body>

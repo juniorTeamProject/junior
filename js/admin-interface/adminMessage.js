@@ -24,7 +24,7 @@ function showMsgs()
     if( contactUs.length == 0|| contactUs == null || flag == 0 )
     {
         document.querySelector('.ImgNoJobs').setAttribute('src','/images/noJobsToShow.png')
-        document.querySelector('.txtNoJobs').innerHTML = 'אין פניות לאתר כרגע'
+        document.querySelector('.allMsg').innerHTML = 'אין פניות לאתר כרגע'
         
     }
      

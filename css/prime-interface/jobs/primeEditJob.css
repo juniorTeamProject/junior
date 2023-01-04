@@ -9,7 +9,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
 }
 .header{
     height: 150px;
@@ -20,6 +19,7 @@ body{
     color: white;
     text-align: center;
     padding-top: 24px;
+    justify-content: center;
 }
 
 .logo{
@@ -55,6 +55,19 @@ body{
     font-size: large;
     border:none;
     cursor: pointer;
+}
+
+.uploudJobs{
+    color: #281158;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    font-size: large;
+    border:none;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
+    max-width: 150px;
 }
 
 .topBttns{

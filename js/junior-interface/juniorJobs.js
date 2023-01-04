@@ -121,6 +121,7 @@ function submitJob(e)
                 localStorage.setItem('currentUser',JSON.stringify(currentUser))
                 updateCurrent_InAllUsers_Local() // update the currenr in all users arr
                 updateJobinLocal(_index) // update the job request in jobs arr
+                alert('בקשה נשלחה בהצלחה!')
             }
 
         
