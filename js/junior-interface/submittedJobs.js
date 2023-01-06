@@ -1,8 +1,14 @@
 
+
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let sumJobs = currentUser.submitJobs || [] // all jobs in the system
 
+///---------------Cant back if not log in---------------------
+if(currentUser.Name == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
+  window.location.assign("/screens/home.html");
+}
+///---------------Cant back if not log in---------------------
 
 showJobs() // show to the user jobs
 
@@ -18,7 +24,7 @@ function showJobs()
                 flag = 1
                 let index = j.index // current index of the current job
                 document.querySelector('.noJobsToShow').style.display = "none"
-                var job = new Job(index,j.img,j.name,j.location,j.field,j.type,j.information) // crate job
+                var job = new Job(index,j.img,j.name,j.location,j.field,j.type,j.information, j.status) // crate job
                 job.addToHtml() // add the current job to user interface 
         }
     }
@@ -43,3 +49,4 @@ function signOut(e) {
     window.location.assign("/screens/home.html");
     e.preventDefault();  
   }
+
