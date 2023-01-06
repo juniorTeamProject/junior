@@ -1,4 +1,6 @@
 
+
+
 // Prime data
 let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of juniors that sign in
@@ -142,5 +144,10 @@ function signOut(e) {
     // move to Home.html
     window.location.assign("/screens/home.html");
     e.preventDefault();  
-  }
+}
 
+ ///---------------Cant back if not log in---------------------
+ if(currentUser.Name == null && currentUser.CompanyName == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
+    window.location.assign("/screens/home.html");
+ }
+ ///---------------Cant back if not log in---------------------

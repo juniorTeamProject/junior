@@ -1,5 +1,6 @@
 
 
+
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let jobs = JSON.parse(localStorage.getItem('jobs')) || [] // all jobs in the system
@@ -169,3 +170,9 @@ function signOut(e) {
     window.location.assign("/screens/home.html");
     e.preventDefault();  
   }
+
+    ///---------------Cant back if not log in---------------------
+ if(currentUser.Name == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
+    window.location.assign("/screens/home.html");
+ }
+ ///---------------Cant back if not log in---------------------

@@ -1,4 +1,10 @@
+
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
+///---------------Cant back if not log in---------------------
+if(currentUser.Name == null && currentUser.CompanyName == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
+  window.location.assign("/screens/home.html");
+}
+///---------------Cant back if not log in---------------------
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let jobs = JSON.parse(localStorage.getItem('jobs'));
 let index;
@@ -58,7 +64,55 @@ function Jobindex(e){
     window.location.assign("/screens/prime-interface/jobs/primeEditJob.html");
 }
 
+function showReqUsers(e)
+{
+    jobs = JSON.parse(localStorage.getItem('jobs'))
+    console.log(e.target.id)
+    let index = e.target.id // index of the current job we clicked
+    let userRec;
+    for(var j of jobs) // j = job
+    {    
+        if(j.index == index) // when we find the job in arr
+        {     
+            // we lop the req arr of the spetsific job
+            for (let i = 0; i < j.requestJuniors.length; i++) {
+                // we check that the rec users not in the recPopup arr - for avoid duplicate res users in html popUp
+                if (!(j.reqInPopUp.includes(j.requestJuniors[i]))) 
+                {
+                    // if ther user doesnt exist in arr we push him to arr
+                    // that if we click again in bttn - avoid to see same user n clicked
+                    j.reqInPopUp.push(j.requestJuniors[i]);
+                    // update the dataBase
+                    localStorage.setItem('jobs',JSON.stringify(jobs))
+                    // create new element in html
+                    let recList = document.querySelector(".listReq");
+                    let newBox = document.createElement("ul");
+                    // loop all the arr rec users
+                    for(let z = 0; z< j.reqInPopUp.length; z++) 
+                    {    
+                       // show the users in popUp
+                       // we pass in the func for evrey li element the inedx of the user
+                        newBox.innerHTML = `<a href="/screens/prime-interface/jobs/juniorReq.html"> <li onclick="getRecIndex(${index},${z});" style="color: white ;" >${j.reqInPopUp[z]}</li></a>`  
+                        // apend the user in popUp
+                        recList.appendChild(newBox);
+                        // console the user for test.
+                        console.log(j.reqInPopUp[z])
+                    }
+                   
+                }
+            }
+        }       
+    }
+}
 
+
+//this function for save the current rec user that the prime click 
+function getRecIndex(jobIndex,recIndex)
+{
+    console.log(jobIndex,recIndex)
+    localStorage.setItem('currentJobRec_index',JSON.stringify(jobIndex))
+    localStorage.setItem('currentJobIndexRec_recInpopUp',JSON.stringify(recIndex))
+}
 
 function signOut(e) {
     // reset currentUser
@@ -79,25 +133,24 @@ function signOut(e) {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-// login bttn - func to open\close the popUp
+  // login bttn - func to open\close the popUp
 var toggle = false;
 function toggleReq_popUp() 
 {
+    
    if(toggle == false){
        document.querySelector(".wrapper-popUp-REQUEST").style.display = "flex";
        toggle = true;
    }else{
        document.querySelector(".wrapper-popUp-REQUEST").style.display = "none";
        toggle = false;
-   }
+       // this fix the duplicate
+       // req users in popUp when we press on the bttn 
+       for(var j of jobs)
+       {
+            j.reqInPopUp.splice(0, j.reqInPopUp.length)
+            localStorage.setItem('jobs',JSON.stringify(jobs))
+            document.querySelector(".listReq").innerHTML = ''
+       }
+   }   
 }

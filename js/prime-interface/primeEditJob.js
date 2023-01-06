@@ -1,7 +1,14 @@
+
+
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let jobs = JSON.parse(localStorage.getItem('jobs'));
 let index = JSON.parse(localStorage.getItem('Jobindex'));
+ ///---------------Cant back if not log in---------------------
+ if(currentUser.Name == null && currentUser.CompanyName == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
+    window.location.assign("/screens/home.html");
+ }
+ ///---------------Cant back if not log in---------------------
 
 let job = currentUser.postedJobs.filter(item => item.index == parseInt(index));
 
@@ -135,3 +142,4 @@ function updateUser(email,info, value){
     }
     localStorage.setItem('allUsers_arr', JSON.stringify(allUsers_arr)); // save to all users
 }
+
