@@ -21,9 +21,6 @@ let Knowledge = document.querySelector("#knowledge")
 let JobField = document.querySelector("#jobField") 
 let LocationJob = document.querySelector("#locationJob") 
 
-if(currentUser.Name == null){
-    window.location.assign("/screens/home.html");
-} 
 
 //img
 let img;
