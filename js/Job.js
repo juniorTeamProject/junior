@@ -69,7 +69,7 @@ class Job {
                 <div class="number"><i id="iconJob" class="fa fa-circle" aria-hidden="true"></i></div>
             </div>
             <div class="left-side">
-                <div id = "${this.index}" class="num_of_requests" onclick="toggleReq_popUp()">בקשות</div>
+                <div id = "${this.index}" class="num_of_requests" onclick="toggleReq_popUp(); showReqUsers(event);">בקשות</div>
                 <div class="top">
                     <!-- picture -->
                     <div class="picture">
@@ -88,9 +88,9 @@ class Job {
                         </section>
                         <div class="icons">
                             <p3>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                <a href="/screens/prime-interface/jobs/primeEditJob.html"><button
-                                        class="appley"  id = ${this.index} onclick = "editJob(event)">ערוך</button> </a>
+                                <i id = ${this.index} onclick = "deleteJob(event)" class="fa fa-trash" aria-hidden="true"></i>
+                                <a><button
+                                        class="appley"  id = ${this.index} onclick = "Jobindex(event)">ערוך</button> </a>
                             </p3>
                         </div>
                     </div>
@@ -106,4 +106,5 @@ class Job {
         }
     }
      
+
 

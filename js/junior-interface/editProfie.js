@@ -1,45 +1,52 @@
 
+
 // Junior Data
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];  // all users
-let fullName = document.querySelector("#name")
-let email = document.querySelector("#email")
-let pass = document.querySelector("#password")
-let Langunge = document.querySelector("#languages")
-let JobScope = document.querySelector("#JobScope")
-let JobType = document.querySelector("#typeJob")
-let Knowledge = document.querySelector("#knowledge")
-let JobField = document.querySelector("#jobField")
-let LocationJob = document.querySelector("#locationJob")
+let indexUsers = JSON.parse(localStorage.getItem('indexUsers')) || 0; // the index and number of juniors that sign in
+
+let fullName = document.querySelector("#name") 
+let email = document.querySelector("#email") 
+let pass = document.querySelector("#password") 
+let Langunge = document.querySelector("#languages") 
+let JobScope = document.querySelector("#JobScope") 
+let JobType = document.querySelector("#typeJob") 
+let Knowledge = document.querySelector("#knowledge") 
+let JobField = document.querySelector("#jobField") 
+let LocationJob = document.querySelector("#locationJob") 
+
+if(currentUser.Name == null){
+    window.location.assign("/screens/home.html");
+} 
 
 //img
 let img;
+    
 document.querySelector('.imageFile').setAttribute("src",currentUser.img);
-
 
 document.querySelector("#name").value = currentUser.Name
 document.querySelector("#email").value = currentUser.Email
 document.querySelector("#password").value = currentUser.Password
+document.querySelector("#languages").value = currentUser.Langunge
+document.querySelector("#JobScope").value = currentUser.JobScope
+document.querySelector("#typeJob").value = currentUser.JobType
+document.querySelector("#knowledge").value = currentUser.Knowledge
+document.querySelector("#jobField").value = currentUser.JobField
+document.querySelector("#locationJob").value = currentUser.LocationJob
 
 
-if(window.location == '/screens/junior-interface-profile/juniorEditProfile'){
-    fullName.value = currentUser.Name
-    email.value = currentUser.Email;
-    pass.value = currentUser.Password
-}
+
 
 function updateJunior(){
     if(img != currentUser.img && img != null){
         currentUser.img = img;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"img",img);
-       
     }
     if(fullName.value != currentUser.Name && fullName.value != ""){
         currentUser.Name = fullName.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Name",fullName.value);
-        
     }
     if(email.value != currentUser.Email && email.value != ""){
         let exist = (allUsers_arr.length && 
@@ -51,14 +58,12 @@ function updateJunior(){
         currentUser.Email = email.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Email",email.value);
-       
         }
     }
     if(pass.value != currentUser.Password && pass.value != ""){
         currentUser.Password = pass.value;
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUser(currentUser.Email,"Password",pass.value);
-        updateUser_J_arr(currentUser.Email,"Password",pass.value);
     }
     if(Langunge.value != currentUser.Langunge && Langunge.value != ""){
         currentUser.Langunge = Langunge.value;
@@ -170,8 +175,9 @@ function removeJunior(){
     let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
     let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
     let temp = allUsers_arr.filter(item => item.Email != currentUser.Email);
-    localStorage.setItem('allUsers_arr', JSON.stringify(temp));
-        currentUser = {};
+    localStorage.setItem('allUsers_arr', JSON.stringify(temp));;
+    currentUser = {};
     localStorage.setItem("currentUser",JSON.stringify(currentUser));
-    window.location.assign("/screens/home.html");
+    indexUsers-=1;
+    localStorage.setItem('indexUsers', JSON.stringify(indexUsers));  
 }

@@ -8,6 +8,7 @@
     <title>Prime Edit Jobs</title>
     <link rel="stylesheet" href="/css/prime-interface/jobs/primeEditJob.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Prime-Edit Job</title>
 </head>
 
 <body>
@@ -16,11 +17,14 @@
         <div class="header">
             <div class="topBttns">
                 <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
-                <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל
+                <a href="/screens/prime-interface/profile/PrimeProfile.html"><button class="myProfile">הפרופיל
                         שלי</button></a>
+                <a href="/screens/prime-interface/jobs/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
             </div>
             <br>
-            <h1 class="headline"> ערוך משרה</h1>
+            <a href="/screens/prime-interface/profile/PrimeProfile.html">
+                <h1 class="headline">הפרופיל שלי</h1>
+            </a>
             <a href="/screens/after-Login/primeAfterLogIn.html">
                 <div class="logo">Jun</div>
             </a>
@@ -31,7 +35,7 @@
     <main>
         <div>
             <!-- form -->
-            <form class="upload_Job_form" onsubmit="addJob(event);">
+            <form class="upload_Job_form">
 
                 <!-- job requirments -->
                 <input class="JobCompanyName" type="text" name="txt" placeholder="שם החברה" required>
@@ -40,10 +44,9 @@
                     <select name="" id="select_languenge" class="select_jobScope" required>
                         <option style="color: blueviolet; font-weight: bold;" selected disabled value="">התקמצעות בשפת
                         </option>
-                        <option value="JS">Java Script</option>
-                        <option value="++C">++C</option>
-                        <option value="C">C</option>
-                        <option value="PY">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">++C</option>
+                        <option value="Python">Python</option>
 
                     </select>
                 </div>
@@ -89,10 +92,10 @@
                 </div>
                 <textarea class="jobDescription" type="text" name="txt" required placeholder="תיאור המשרה"></textarea>
                 <!-- button - update -->
-                <button class="update">עדכן</button>
+                <button onclick="editJob(event);" class="update">עדכן</button>
 
             </form>
         </div>
     </main>
-
+<script src="/js/prime-interface/primeEditJob.js"></script>
 </body>

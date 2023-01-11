@@ -1,11 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 body {
     background: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header {
@@ -124,6 +124,7 @@ main {
     display: block;
     direction: rtl;
     justify-content: baseline;
+    padding-bottom: 80px;
 }
 
 .first {
@@ -133,7 +134,7 @@ main {
     min-width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .right-side {
@@ -209,6 +210,8 @@ p{
 
 .info h1 {
     text-align: center;
+    justify-content: center;
+    margin-left: 130px;
     padding-top: 10px;
     direction: rtl;
 

@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/prime-interface/jobs/primeAddJob.css">
-    <title>Document</title>
+    <title>Prime-Add Job</title>
 </head>
 <body>
     <!-- start header -->
     <header>
-        <div class="wrapper">
-    
-          <a href="/screens/after-Login/primeAfterLogIn.html">
-            <div class="logo">Jun</div>
-          </a>
-    
-          <!--bttn  after login, etc-->
-          <div class="wrapperBttns" >
-          <button class="logoutButton" onclick="signOut(event)">התנתק</button>
-            <a href="/screens/prime-interface/profile/PrimeEditProfile.html"><button class="myProfile">הפרופיל שלי</button></a>
-          </div>
-
-          <div class="headline">
-            <h1>העלאת משרה</h1>
-          </div>
+        <div class="header">
+            <div class="topBttns">
+                <a><button onclick="signOut(event)" class="logoutButton">התנתק</button></a>
+                <a href="/screens/prime-interface/profile/PrimeProfile.html"><button class="myProfile">הפרופיל
+                        שלי</button></a>
+                <a href="/screens/prime-interface/jobs/primeAddJob.html"><button class="uploudJobs">העלאת משרות</button></a>
+            </div>
+            <br>
+            <a href="/screens/prime-interface/profile/PrimeProfile.html">
+                <h1 class="headline">הפרופיל שלי</h1>
+            </a>
+            <a href="/screens/after-Login/primeAfterLogIn.html">
+                <div class="logo">Jun</div>
+            </a>
         </div>
     </header>
       <!-- END Header-->

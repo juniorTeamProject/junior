@@ -9,19 +9,17 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	font-family: sans-serif;
 }
 .header{
-    height: 150px;
+    height: 250px;
     background: #7A3DC6;
-
 }
 
 .headline{
     color: white;
     text-align: center;
     padding-top: 24px;
-
-    text-decoration: none;
 }
 
 .logo{
@@ -59,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-.offerJobs{
+.uploudJobs{
     color: #281158;
     background-color: white;
     border-radius: 10px;
@@ -69,77 +67,86 @@ body{
     font-weight: bold;
     padding: 8px;
     cursor: pointer;
+    max-width: 150px;
 }
 
-.profileNav{
-    background-color: #E6E6E6;
-    max-height: 100px;
+.topBttns{
+    max-height: 15px;
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+#profileName{
+    padding-top: 80px;
+    color: white;
     text-align: center;
-    margin: 0 auto;
-    color: #8e8b8b;
-    padding: 20px 0px 20px 50px;
+    font-size: 2.2em;
+    width: 300px;
+    margin:0 auto;
 }
 
-.profileNav a{
-    color: #8e8b8b;
-    text-decoration: none;
-    font-size: 1.5em;
-    padding-left: 50px;
-    text-decoration: none;
-    margin: 20px 0px 20px 50px;
-    margin: 0 auto;
+#aprrove{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.profileNav a:hover{
-    color: #281158;
-    transition: 1000ms;
+#accept{
+    display: inline-block;
+    justify-content: space-between;
+    width: 90px;
+    height: 40px; 
+    background-color: white;
+    border-color: black;
+    border-radius: 10px;
+    margin-left: 400px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+
 }
 
-i{
-    color: #BDBDBD;
-    display: block;
-    padding-right: 50px;
+#reject{
+    display: inline-block;
+    justify-content: space-between;
+    width: 90px;
+    height: 40px; 
+    background-color: #E56A78;
+    border-radius: 10px;
+    margin-right: 400px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
 }
 
-.profileNav .fa-address-card-o{
-    font-size: 1.4em;
+#reject:hover{
+    font-size: larger;
 }
 
-.profileNav .fa-heart{
-    font-size: 1.4em;
-}
+#accept:hover{
+    font-size: larger;}
 
 .infoBackground{
     background-color: #F5F5F5;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 30px;
+    max-width: 100%;
+    direction: rtl;
     padding-bottom: 50px;
+    text-align: center;
+    margin:0 auto;
+    align-items: center;
 }
 
 .photoProfile{
     border-radius:20px;
-    width: 150px;
-    padding-top: 50px;
-    display: block;
+    width: 140px;
     margin:0 auto;
-    padding-bottom: 30px;
-}
-
-.currentProfile{
-    padding-top: 20px;
-    max-width: 100%;
-    direction: rtl;
-    margin:0 auto;
-    font-size: 1.5em;
+    padding-top: 30px;
     display: flex;
-    font-weight: bold;
-    justify-content: center;
-    align-content: space-between;
-}
-
-.personalInfo{
-    font-weight: normal;
+    position: relative;
 }
 
 #quesHL{
@@ -152,21 +159,23 @@ i{
     margin:0 auto;
 }
 
-.currentQues{
+#currentQues{
     padding-top: 20px;
-    max-width: 100%;
+    max-width: 50%;
     direction: rtl;
-    margin:0 auto;
-    display: flex;
+    display: inline-block;
     font-size: 1.5em;
     font-weight: bold;
     justify-content: center;
+    text-align: center;
 }
 
-.questionnaireInfo{
-    font-weight: normal;
+.languange, .jobScope, .jobType, .Knowledge, .JobField, .LocationJob{
+    width: 500px;
+    height: 50px;
+    background-color: white;
+    justify-content: center;
+    font-size: 0.7em;
+    align-items: center;
+    display: flex;
 }
-
-
-
-

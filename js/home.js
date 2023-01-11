@@ -1,3 +1,5 @@
+
+
 // ---------local data--------
 allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
 //corrent User
@@ -11,6 +13,13 @@ AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) ||  0; //admins Se
 
 function signIn(email,password){
     currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+    // if user ia blocked
+    let blockUsers = JSON.parse(localStorage.getItem('blockUsers')) || [];
+    let block = blockUsers.filter(user => user.Email == email) || 0;
+    if(block != 0){
+        alert("משתמש זה הינו חסום מהאתר!");
+        return;
+    }
     // check if user exist
     let exist = (allUsers_arr.length && 
     JSON.parse(localStorage.getItem('allUsers_arr')).some(data => data.Email.toLowerCase() == email && data.Password.toLowerCase() == password));
@@ -79,3 +88,5 @@ function signOut(e) {
         toggle = false;
     }
  }
+
+

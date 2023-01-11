@@ -1,5 +1,6 @@
 
 
+
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let jobs = JSON.parse(localStorage.getItem('jobs')) || [] // all jobs in the system
@@ -121,6 +122,7 @@ function submitJob(e)
                 localStorage.setItem('currentUser',JSON.stringify(currentUser))
                 updateCurrent_InAllUsers_Local() // update the currenr in all users arr
                 updateJobinLocal(_index) // update the job request in jobs arr
+                alert('בקשה נשלחה בהצלחה!')
             }
 
         
@@ -168,3 +170,4 @@ function signOut(e) {
     window.location.assign("/screens/home.html");
     e.preventDefault();  
   }
+

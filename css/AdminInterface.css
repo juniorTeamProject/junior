@@ -9,6 +9,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
 }
 .header{
     height: 150px;
@@ -19,7 +20,6 @@ body{
     color: white;
     text-align: center;
     padding-top: 24px;
-    justify-content: center;
 }
 
 .logo{
@@ -48,16 +48,27 @@ body{
     cursor: pointer;
 }
 
-.myProfile{
-    color: white;
-    background-color: #7A3DC6;
+
+
+.topBttns{
+    max-height: 15px;
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+.managment{
+    color: #ff0000;
+    background-color: white;
+    border-radius: 10px;
     margin: 10px 10px 10px 10px;
     font-size: large;
     border:none;
+    font-weight: bold;
+    padding: 8px;
     cursor: pointer;
 }
 
-.uploudJobs{
+.message{
     color: #281158;
     background-color: white;
     border-radius: 10px;
@@ -67,43 +78,36 @@ body{
     font-weight: bold;
     padding: 8px;
     cursor: pointer;
-    max-width: 150px;
 }
 
-.topBttns{
-    max-height: 15px;
-    max-width: 400px;
-    justify-content: space-between;
-}
-
-main{
-    justify-content: space-around;
+#Admin_Prem, #delete_account, #block_account, #unblock_account, #upgrade_plan {
+    margin:0 auto;
+    max-width: 900px;
+    min-height: 200px;
+    background: #e7e7e777;
+    border-radius: 20px;
+    justify-content: center;
     text-align: center;
-    justify-items: center;
-    align-items: center;
-    padding-top: 30px;
-    direction: rtl;
-    color: #281158;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-.jobRole, .jobPosition,.JobCompanyName,#image_input{
-    direction: rtl;
-	width:31%;
+
+
+.HL{
+    font-size: 1.5em;
+    color:#281158;
+    padding-top: 30px;
+    margin:0 auto;
+}
+
+input, #plan{
+	direction: rtl;
+	width:200px;
 	height: 25px;
 	background: #e0dede;
-    display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-}
-
-.jobDescription{
-    direction: rtl;
-	width:350px;
-	height: 150px;
-	background: #e0dede;
-    display: flex;
+	justify-content: center;
+	display: flex;
 	margin: 20px auto;
 	padding: 10px;
 	border: none;
@@ -111,22 +115,24 @@ main{
 	border-radius: 5px;
 }
 
-.select_jobScope {
+#plan{
+    appearance: none;
 	padding: 10px;
 	background-color: #e0dede;
-	height: 40px;
+	height: 45px;
 	cursor: pointer;
 	border: none;
-	border-radius: 10px;
-	color: #838383;
+	border-radius: 5px;
+	color: #8383839f;
 	direction: rtl;
-	width: 500px;
+	width: 220px;
 	outline: white;
 	margin-top: 10px;
 }
 
+
 .update {
-	width: 100px;
+	width: 80px;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
@@ -141,4 +147,6 @@ main{
 	border-radius: 5px;
 	transition: .2s ease-in;
 	cursor: pointer;
+    margin-bottom: 20px;
 }
+

@@ -1,3 +1,5 @@
+
+
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 
@@ -31,7 +33,9 @@ function addJob(e)
       information: jobDescription.value,
       languenge: select_languenge.value,
       knowledge: select_Knowledge.value,
-      requestJuniors:[]
+      requestJuniors:[],
+      reqInPopUp:[],
+      status:"ממתין..."
     } 
 
     jobs.push(job)  // push the new job to all jobs_arr in system 
@@ -81,4 +85,5 @@ function pickImage(input) {
     // move to Home.html
     window.location.assign("/screens/home.html");
     e.preventDefault();  
-  }
+}
+

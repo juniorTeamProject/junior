@@ -13,12 +13,14 @@ body{
 .header{
     height: 150px;
     background: #7A3DC6;
+
 }
 
-.headline {
+.headline{
     color: white;
     text-align: center;
     padding-top: 24px;
+
     text-decoration: none;
 }
 
@@ -57,7 +59,7 @@ body{
     cursor: pointer;
 }
 
-.uploudJobs{
+.offerJobs{
     color: #281158;
     background-color: white;
     border-radius: 10px;
@@ -67,18 +69,11 @@ body{
     font-weight: bold;
     padding: 8px;
     cursor: pointer;
-    max-width: 150px;
-}
-
-.topBttns{
-    max-height: 15px;
-    max-width: 400px;
-    justify-content: space-between;
 }
 
 .profileNav{
     background-color: #E6E6E6;
-    max-height: 40px;
+    max-height: 100px;
     text-align: center;
     margin: 0 auto;
     color: #8e8b8b;
@@ -100,12 +95,6 @@ body{
     transition: 1000ms;
 }
 
-.profileNav .current{
-    color:#281158;
-    display: inline-block;
-}
-
-
 i{
     color: #BDBDBD;
     display: block;
@@ -116,9 +105,33 @@ i{
     font-size: 1.4em;
 }
 
-.profileNav .fa-suitcase{
+.profileNav .fa-heart{
+    font-size: 1.4em;
+}
+
+.profileNav .fa-list{
     font-size: 1.4em;
     color:#281158;
+}
+
+.profileNav .current{
+    color:#281158;
+}
+
+.amountofjobs{
+    max-width: 100%;
+    max-height: 50px;
+    height: 50px;
+    direction: rtl;
+    display: flex;
+    padding-top:25px;
+    padding-right:45%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.amountofjobs p{
+    padding-right: 7px;
 }
 
 main {
@@ -133,6 +146,7 @@ main {
     display: block;
     direction: rtl;
     justify-content: baseline;
+    padding-bottom: 80px;
 }
 
 .first {
@@ -142,14 +156,7 @@ main {
     min-width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-}
-
-.num_of_requests{
-padding-right: 260px;
-font-size: small;
-color: #DC3549;
-cursor: pointer;
+    margin-top: 30px;
 }
 
 .right-side {
@@ -223,8 +230,11 @@ p{
 
 }
 
+
 .info h1 {
     text-align: center;
+    justify-content: center;
+    margin-left: 130px;
     padding-top: 10px;
     direction: rtl;
 
@@ -249,15 +259,22 @@ p{
 .info section p2 {
     color: black;
     direction: rtl;
+    font-weight: normal;
 
 }
 
+#stsId{
+    color: #8e8b8b;
+}
+
 .icons {
+    color: #DC3549;
     display: flex;
     justify-content: space-between;
     direction: rtl;
 
 }
+
 
 .info p3 {
     padding-top: 10px;
@@ -267,32 +284,33 @@ p{
 
 }
 
+#sts{
+    color: #DC3549;
+}
+
+
 .icons {
     display: inline-block;
 }
 
 .icons button {
-    background: #DC3549;
+    background: #7A3DC6;
     color: white;
-    border-color: #DC3549;
+    border-color: #7A3DC6;
     border-radius: 5%;
     height: 30px;
     width: 90px;
     font-weight: bold;
     font-size: 0.5em;
-    cursor: pointer;
 }
 
 .icons p3 i {
     margin-bottom: 10px;
     font-size: 25px;
+    color: red;
 }
 
-.icons p3 i:hover {
-    cursor: pointer;
-    transition: 1000ms;
-    color: darkslategray;
-}
+
 
 .bottom {
     background: #EBEBEB;
@@ -306,71 +324,21 @@ p{
     
 }
 .noJobsToShow{
-    margin-top: 150px;
-    display: none;
-   justify-content: center;
-   align-items: center;
-    height: 300px;
-    
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 .ImgNoJobs{
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
 }
 #iconJob{
     color:#27115883;
-    
-    
+    font-size: 150px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
-.wrapper-popUp-REQUEST{
-    background: rgb(0, 0, 0,0.6);
-    width: 100%;
-    min-height: 100%;
-    overflow-y: hidden;
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
 
-.content{
-    max-height: 800px;
-    height: 400px;
-    width: 45%;
-    max-width: 600px;
-    background: white;
-    border-radius:10px;
-    position: relative;
-    display: block;
-}
-
-.top_content{
-    height:120px;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-}
-
-.listReq{
-    max-height:100%;
-    height: 280px;
-    background:grey;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-    direction: rtl;
-    padding: 20px;
-}
-
-.request h1{
-    color: #281158;
-    text-align: center;
-    padding-top: 40px;
-}
-.exit_icon{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    cursor: pointer;
-    }
