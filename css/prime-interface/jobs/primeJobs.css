@@ -143,13 +143,23 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    opacity: 1;
+    animation: slideInFromRight 0.5s ease-in;
 }
+
+@keyframes slideInFromRight
+{
+    from { transform: translateX(100%); }
+    to { transform: translateX(0%); }
+}
+
 
 .num_of_requests{
 padding-right: 260px;
 font-size: small;
 color: #DC3549;
 cursor: pointer;
+font-weight: bold;
 }
 
 .right-side {
@@ -360,7 +370,14 @@ p{
     border-bottom-right-radius:10px;
     direction: rtl;
     padding: 20px;
+    animation: fadeIn 0.5s ease-in;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
 
 .request h1{
     color: #281158;
@@ -373,4 +390,14 @@ p{
     left: 10px;
     width: 30px;
     cursor: pointer;
-    }
+    animation: rotate 1s;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+ 
+
+

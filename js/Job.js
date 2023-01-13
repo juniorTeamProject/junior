@@ -69,7 +69,11 @@ class Job {
                 <div class="number"><i id="iconJob" class="fa fa-circle" aria-hidden="true"></i></div>
             </div>
             <div class="left-side">
-                <div id = "${this.index}" class="num_of_requests" onclick="toggleReq_popUp(); showReqUsers(event);">בקשות</div>
+                <div class="wrapRecBttn">
+                    
+                    <div id = "${this.index}" class="num_of_requests" onclick="toggleReq_popUp(); showReqUsers(event);">בקשות</div>
+                </div>
+                
                 <div class="top">
                     <!-- picture -->
                     <div class="picture">

@@ -20,13 +20,21 @@ top: 0;
 font-size:3.6em ;
 color: white;
 font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-
+animation: slideInFromRight 0.5s ease-in;
 }
 .logo::after {
     content: "ior";
     color: #DC3549;
-    
+    animation: slideInFromRight 2s ease-in;
 }
+
+
+
+@keyframes slideInFromRight
+ {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0%); }
+  }
 
 /* bttns sign */
 .wrapperBttns{
@@ -41,6 +49,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     justify-content: space-evenly;
     padding: 20px;
     font-size: 1.1em; 
+   
       
 }
 .primeBttn{
@@ -95,7 +104,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     padding: 70px;
     display: flex;
     justify-content: center;
+    animation: downTotop 1s ease-in;
 }
+
+@keyframes downTotop
+ {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0%); }
+  }
 
 /* num&text of jobs */
 .wrTextJobs{

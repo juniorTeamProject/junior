@@ -125,7 +125,14 @@ main {
     direction: rtl;
     justify-content: baseline;
     padding-bottom: 80px;
+    opacity: 1;
+    animation: slideInFromRight 0.5s ease-in;
 }
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0%); }
+  }
 
 .first {
     background: #F5F5F5;

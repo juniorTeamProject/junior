@@ -41,6 +41,8 @@ let blockUsers = [
     }
 ]
 
+let currentUser = {}
+
 function signUp_Prime(_companyName, _email_prime, _password_prime, _img)
 {
     let exist = (users.length && users.some(user => user.Email.toLowerCase() == _email_prime)); 
@@ -117,6 +119,14 @@ function signIn(email,password)
     }
 }
 
+function signOut() {
+    // reset currentUser
+    currentUser = {};
+    // check if no currentUser
+    if (currentUser.Name == null)
+        return true
+}
+
 
 
 // signUp --- Prime
@@ -147,9 +157,18 @@ describe('#signUp_Junior',()=>{
 })
 
 
-// signIn any users
+// signIn any user
 describe('signIn',()=>{
     it('user exist should log in',()=>{
         expect(signIn('intel@gmail.com','123456')).toBe(true)
     })
 })
+
+// sign out any user
+describe('signOut',()=>{
+    it('user will log out',()=>{
+        expect(signOut()).toBe(true)
+    })
+})
+
+
