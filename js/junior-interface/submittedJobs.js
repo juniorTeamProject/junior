@@ -4,11 +4,7 @@ let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))
 let currentUser = JSON.parse(localStorage.getItem('currentUser'))
 let sumJobs = currentUser.submitJobs || [] // all jobs in the system
 
-///---------------Cant back if not log in---------------------
-if(currentUser.Name == null && window.location.href != "http://127.0.0.1:5500/screens/home.html"){
-  window.location.assign("/screens/home.html");
-}
-///---------------Cant back if not log in---------------------
+
 
 showJobs() // show to the user jobs
 
@@ -31,7 +27,7 @@ function showJobs()
     // if there is no offer jobs show to user image and txt that he has not offers job
     if( sumJobs.length == 0|| sumJobs == null || flag == 0 )
     {
-        document.querySelector('.txtNoJobs').innerHTML = 'עדיין אין משרות שאהבת'
+        document.querySelector('.txtNoJobs').innerHTML = 'לא קיימות משרות שהגשת'
         document.querySelector('.ImgNoJobs').setAttribute('src','/images/noPostedJobs.png')
         
     }

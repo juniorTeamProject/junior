@@ -27,7 +27,7 @@ function showJobs()
     // if there is no offer jobs show to user image and txt that he has not offers job
     if( wishJobs.length == 0|| wishJobs == null || flag == 0 )
     {
-        document.querySelector('.txtNoJobs').innerHTML = 'עדיין אין משרות שאהבת'
+        document.querySelector('.txtNoJobs').innerHTML = 'לא קיימות משרות שאהבת'
         document.querySelector('.ImgNoJobs').setAttribute('src','/images/noPostedJobs.png')
         
     }
