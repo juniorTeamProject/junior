@@ -1,0 +1,4 @@
+[[redirects]]
+from "/*"
+to = "/screens/home.html"
+status = 200
