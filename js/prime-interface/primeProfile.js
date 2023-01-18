@@ -1,5 +1,5 @@
 
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+currentUser = JSON.parse(localStorage.getItem('currentUser'));
 let allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr'))  ||[];
 
 

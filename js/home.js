@@ -3,7 +3,7 @@
 // ---------local data--------
 allUsers_arr = JSON.parse(localStorage.getItem('allUsers_arr')) || [];
 //corrent User
-let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 AdminsSetup = JSON.parse(localStorage.getItem('AdminsSetup')) ||  0; //admins Setup
 //-----------
 
