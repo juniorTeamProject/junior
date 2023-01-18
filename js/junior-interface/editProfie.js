@@ -146,6 +146,7 @@ function updateUser(email,info, value){
       reader.onload = function (e) 
       {
         let url = e.target.result;
+        img = url;
         var imageFiles = document.getElementsByClassName('imageFile');
         for (var i = 0; i < imageFiles.length; i++) {
             imageFiles[i].setAttribute('src', url);
