@@ -1,6 +1,6 @@
 
 
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
 console.log(currentUser)
 document.querySelector('.photoProfile').setAttribute("src",currentUser.img)
