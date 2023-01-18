@@ -186,4 +186,5 @@ function removeJunior(){
     localStorage.setItem("currentUser",JSON.stringify(currentUser));
     indexUsers-=1;
     localStorage.setItem('indexUsers', JSON.stringify(indexUsers));  
+    window.location.assign("/screens/home.html");
 }
