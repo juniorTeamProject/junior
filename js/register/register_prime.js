@@ -67,17 +67,24 @@ function signUp_Prime(_companyName, _email_prime, _password_prime, _img){
   
   //change Prime image in 
   function pickImage(input) {    
-      if (input.files && input.files[0]) {
-        let reader = new FileReader();
-        flagImg = 1;
-        reader.onload = function (e) {
-          let url = e.target.result;
-        $('.imageFile').attr('src', url).width(100).height(90);
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      flagImg = 1;
+      reader.onload = function (e) 
+      {
+        let url = e.target.result;
+        var imageFiles = document.getElementsByClassName('imageFile');
+        for (var i = 0; i < imageFiles.length; i++) {
+            imageFiles[i].setAttribute('src', url);
+            imageFiles[i].style.width = '100px';
+            imageFiles[i].style.height = '90px';
+        }
+
         localStorage.setItem('userImg',url);
         console.log(e.target.result);
-  
-        };
-        
-        reader.readAsDataURL(input.files[0]);
-      }
+
+      };
+      
+      reader.readAsDataURL(input.files[0]);
     }
+  }

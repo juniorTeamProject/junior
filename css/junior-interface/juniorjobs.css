@@ -68,10 +68,6 @@ body {
     cursor: pointer;
 }
 
-.offerJobs:hover{
-    width: 123px;
-    height: 38px;
-}
 
 .profileNav {
     background-color: #E6E6E6;
